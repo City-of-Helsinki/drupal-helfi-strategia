@@ -1,12 +1,10 @@
-# Your Drupal 9 project
-
-Description of your project.
+# City of Helsinki - Strategia Drupal 9 project project
 
 ## Environments
 
 Env | Branch | Drush alias | URL
 --- | ------ | ----------- | ---
-development | * | - | http://yoursite.docker.so/
+development | * | - | http://strategia.docker.so/
 production | main | @main | TBD
 
 ## Requirements
