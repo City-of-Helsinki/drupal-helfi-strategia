@@ -1,4 +1,4 @@
-# City of Helsinki - Strategia Drupal 9 project project
+# City of Helsinki - Strategia Drupal 9 project
 
 ## Environments
 
