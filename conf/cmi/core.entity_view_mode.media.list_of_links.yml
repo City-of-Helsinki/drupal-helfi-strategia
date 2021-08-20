@@ -1,0 +1,12 @@
+uuid: 2671348c-7c68-4943-819c-232bf4f37478
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: PHC5-ZAHrmao9xAd6ZMuFwwm9kIEBb4E31qjN0JkovE
+id: media.list_of_links
+label: 'List of Links'
+targetEntityType: media
+cache: true

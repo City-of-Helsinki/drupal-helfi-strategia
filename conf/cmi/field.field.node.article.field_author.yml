@@ -1,0 +1,21 @@
+uuid: da7a420d-859c-4954-b330-470616d9d091
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.article
+_core:
+  default_config_hash: 1oqobfI8cP7lwC92-ke2O_wtHzD16wfuRS5zOSSxEVY
+id: node.article.field_author
+field_name: field_author
+entity_type: node
+bundle: article
+label: Author
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
