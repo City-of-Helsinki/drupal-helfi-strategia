@@ -1,4 +1,3 @@
-label: 'Uudelleenkäytettävät lohkot'
 display:
   default:
     display_title: Isäntä
@@ -27,7 +26,6 @@ display:
           label: Tyyppi
           separator: ', '
         paragraphs__target_id:
-          label: Lohkot
           separator: ', '
         langcode:
           label: Kieli
@@ -49,6 +47,5 @@ display:
         type:
           expose:
             label: Tyyppi
-      title: 'Uudelleenkäytettävät lohkot'
   page_1:
     display_title: Sivu
