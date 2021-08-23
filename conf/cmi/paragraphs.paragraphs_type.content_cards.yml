@@ -1,0 +1,17 @@
+uuid: 6f38a2aa-c821-459f-9df7-95239583a47d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: G0XIMKXx8apK0uBqDSIJEWOXrbDnUoORLCeka-ydj4I
+id: content_cards
+label: 'Content cards'
+icon_uuid: null
+icon_default: null
+description: 'With content cards you can reference to content inside this site. The information about the content is automatically fetched through the reference.'
+behavior_plugins: {  }
