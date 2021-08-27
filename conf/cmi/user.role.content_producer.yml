@@ -1,11 +1,11 @@
-uuid: a9f95786-540e-44f9-a587-9d139e70ab6e
+uuid: 7c49c937-0467-4ea5-956f-652e1135c207
 langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: EVzxFtbOrGVTXWw2GTh1fEzzqruPEqSo84k10-BF6eA
 id: content_producer
-label: 'Content producer'
+label: Sisällöntuottaja
 weight: 3
 is_admin: null
 permissions:
@@ -21,6 +21,7 @@ permissions:
   - 'cancel account'
   - 'change own username'
   - 'create file media'
+  - 'create hel_map media'
   - 'create image media'
   - 'create landing_page content'
   - 'create media'
@@ -30,12 +31,14 @@ permissions:
   - 'create terms in keywords'
   - 'delete media'
   - 'delete own file media'
+  - 'delete own hel_map media'
   - 'delete own image media'
   - 'delete own landing_page content'
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete own soundcloud media'
   - 'edit own file media'
+  - 'edit own hel_map media'
   - 'edit own image media'
   - 'edit own landing_page content'
   - 'edit own page content'
