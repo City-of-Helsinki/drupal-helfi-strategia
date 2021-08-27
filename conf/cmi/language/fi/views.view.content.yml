@@ -13,13 +13,13 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Edellinen'
-            next: 'Seuraava ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
             first: '« Ensimmäinen'
             last: 'Viimeinen »'
       fields:
         title:
-          label: Otsikko
+          label: 'Listauksen otsikko'
         type:
           label: Sisältötyyppi
           separator: ', '
@@ -40,7 +40,7 @@ display:
       filters:
         title:
           expose:
-            label: Otsikko
+            label: 'Listauksen otsikko'
         type:
           expose:
             label: Sisältötyyppi
@@ -61,7 +61,7 @@ display:
       empty:
         area_text_custom:
           content: 'Ei sisältöä.'
-    display_title: Isäntä
+    display_title: Master
   page_1:
     display_options:
       menu:
