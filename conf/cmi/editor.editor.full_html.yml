@@ -1,4 +1,4 @@
-uuid: cae0a4a6-ec6e-4835-ab03-e98089591cd1
+uuid: e7ac45c9-c93a-47e4-bfe3-2168b04f80c0
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: gbKl_x1IJKUaF94IUbOx7E4G4-5WM7C33s7ABH74Rz8
+  default_config_hash: OAvmyVNNhuk6W9C_M5zVB7sF3sPuuyFO8FyZv-ZGu3o
 format: full_html
 editor: ckeditor
 settings:
@@ -51,6 +51,7 @@ settings:
             - Paste
             - PasteFromWord
             - SpecialChar
+            - Table
             - Source
   plugins:
     drupallink:

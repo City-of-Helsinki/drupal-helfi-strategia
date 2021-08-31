@@ -1,4 +1,4 @@
-uuid: 123e0279-c3c2-435b-8754-af9150acebeb
+uuid: 7e97b9a8-56b5-45b7-bd28-c1cbe4508d36
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: 8lZSaHWE7T-gq61sZA4PYTFXxMu3T5F1qPw8sCwrqXc
+  default_config_hash: 7Amnz8unxEqEP9kyTXtYaKyvVmL2zPRmBy6LVr-NdVk
 id: paragraph.field_liftup_with_image_design
 field_name: field_liftup_with_image_design
 entity_type: paragraph
@@ -19,6 +19,12 @@ settings:
     -
       value: image-on-left
       label: 'Image on left'
+    -
+      value: image-on-right-secondary
+      label: 'Image on right, secondary color'
+    -
+      value: image-on-left-secondary
+      label: 'Image on left, secondary color'
     -
       value: background-text-on-right
       label: 'Background image, text on right'

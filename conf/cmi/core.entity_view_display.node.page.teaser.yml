@@ -1,4 +1,4 @@
-uuid: 75730a5d-328d-49ac-b142-1b8498c034a0
+uuid: abd67af4-51b8-46f5-961a-c1f51e7a37c4
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_lead_in
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
@@ -14,7 +15,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: YrnOo0175KtZqKjepPd-xcsMt8hETdl7s9AKQbo9t94
+  default_config_hash: zHVZh5t51MpXE6bJTMRdWW5ll5uIzXCG8a6Xc6bLUws
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -33,6 +34,7 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_lead_in: true
   field_lower_content: true
   field_metatags: true
   langcode: true

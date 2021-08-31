@@ -1,3 +1,5 @@
+label: 'Ajastettu sisältö'
+description: 'Etsi ja ylläpidä ajastettua sisältöä.'
 display:
   default:
     display_options:
@@ -19,7 +21,7 @@ display:
         node_bulk_form:
           action_title: Toiminto
         title:
-          label: Otsikko
+          label: 'Listauksen otsikko'
           separator: ', '
         type:
           label: Sisältötyyppi
@@ -44,7 +46,7 @@ display:
       filters:
         title:
           expose:
-            label: Otsikko
+            label: 'Listauksen otsikko'
         type:
           expose:
             label: Sisältötyyppi
@@ -61,13 +63,19 @@ display:
         langcode:
           expose:
             label: Kieli
-    display_title: Isäntä
+      title: 'Ajastettu sisältö'
+      empty:
+        area_text_custom:
+          content: 'Ei vielä ajastettua sisältöä.'
+    display_title: Master
   overview:
     display_options:
       menu:
         title: Ajastettu
       tab_options:
         title: Sisältö
+      display_description: 'Yleiskatsaus koko ajoitetusta sisällöstä.'
+    display_title: Sisältö
   user_page:
     display_options:
       menu:
@@ -77,4 +85,8 @@ display:
       arguments:
         uid:
           exception:
-            title: Kaikki
+            title: All
+      empty:
+        area_text_custom:
+          content: '{{ arguments.uid }} käyttäjä ei ole ajastanut sisältöä.'
+    display_title: Käyttäjäprofiili

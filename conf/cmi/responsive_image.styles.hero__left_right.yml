@@ -1,4 +1,4 @@
-uuid: 8255ae01-7222-4eed-9f57-3ba303e04a2e
+uuid: 8fc1ea98-d677-4e36-947f-39a53ae4711f
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,6 @@ dependencies:
     - image.style.3_2_s_2x
     - image.style.3_2_xs
     - image.style.3_2_xs_2x
-  theme:
-    - hdbt
 _core:
   default_config_hash: VOrWXmHCCzslJCkaWhkUoHuJ2R1VENCqsCMheMfXcvw
 id: hero__left_right
