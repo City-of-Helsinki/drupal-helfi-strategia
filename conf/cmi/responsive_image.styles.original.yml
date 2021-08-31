@@ -1,4 +1,4 @@
-uuid: 8b17e512-01bc-46fc-bb01-a169e9460141
+uuid: 8d0c9098-8057-4323-a04c-2fe48f929815
 langcode: en
 status: true
 dependencies:
@@ -13,8 +13,6 @@ dependencies:
     - image.style.original_xs_2x
     - image.style.original_xxs
     - image.style.original_xxs_2x
-  theme:
-    - hdbt
 _core:
   default_config_hash: GHc3XCdV80PXDojpCaQ7DsBPaBAXpeDpebYof1ne27A
 id: original

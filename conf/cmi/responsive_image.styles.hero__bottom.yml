@@ -1,4 +1,4 @@
-uuid: d1b429b1-e5c7-4430-ba96-b04a3d4bc780
+uuid: 9cd620ff-ab84-43f2-965b-87d9b7f28a4a
 langcode: en
 status: true
 dependencies:
@@ -15,8 +15,6 @@ dependencies:
     - image.style.23_10_xs_2x
     - image.style.23_10_xxs
     - image.style.23_10_xxs_2x
-  theme:
-    - hdbt
 _core:
   default_config_hash: wSwVWbcfZCu9XvGOiDxuNG0mnekg0cSOxrHMQOsQYps
 id: hero__bottom
