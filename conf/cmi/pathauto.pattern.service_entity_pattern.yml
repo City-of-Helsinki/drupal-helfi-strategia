@@ -1,0 +1,16 @@
+uuid: abf1ad37-16c6-4841-b14f-b0d7310bf432
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+_core:
+  default_config_hash: IWvSKmxM6YS9noET0SzVZH1Z8brcnwBuE1iIKyR5k0g
+id: service_entity_pattern
+label: 'Service entity pattern'
+type: 'canonical_entities:tpr_service'
+pattern: '[tpr_service:label]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

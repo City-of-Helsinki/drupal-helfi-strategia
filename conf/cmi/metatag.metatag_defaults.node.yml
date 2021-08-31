@@ -1,15 +1,16 @@
-uuid: 59c62309-50b2-4547-b235-8ebdd2673e3d
+uuid: 7dea3fb9-c2a5-40f7-971f-a48d9a7208bf
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 9Jic1G9pzey2mP5olncL3_CE4eTuYJQKYzR0GCOUFqA
+  default_config_hash: TNqyaA_Ul3j23LWpgpesmTSiDpiN6DpiTMKZHu6xxGg
 id: node
 label: Content
 tags:
   canonical_url: '[node:url]'
   content_language: '[node:langcode]'
-  title: '[node:title] | [site:name]'
+  description: '[node:field_lead_in]'
+  title: '[node:title] | [site:page-title-suffix]'
   article_modified_time: '[node:created:html_datetime]'
   article_published_time: '[node:created:html_datetime]'
   og_image_url: '[node:field_liftup_image:entity:field_media_image:og_image:url],[site:base-url]/themes/custom/hdbt/src/images/og-global.png'

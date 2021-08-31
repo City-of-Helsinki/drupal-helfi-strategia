@@ -1,8 +1,9 @@
-uuid: 1fac9602-7da8-44e1-8d8c-5f42c5ddd21b
+uuid: f837faee-65bb-4596-8ca6-5cd29e9a77a8
 langcode: en
 status: true
 dependencies:
   module:
+    - language
     - system
   theme:
     - hdbt_admin

@@ -1,0 +1,13 @@
+uuid: 2def5d7b-ff4d-4822-9125-081a979597c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+_core:
+  default_config_hash: bcHK7uQerIVXgQO9RZ9HqgLysPjceBNydMEBNOY2Gx8
+id: tpr_unit_unpublish_action
+label: 'Unpublish unit'
+type: tpr_unit
+plugin: 'entity:unpublish_action:tpr_unit'
+configuration: {  }
