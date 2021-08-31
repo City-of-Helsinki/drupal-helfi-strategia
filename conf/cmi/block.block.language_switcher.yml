@@ -1,7 +1,9 @@
-uuid: 57d58d63-af19-4597-b865-e8413d1d5c06
+uuid: 44fe9c35-cef6-42ff-a8cf-fdc3dd9e0e7f
 langcode: en
 status: true
 dependencies:
+  module:
+    - language
   theme:
     - hdbt
 _core:

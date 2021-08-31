@@ -1,4 +1,4 @@
-uuid: eaf527bd-af60-4b63-8fe2-f76b2f541e30
+uuid: 9caf0ad3-afe3-4ab9-9352-d808edc59fea
 langcode: en
 status: true
 dependencies:
@@ -13,8 +13,6 @@ dependencies:
     - image.style.23_10_xs_2x
     - image.style.23_10_xxs
     - image.style.23_10_xxs_2x
-  theme:
-    - hdbt
 _core:
   default_config_hash: sqxPwEOHDHbmSWO75WNVWlTSQ5yyV_PYHC7vxrA5LoQ
 id: hero__diagonal

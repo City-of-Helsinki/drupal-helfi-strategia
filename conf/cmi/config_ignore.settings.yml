@@ -1,4 +1,5 @@
 ignored_config_entities:
   - 'eu_cookie_compliance.cookie_category*'
+  - '*.site_settings'
 _core:
-  default_config_hash: PipyKPJHaHaJB3D4LeRoRJxSSd7QbBM0gb5wpSrEFfc
+  default_config_hash: QkouijUZWSmzRC1sUOJntoclIHqPYGTSt2534poifsQ

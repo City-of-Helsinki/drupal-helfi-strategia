@@ -1,12 +1,12 @@
-uuid: 3d4b5e06-7e21-4e14-afd3-102032d5f593
+uuid: ebc200ac-b524-47a1-98ba-6a47f484a195
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+  default_config_hash: P7RVjjPPp5LCZ6NPaIl50Pu9gQvBoGkfUei2TptDE0s
 id: taxonomy_term
 label: 'Taxonomy term'
 tags:
   canonical_url: '[term:url]'
   description: '[term:description]'
-  title: '[term:name] | [site:name]'
+  title: '[term:name] | [site:page-title-suffix]'
