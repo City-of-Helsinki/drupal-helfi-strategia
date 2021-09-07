@@ -1,0 +1,8 @@
+enabled: true
+settings:
+  redirect_url: ''
+  client_id: '123'
+  client_secret: '123'
+  is_production: 0
+_core:
+  default_config_hash: zopXf6sP7mRYaLFcT3RYztlMsWVSE3gXW4kmH71RbnU
