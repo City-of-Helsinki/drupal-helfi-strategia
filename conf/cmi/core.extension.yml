@@ -48,6 +48,7 @@ module:
   helfi_platform_config: 0
   helfi_proxy: 0
   helfi_tpr: 0
+  helfi_tunnistamo: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -68,6 +69,7 @@ module:
   metatag_views: 0
   migrate: 0
   node: 0
+  openid_connect: 0
   options: 0
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
