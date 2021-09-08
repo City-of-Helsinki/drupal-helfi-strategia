@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_service_channel_publish_action
+label: 'Publish service channel'
+type: tpr_service_channel
+plugin: 'entity:publish_action:tpr_service_channel'
+configuration: {  }
+uuid: eedee1d9-f13e-4c72-a597-193499785a69
