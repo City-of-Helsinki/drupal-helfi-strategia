@@ -2,7 +2,7 @@
 
 $config['helfi_proxy.settings']['prefixes'] = [
   'en' => 'dev-administration',
-  'fi' => 'dev-kaupunki-ja-hallinto',
-  'sv' => 'dev-stad-och-forvaltning',
+  'fi' => 'dev-hallinto',
+  'sv' => 'dev-forvaltning',
   'ru' => 'dev-administration',
 ];
