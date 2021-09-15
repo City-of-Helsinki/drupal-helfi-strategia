@@ -1,3 +1,4 @@
+uuid: 177faeb3-a520-41bc-8bc2-9536a218916e
 langcode: en
 status: true
 dependencies:
@@ -8,4 +9,3 @@ label: 'Unpublish service channel'
 type: tpr_service_channel
 plugin: 'entity:unpublish_action:tpr_service_channel'
 configuration: {  }
-uuid: 177faeb3-a520-41bc-8bc2-9536a218916e
