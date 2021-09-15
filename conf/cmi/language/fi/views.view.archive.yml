@@ -15,13 +15,13 @@ display:
       pager:
         options:
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
           tags:
             previous: '‹ Edellinen'
             next: 'Seuraava ›'
   block_1:
-    display_title: Block
+    display_title: Lohko
   page_1:
     display_title: Sivu

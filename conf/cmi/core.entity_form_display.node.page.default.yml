@@ -10,9 +10,9 @@ dependencies:
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
+    - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
-    - hdbt_admin_editorial
     - media_library
     - metatag
     - paragraphs
@@ -36,15 +36,15 @@ content:
     weight: 14
     region: content
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: text
+      default_paragraph_type: _none
       features:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
@@ -60,8 +60,8 @@ content:
   field_hero:
     weight: 3
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: closed_expand_nested
       closed_mode: summary
       autocollapse: none
@@ -93,17 +93,17 @@ content:
     region: content
   field_lower_content:
     type: paragraphs
-    weight: 19
+    weight: 20
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: text
+      default_paragraph_type: _none
       features:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
@@ -116,6 +116,25 @@ content:
       sidebar: false
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_sidebar_content:
+    type: paragraphs
+    weight: 15
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
     region: content
   langcode:
     type: language_select
@@ -139,12 +158,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -187,12 +206,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
