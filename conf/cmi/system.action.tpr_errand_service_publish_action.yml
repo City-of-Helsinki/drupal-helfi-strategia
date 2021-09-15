@@ -1,3 +1,4 @@
+uuid: b709269b-e4b7-40ee-8cb5-15df43920063
 langcode: en
 status: true
 dependencies:
@@ -8,4 +9,3 @@ label: 'Publish errand service'
 type: tpr_errand_service
 plugin: 'entity:publish_action:tpr_errand_service'
 configuration: {  }
-uuid: b709269b-e4b7-40ee-8cb5-15df43920063

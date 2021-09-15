@@ -13,15 +13,15 @@ display:
       pager:
         options:
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
           tags:
             previous: '‹ Edellinen'
             next: 'Seuraava ›'
       fields:
         title:
-          label: 'Listauksen otsikko'
+          label: Otsikko
         name:
           label: Kirjoittaja
         changed:

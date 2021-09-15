@@ -2,7 +2,7 @@ label: Redirect
 description: Uudelleenohjaukset
 display:
   default:
-    display_title: Master
+    display_title: Isäntä
     display_options:
       exposed_form:
         options:
@@ -19,8 +19,8 @@ display:
             first: '« ensimmäinen'
             last: 'viimeinen »'
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
       fields:
         redirect_bulk_form:
