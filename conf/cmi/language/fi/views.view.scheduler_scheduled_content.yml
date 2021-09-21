@@ -21,7 +21,7 @@ display:
         node_bulk_form:
           action_title: Toiminto
         title:
-          label: 'Listauksen otsikko'
+          label: Otsikko
           separator: ', '
         type:
           label: Sisältötyyppi
@@ -46,7 +46,7 @@ display:
       filters:
         title:
           expose:
-            label: 'Listauksen otsikko'
+            label: Otsikko
         type:
           expose:
             label: Sisältötyyppi
@@ -67,7 +67,7 @@ display:
       empty:
         area_text_custom:
           content: 'Ei vielä ajastettua sisältöä.'
-    display_title: Master
+    display_title: Isäntä
   overview:
     display_options:
       menu:
@@ -85,7 +85,7 @@ display:
       arguments:
         uid:
           exception:
-            title: All
+            title: Kaikki
       empty:
         area_text_custom:
           content: '{{ arguments.uid }} käyttäjä ei ole ajastanut sisältöä.'

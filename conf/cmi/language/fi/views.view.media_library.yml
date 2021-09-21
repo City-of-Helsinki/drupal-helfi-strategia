@@ -14,8 +14,8 @@ display:
       pager:
         options:
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
             offset_label: Offset
           tags:
             previous: '‹ Edellinen'
@@ -87,7 +87,7 @@ display:
       arguments:
         bundle:
           exception:
-            title: All
+            title: Kaikki
       header:
         display_link_grid:
           label: Ruudukko
@@ -112,7 +112,7 @@ display:
       arguments:
         bundle:
           exception:
-            title: All
+            title: Kaikki
       header:
         display_link_grid:
           label: Ruudukko

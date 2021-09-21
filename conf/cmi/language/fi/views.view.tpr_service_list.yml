@@ -1,10 +1,9 @@
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Suodata
           reset_button_label: Palauta
           exposed_sorts_label: Lajittele
           sort_asc_label: Nousevasti
@@ -17,46 +16,40 @@ display:
             first: '« Ensimmäinen'
             last: 'Viimeinen »'
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
+            items_per_page_label: 'Tuloksia sivua kohden'
+            items_per_page_options_all_label: '- Kaikki -'
       fields:
         tpr_service_bulk_form:
-          label: Massapäivitys
-          action_title: Toiminto
-        id:
-          label: ID
-          separator: ', '
+          action_title: Toimenpide
         name:
           label: Nimi
-          separator: ', '
         langcode:
           label: Kieli
-          separator: ', '
         content_translation_status:
           label: Tila
           settings:
             format_custom_true: Julkaistu
             format_custom_false: Julkaisematon
-          separator: ', '
         content_translation_changed:
           label: Päivitetty
-          separator: ', '
         operations:
           label: Toimenpiteet
       filters:
         combine:
           expose:
-            label: Search
+            label: Haku
         langcode:
           expose:
             label: Kieli
+      title: 'TPR Palvelut'
       header:
         result:
           content: 'Näytetään @start - @end / @total'
       empty:
         area:
           content:
-            value: 'Ei tuloksia.'
+            value: 'Palveluita ei löytynyt.'
+            format: plain_text
   page_1:
     display_title: Sivu
+label: 'TPR Palvelut'
