@@ -21,7 +21,7 @@ display:
             items_per_page_options_all_label: '- Alla -'
             offset_label: Kompensera
       fields:
-        tpr_service_bulk_form:
+        tpr_service_channel_bulk_form:
           label: Massuppdatera
           action_title: Åtgärd
         id:
