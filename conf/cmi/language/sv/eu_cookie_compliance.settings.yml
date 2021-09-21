@@ -13,5 +13,5 @@ withdraw_message:
   value: "<h2>Hel.fi uses cookies</h2>\r\n\r\n<p>You have given your consent for us to set cookies.</p>\r\n"
 withdraw_action_button_label: 'Återkalla samtycke'
 withdraw_tab_button_label: Sekretessinställningar
-save_preferences_button_label: 'Spara val'
+save_preferences_button_label: 'Acceptera valda cookies'
 accept_all_categories_button_label: 'Acceptera alla cookies'
