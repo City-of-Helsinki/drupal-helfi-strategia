@@ -2,7 +2,7 @@
 
 $config['helfi_proxy.settings']['prefixes'] = [
   'en' => 'staging-administration',
-  'fi' => 'staging-hallinto',
-  'sv' => 'staging-forvaltning',
+  'fi' => 'staging-paatoksenteko-ja-hallinto',
+  'sv' => 'staging-beslutsfattande-och-forvaltning',
   'ru' => 'staging-administration',
 ];
