@@ -12,15 +12,20 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Edellinen'
-            next: 'Seuraava ›'
+            previous: ''
+            next: ''
           expose:
-            items_per_page_label: 'Merkintöjä sivua kohti'
-            items_per_page_options_all_label: '- Kaikki -'
-            offset_label: Offset
+            items_per_page_label: ''
+            items_per_page_options_all_label: ''
+            offset_label: ''
+          views_infinite_scroll:
+            button_text: 'Lataa lisää palveluita'
       arguments:
         id:
           exception:
             title: Kaikki
-  unit_services:
-    display_title: Lohko
+      empty:
+        area:
+          content:
+            value: "<p>Ei tuloksia</p>\r\n"
+            format: full_html
