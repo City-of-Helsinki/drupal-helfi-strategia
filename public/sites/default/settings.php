@@ -35,6 +35,7 @@ if ($ssl_ca_path = getenv('AZURE_SQL_SSL_CA_PATH')) {
   $settings['php_storage']['twig']['secret'] = $settings['hash_salt'];
   $settings['file_chmod_directory'] = 16895;
   $settings['file_chmod_file'] = 16895;
+
   $config['system.performance']['cache']['page']['max_age'] = 86400;
 }
 
@@ -116,3 +117,10 @@ if ($blob_storage_name = getenv('AZURE_BLOB_STORAGE_NAME')) {
   $settings['flysystem'] = $schemes;
 }
 
+if ($varnish_host = getenv('VARNISH_HOST')) {
+  $config['varnish_purger.settings.default']['hostname'] = $varnish_host;
+}
+
+if ($varnish_port = getenv('VARNISH_PORT')) {
+  $config['varnish_purger.settings.default']['port'] = $varnish_port;
+}
