@@ -7,7 +7,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "composer/installers": "^1.9",
+        "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6.7",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
@@ -31,7 +31,7 @@
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^9.1",
         "phpspec/prophecy-phpunit": "^2",
-        "phpunit/phpunit": "~9.4.0"
+        "phpunit/phpunit": "~9.5.10"
     },
     "conflict": {
         "drupal/drupal": "*"
