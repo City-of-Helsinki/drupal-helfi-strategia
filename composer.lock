@@ -4061,16 +4061,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "2eaf8b5e170a66c78a95e46c202b798337251918"
+                "reference": "4079e42682be2cf56da37ab5bd4881207c5a3196"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/2eaf8b5e170a66c78a95e46c202b798337251918",
-                "reference": "2eaf8b5e170a66c78a95e46c202b798337251918",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/4079e42682be2cf56da37ab5bd4881207c5a3196",
+                "reference": "4079e42682be2cf56da37ab5bd4881207c5a3196",
                 "shasum": ""
             },
             "require": {
@@ -4150,7 +4150,7 @@
                 "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/latest",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2021-09-30T14:22:31+00:00"
+            "time": "2021-09-30T20:19:04+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4191,16 +4191,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "223056b4f274d5175eb105f10c895f0a548ae99f"
+                "reference": "7132f6a82eac85709f0affff712d98fd761839b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/223056b4f274d5175eb105f10c895f0a548ae99f",
-                "reference": "223056b4f274d5175eb105f10c895f0a548ae99f",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/7132f6a82eac85709f0affff712d98fd761839b8",
+                "reference": "7132f6a82eac85709f0affff712d98fd761839b8",
                 "shasum": ""
             },
             "require": {
@@ -4221,10 +4221,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.4.2",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.4.3",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2021-09-30T14:51:49+00:00"
+            "time": "2021-10-01T05:25:15+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
@@ -4982,17 +4982,17 @@
         },
         {
             "name": "drupal/purge",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/purge.git",
-                "reference": "8.x-3.0"
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "cdf9c61f8e35dab0269e1389f0a9c493f26df1b8"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9",
@@ -5001,8 +5001,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1590744318",
+                    "version": "8.x-3.1",
+                    "datestamp": "1633041576",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
