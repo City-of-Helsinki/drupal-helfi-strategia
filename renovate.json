@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "config:base",
+    ":disableRateLimiting"
+  ],
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "matchLanguages": ["php"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}
