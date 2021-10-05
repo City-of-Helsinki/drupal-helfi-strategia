@@ -6,3 +6,4 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'sv' => 'staging-beslutsfattande-och-forvaltning',
   'ru' => 'staging-administration',
 ];
+$config['openid_connect.settings.tunnistamo']['settings']['is_production'] = TRUE;
