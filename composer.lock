@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9c6c87947aab99ed44845c7362e6b12",
+    "content-hash": "9b1dec1b5fad386cdb166b273bbb4aa6",
     "packages": [
         {
             "name": "City-of-Helsinki/php-hauki-client",
@@ -4982,17 +4982,17 @@
         },
         {
             "name": "drupal/purge",
-            "version": "3.0.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/purge.git",
-                "reference": "8.x-3.0"
+                "reference": "8.x-3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "eb025762097e5435d11f8b5bcb1b0ef32a6b72fe"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9",
@@ -5001,8 +5001,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1590744318",
+                    "version": "8.x-3.2",
+                    "datestamp": "1633428281",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5038,17 +5038,17 @@
         },
         {
             "name": "drupal/raven",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "3.2.5"
+                "reference": "3.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-3.2.5.zip",
-                "reference": "3.2.5",
-                "shasum": "bac9edb225346b4de10b3ce62710d0470e37cd55"
+                "url": "https://ftp.drupal.org/files/projects/raven-3.2.6.zip",
+                "reference": "3.2.6",
+                "shasum": "48376d5454a56f4eae000455cd559104eb6270e7"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5060,8 +5060,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.5",
-                    "datestamp": "1631732322",
+                    "version": "3.2.6",
+                    "datestamp": "1633372747",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9408,16 +9408,16 @@
         },
         {
             "name": "sentry/sentry",
-            "version": "3.3.2",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-php.git",
-                "reference": "3d733139a3ba2d1d3a8011580e3acf0ba1d0dc9b"
+                "reference": "9a7b6d84ac8fa370397336028e760c71accac1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/3d733139a3ba2d1d3a8011580e3acf0ba1d0dc9b",
-                "reference": "3d733139a3ba2d1d3a8011580e3acf0ba1d0dc9b",
+                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/9a7b6d84ac8fa370397336028e760c71accac1dc",
+                "reference": "9a7b6d84ac8fa370397336028e760c71accac1dc",
                 "shasum": ""
             },
             "require": {
@@ -9496,7 +9496,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-php/issues",
-                "source": "https://github.com/getsentry/sentry-php/tree/3.3.2"
+                "source": "https://github.com/getsentry/sentry-php/tree/3.3.3"
             },
             "funding": [
                 {
@@ -9508,7 +9508,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-07-19T08:09:34+00:00"
+            "time": "2021-10-04T11:20:34+00:00"
         },
         {
             "name": "stack/builder",
@@ -14392,16 +14392,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f"
+                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/30f38bffc6f24293dadd1823936372dfa9e86e2f",
-                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
                 "shasum": ""
             },
             "require": {
@@ -14436,9 +14436,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
             },
-            "time": "2021-09-17T15:28:14+00:00"
+            "time": "2021-10-02T14:08:47+00:00"
         },
         {
             "name": "phpspec/prophecy",
