@@ -7,3 +7,5 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'ru' => 'staging-administration',
 ];
 $config['openid_connect.settings.tunnistamo']['settings']['is_production'] = TRUE;
+$config['helfi_proxy.settings']['tunnistamo_return_url'] = '/fi/staging-paatoksenteko-ja-hallinto/openid-connect/tunnistamo';
+
