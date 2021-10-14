@@ -1,3 +1,4 @@
+asset_path: 'hallinto-assets'
 prefixes:
   en: decision-making
   fi: paatoksenteko-ja-hallinto
