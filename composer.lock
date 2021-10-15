@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f0f6d5fb0ec12f4a8278c527f84381b",
+    "content-hash": "e35975e2589717c233d8cac8f428f5f8",
     "packages": [
         {
             "name": "City-of-Helsinki/php-hauki-client",
@@ -4213,16 +4213,16 @@
         },
         {
             "name": "drupal/helfi_proxy",
-            "version": "1.1.8",
+            "version": "dev-UHF-2832",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy.git",
-                "reference": "bf53182822ad951681fac8a51f18b0ef00ac96ee"
+                "reference": "6f363733d0c6db9eddffbb120ddabc569e3ac90b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/bf53182822ad951681fac8a51f18b0ef00ac96ee",
-                "reference": "bf53182822ad951681fac8a51f18b0ef00ac96ee",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/6f363733d0c6db9eddffbb120ddabc569e3ac90b",
+                "reference": "6f363733d0c6db9eddffbb120ddabc569e3ac90b",
                 "shasum": ""
             },
             "require": {
@@ -4244,10 +4244,10 @@
             ],
             "description": "Provides various fixes so we can serve multiple Drupal instances in one domain.",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/1.1.8",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/UHF-2832",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/issues"
             },
-            "time": "2021-10-14T08:44:02+00:00"
+            "time": "2021-10-15T10:27:17+00:00"
         },
         {
             "name": "drupal/helfi_tpr",
@@ -16628,10 +16628,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/helfi_proxy": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

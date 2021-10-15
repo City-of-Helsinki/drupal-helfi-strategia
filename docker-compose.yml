@@ -16,9 +16,11 @@ services:
       DRUPAL_ROUTES: "https://varnish-${DRUPAL_HOSTNAME},https://helfi-proxy.docker.so,http://strategia-varnish"
       DRUSH_OPTIONS_URI: "https://${DRUPAL_HOSTNAME}"
       DRUPAL_REVERSE_PROXY_ADDRESS: helfi-proxy.docker.so
-      #XDEBUG_ENABLE: "true"
+      XDEBUG_ENABLE: "true"
       SIMPLETEST_BASE_URL: "http://app:8080"
       SIMPLETEST_DB: "mysql://drupal:drupal@db:3306/drupal"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - internal
       - stonehenge-network
