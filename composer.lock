@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f0f6d5fb0ec12f4a8278c527f84381b",
+    "content-hash": "2b827dc95a6550ee826f2a0ddba7f9e3",
     "packages": [
         {
             "name": "City-of-Helsinki/php-hauki-client",
@@ -4016,40 +4016,6 @@
             "time": "2021-05-21T06:10:50+00:00"
         },
         {
-            "name": "drupal/helfi_linkedevents",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-linkedevents.git",
-                "reference": "11388a54ebb15db7d73fad10ec950a43dd7c180a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-linkedevents/zipball/11388a54ebb15db7d73fad10ec950a43dd7c180a",
-                "reference": "11388a54ebb15db7d73fad10ec950a43dd7c180a",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/helfi_api_base": "*",
-                "drupal/key_value_field": "^1.0",
-                "ext-json": "*"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-                "drupal/coder": "^8.3"
-            },
-            "type": "drupal-custom-module",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Linked Events integration",
-            "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-linkedevents/tree/1.0.1",
-                "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-linkedevents/issues"
-            },
-            "time": "2021-04-12T07:24:21+00:00"
-        },
-        {
             "name": "drupal/helfi_media_formtool",
             "version": "dev-main",
             "source": {
@@ -4117,16 +4083,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.0.17",
+            "version": "2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "81d53790da4dcd7f29adf72f1fd9f28019b97f47"
+                "reference": "cfdd1eb0bed0af4c64cf572543686ed139cc6e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/81d53790da4dcd7f29adf72f1fd9f28019b97f47",
-                "reference": "81d53790da4dcd7f29adf72f1fd9f28019b97f47",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/cfdd1eb0bed0af4c64cf572543686ed139cc6e49",
+                "reference": "cfdd1eb0bed0af4c64cf572543686ed139cc6e49",
                 "shasum": ""
             },
             "require": {
@@ -4206,10 +4172,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/latest",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.0.18",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2021-10-14T14:53:48+00:00"
+            "time": "2021-10-18T06:01:11+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
