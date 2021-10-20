@@ -1,9 +1,11 @@
+label: 'Ajastettu sisältö'
+description: 'Etsi ja ylläpidä ajastettua sisältöä.'
 display:
   default:
     display_options:
       exposed_form:
         options:
-          submit_button: Suodatin
+          submit_button: Suodata
           reset_button_label: Palauta
           exposed_sorts_label: Lajittele
           sort_asc_label: Nousevasti
@@ -61,20 +63,33 @@ display:
         langcode:
           expose:
             label: Kieli
-    display_title: Isäntä
+      title: 'Ajastettu sisältö'
+      empty:
+        area_text_custom:
+          content: 'Ei vielä ajastettua sisältöä.'
+    display_title: Oletus
   overview:
     display_options:
       menu:
         title: Ajastettu
       tab_options:
         title: Sisältö
+        description: 'Find and manage scheduled content'
+      display_description: 'Yleiskatsaus koko ajoitetusta sisällöstä.'
+    display_title: Sisältö
   user_page:
     display_options:
       menu:
         title: Ajastettu
       tab_options:
         title: Sisältö
+        description: 'Find and manage scheduled content'
+      display_description: 'Scheduled content tab on user profile, showing just that user''s scheduled content'
       arguments:
         uid:
           exception:
             title: Kaikki
+      empty:
+        area_text_custom:
+          content: 'No scheduled content for user {{ arguments.uid }}'
+    display_title: 'User profile tab'
