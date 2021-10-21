@@ -74,7 +74,7 @@ display:
         title: Ajastettu
       tab_options:
         title: Sisältö
-        description: 'Find and manage scheduled content'
+        description: 'Etsi ja ylläpidä ajastettua sisältöä.'
       display_description: 'Yleiskatsaus koko ajoitetusta sisällöstä.'
     display_title: Sisältö
   user_page:
@@ -83,13 +83,13 @@ display:
         title: Ajastettu
       tab_options:
         title: Sisältö
-        description: 'Find and manage scheduled content'
-      display_description: 'Scheduled content tab on user profile, showing just that user''s scheduled content'
+        description: 'Etsi ja ylläpidä ajastettua sisältöä.'
+      display_description: 'Yleiskatsaus koko ajoitetusta sisällöstä.'
       arguments:
         uid:
           exception:
             title: Kaikki
       empty:
         area_text_custom:
-          content: 'No scheduled content for user {{ arguments.uid }}'
-    display_title: 'User profile tab'
+          content: '{{ arguments.uid }} käyttäjä ei ole ajastanut sisältöä.'
+    display_title: Käyttäjäprofiili
