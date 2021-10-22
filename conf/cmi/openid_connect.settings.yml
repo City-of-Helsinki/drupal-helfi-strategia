@@ -4,7 +4,7 @@ override_registration_settings: true
 user_login_display: below
 userinfo_mappings:
   timezone: zoneinfo
-  metatag: 0
-  path: 0
+  metatag: '0'
+  path: '0'
 _core:
   default_config_hash: YpBA3MmDuJpZ9SM3DE4kR0lTY89bf2y3g0sS7s3TQ4k
