@@ -1,5 +1,5 @@
 applies_admin_routes: false
-include_home_segment: true
+include_home_segment: false
 alternative_title_field: ''
 home_segment_title: Home
 home_segment_keep: false
@@ -28,7 +28,7 @@ follow_redirects: false
 limit_segment_display: false
 segment_display_limit: ''
 truncator_mode: false
-truncator_length: '100'
+truncator_length: 100
 truncator_dots: true
 _core:
   default_config_hash: WIMIX8ESpGpyAoJDBXSTqTb7Th3BDpJP3CTLc6M7Rl4
