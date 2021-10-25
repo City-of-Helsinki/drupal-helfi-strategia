@@ -1,5 +1,5 @@
 langcode: en
-asset_path: 'hallinto-assets'
+asset_path: hallinto-assets
 front_page_title: 'Decision Making'
 prefixes:
   en: decision-making
