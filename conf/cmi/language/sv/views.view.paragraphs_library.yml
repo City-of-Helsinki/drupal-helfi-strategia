@@ -1,6 +1,6 @@
 display:
   default:
-    display_title: Förvald
+    display_title: Huvud
     display_options:
       exposed_form:
         options:
@@ -26,6 +26,7 @@ display:
           label: Typ
           separator: ', '
         paragraphs__target_id:
+          label: Paragraphs
           separator: ', '
         langcode:
           label: Språk
