@@ -1,4 +1,6 @@
-asset_path: 'hallinto-assets'
+langcode: en
+asset_path: hallinto-assets
+front_page_title: Decision-making
 prefixes:
   en: decision-making
   fi: paatoksenteko-ja-hallinto
