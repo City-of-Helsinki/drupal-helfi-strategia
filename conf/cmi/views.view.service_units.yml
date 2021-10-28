@@ -19,7 +19,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Default
     position: 0
     display_options:
       access:
@@ -50,7 +50,7 @@ display:
       pager:
         type: infinite_scroll
         options:
-          items_per_page: 8
+          items_per_page: 5
           offset: 0
           id: 0
           total_pages: null
@@ -66,7 +66,7 @@ display:
             offset: false
             offset_label: Offset
           views_infinite_scroll:
-            button_text: 'Load more service locations'
+            button_text: 'Load more service points'
             automatically_load_content: false
             initially_load_all_pages: false
       style:
