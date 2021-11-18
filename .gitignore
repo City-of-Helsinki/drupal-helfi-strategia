@@ -11,6 +11,8 @@ vendor
 # Ignore the folder created by PhpStorm
 .idea/*
 
+*.sql
+
 local.settings.php
 
 # Ignore OSX generated files
