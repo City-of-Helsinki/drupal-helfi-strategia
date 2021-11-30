@@ -1,0 +1,27 @@
+uuid: b6ee73ae-8801-4a12-9599-878a726f1072
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_hotjar
+    - system
+  theme:
+    - hdbt
+_core:
+  default_config_hash: LKXhPHn6fHpUooNoGE5EkgpCDi3-eUczzNpcSUWUlv0
+id: hotjar
+theme: hdbt
+region: attachments
+weight: 5
+provider: null
+plugin: hotjar
+settings:
+  id: hotjar
+  label: Hotjar
+  provider: helfi_hotjar
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/strategia-ja-talous/talous*\r\n/strategia-ja-talous/talous/*\r\n/strategi-och-ekonomi/ekonomi\r\n/strategi-och-ekonomi/ekonomi/*\r\n/strategy-and-economy/economy\r\n/strategy-and-economy/economy/*"
+    negate: false
