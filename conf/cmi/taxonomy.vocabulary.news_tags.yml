@@ -1,0 +1,10 @@
+uuid: 1d58945c-3a75-4767-91fa-247e1354de44
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vwgTruq_bxZ5J1FxeUioSBiPtqh6Zx2fFBVYErHZnKI
+name: 'News tags'
+vid: news_tags
+description: ''
+weight: 0

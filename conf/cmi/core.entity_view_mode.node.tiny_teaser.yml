@@ -1,0 +1,12 @@
+uuid: a4cad40c-755c-4c19-8ac1-43abe105040a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: esEvb8UT59th89qKzDjikljeeylxnQrNujTF310hPXY
+id: node.tiny_teaser
+label: 'Tiny Teaser'
+targetEntityType: node
+cache: true
