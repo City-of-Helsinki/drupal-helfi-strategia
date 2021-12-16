@@ -1,11 +1,35 @@
 uuid: 7c49c937-0467-4ea5-956f-652e1135c207
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.file
+    - media.type.hel_map
+    - media.type.image
+    - media.type.remote_video
+    - media.type.soundcloud
+    - node.type.announcement
+    - node.type.landing_page
+    - node.type.page
+    - taxonomy.vocabulary.keywords
+  module:
+    - content_translation
+    - file
+    - helfi_api_base
+    - helfi_tpr
+    - media
+    - node
+    - paragraphs
+    - scheduler
+    - siteimprove
+    - system
+    - taxonomy
+    - toolbar
+    - view_unpublished
 _core:
   default_config_hash: EVzxFtbOrGVTXWw2GTh1fEzzqruPEqSo84k10-BF6eA
 id: content_producer
-label: Sisällöntuottaja
+label: 'Content producer'
 weight: 3
 is_admin: null
 permissions:
@@ -54,9 +78,13 @@ permissions:
   - 'schedule publishing of nodes'
   - 'translate editable entities'
   - 'update media'
+  - 'use siteimprove'
+  - 'use siteimprove prepublish'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view announcement revisions'
+  - 'view any unpublished landing_page content'
+  - 'view any unpublished page content'
   - 'view landing_page revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
@@ -65,5 +93,7 @@ permissions:
   - 'view scheduled content'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
-  - 'use siteimprove'
-  - 'use siteimprove prepublish'
+  - 'view unpublished tpr_errand_service'
+  - 'view unpublished tpr_service'
+  - 'view unpublished tpr_service_channel'
+  - 'view unpublished tpr_unit'

@@ -1,6 +1,6 @@
 langcode: en
-asset_path: hallinto-assets
 front_page_title: Decision-making
+asset_path: hallinto-assets
 robots_paths:
   - '/sisallonhallinta*'
 prefixes:
