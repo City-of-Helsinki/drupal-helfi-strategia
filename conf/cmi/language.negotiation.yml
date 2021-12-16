@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: bF9DhF_EWxMtfbAHt165mIR28wie7Hpq8r21BraWMyE
 session:
   parameter: language
 url:
@@ -11,5 +13,3 @@ url:
     fi: ''
     sv: ''
 selected_langcode: fi
-_core:
-  default_config_hash: bF9DhF_EWxMtfbAHt165mIR28wie7Hpq8r21BraWMyE
