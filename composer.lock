@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20c5c7775a017d70a70aa26619baa3ea",
+    "content-hash": "dda2a50501c2b6948013284d8839a16b",
     "packages": [
         {
             "name": "City-of-Helsinki/php-hauki-client",
@@ -3617,7 +3617,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flysystem_azure.git",
-                "reference": "1f54cbcccaf9a7a609a48353fca78c3bdca71f1d"
+                "reference": "d92841cd4c66cbf78a5297329afbb9add1df7314"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -16762,7 +16762,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/flysystem_azure": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
