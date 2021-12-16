@@ -18,10 +18,10 @@ plugin: hotjar
 settings:
   id: hotjar
   label: Hotjar
-  provider: helfi_hotjar
   label_display: '0'
+  provider: helfi_hotjar
 visibility:
   request_path:
     id: request_path
-    pages: "/strategia-ja-talous/talous*\r\n/strategia-ja-talous/talous/*\r\n/strategi-och-ekonomi/ekonomi\r\n/strategi-och-ekonomi/ekonomi/*\r\n/strategy-and-economy/economy\r\n/strategy-and-economy/economy/*"
     negate: false
+    pages: "/strategia-ja-talous/talous*\r\n/strategia-ja-talous/talous/*\r\n/strategi-och-ekonomi/ekonomi\r\n/strategi-och-ekonomi/ekonomi/*\r\n/strategy-and-economy/economy\r\n/strategy-and-economy/economy/*"
