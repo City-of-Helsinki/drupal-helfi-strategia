@@ -42,6 +42,9 @@ display:
             label: Tilakoodi
           group_info:
             label: Tilakoodi
+            group_items:
+              7:
+                title: '300 Multiple Choices'
         language:
           expose:
             label: 'Alkuperäinen kieli'
