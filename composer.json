@@ -16,6 +16,7 @@
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_azure_fs": "^1.0",
+        "drupal/helfi_drupal_tools": "dev-main",
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_platform_config": "^2.0",
         "drupal/helfi_proxy": "^1.0",
@@ -40,7 +41,13 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true
+        }
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
@@ -78,7 +85,7 @@
             "public/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "drush/{$name}": [
+            "drush/Commands/{$name}": [
                 "type:drupal-drush"
             ]
         }
