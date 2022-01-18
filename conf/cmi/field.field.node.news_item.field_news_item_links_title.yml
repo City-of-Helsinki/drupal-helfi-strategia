@@ -1,0 +1,21 @@
+uuid: 47cdca06-23a4-4e7e-93ed-c7a495fd78a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_item_links_title
+    - node.type.news_item
+_core:
+  default_config_hash: QGbQIwzV_1lL4m9U5KmAPm0nCd2-GCBokD0UMV27z2A
+id: node.news_item.field_news_item_links_title
+field_name: field_news_item_links_title
+entity_type: node
+bundle: news_item
+label: Title
+description: 'Link list title'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
