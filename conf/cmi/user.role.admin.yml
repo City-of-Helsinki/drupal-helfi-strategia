@@ -196,3 +196,6 @@ permissions:
   - 'edit terms in news_tags'
   - 'translate news_item node'
   - 'translate news_tags taxonomy_term'
+  - 'assign admin role'
+  - 'assign content_producer role'
+  - 'assign read_only role'
