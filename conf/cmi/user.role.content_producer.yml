@@ -101,3 +101,6 @@ permissions:
   - 'delete own news_item content'
   - 'edit any news_item content'
   - 'edit own news_item content'
+  - 'create helfi_chart media'
+  - 'delete own helfi_chart media'
+  - 'edit own helfi_chart media'
