@@ -37,6 +37,7 @@ dependencies:
     - taxonomy
     - toolbar
     - view_unpublished
+    - content_lock
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
@@ -216,3 +217,4 @@ permissions:
   - 'set news_item published on date'
   - 'view news_item revisions'
   - 'set announcement published on date'
+  - 'break content lock'
