@@ -18,6 +18,7 @@ PHONY += oc-sync
 oc-sync:
 	$(call drush,helfi:oc:get-dump)
 	$(call drush,sql-query --file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME),SQL dump imported)
+	$(call drush,helfi:oc:sanitize-database)
 	$(call drush,cr)
 	$(call drush,cim -y)
 	$(call drush,cr)
@@ -32,8 +33,8 @@ PHONY += drush-locale-update
 drush-locale-update: ## Update translations.
 	$(call step,Update translations...)
 	$(call drush,state:set locale.translation_last_checked 0)
-	$(call drush,locale:check)
-	$(call drush,locale:update)
-	$(call drush,cr)
+	$(call drush_on_docker,locale:check)
+	$(call drush_on_docker,locale:update)
+	$(call drush_on_docker,cr)
 	$(call step,Import custom translations...)
 	$(call drush,helfi:locale-import helfi_platform_config)
