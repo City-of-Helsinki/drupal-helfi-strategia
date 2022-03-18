@@ -4,7 +4,7 @@ langcode: en
 site_settings:
   default_icon: star-fill
   theme_color: gold
-  koro: basic
+  koro: vibration
 footer_settings:
   footer_color: dark
   footer_top_title: 'Contact us'
