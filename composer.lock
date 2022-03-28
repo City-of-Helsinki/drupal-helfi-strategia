@@ -4200,16 +4200,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.6.4",
+            "version": "2.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "e5e69b8d074109ff96eccf93620bac11cd0624b8"
+                "reference": "f5ec4bff4e1932433db2ff38d7805abdf2e15aa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/e5e69b8d074109ff96eccf93620bac11cd0624b8",
-                "reference": "e5e69b8d074109ff96eccf93620bac11cd0624b8",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f5ec4bff4e1932433db2ff38d7805abdf2e15aa5",
+                "reference": "f5ec4bff4e1932433db2ff38d7805abdf2e15aa5",
                 "shasum": ""
             },
             "require": {
@@ -4300,6 +4300,9 @@
                     },
                     "drupal/field_group": {
                         "[#UHF-3268] Support for field group translations": "https://www.drupal.org/files/issues/2021-11-22/field_group_fix-translations_label_description-3111107-31.patch"
+                    },
+                    "drupal/easy_breadcrumb": {
+                        "[#UHF-3631] Breadcrumb allow dashes and underscores": "https://www.drupal.org/files/issues/2020-07-23/easy_breadcrumb-allow_hyphens_underscores-3161100-2.patch"
                     }
                 }
             },
@@ -4308,10 +4311,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.5",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-03-25T08:59:25+00:00"
+            "time": "2022-03-28T07:03:10+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
