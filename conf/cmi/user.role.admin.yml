@@ -39,6 +39,7 @@ dependencies:
     - view_unpublished
     - content_lock
     - views_bulk_edit
+    - views_bulk_edit
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
@@ -219,4 +220,5 @@ permissions:
   - 'view news_item revisions'
   - 'set announcement published on date'
   - 'break content lock'
+  - 'use views bulk edit'
   - 'use views bulk edit'
