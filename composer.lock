@@ -4055,16 +4055,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "ff6c1bf2c7fb36a7c0984866f1e980151a2361c7"
+                "reference": "09137df4ece58d745a09958cd8e7db5f2e834b82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/ff6c1bf2c7fb36a7c0984866f1e980151a2361c7",
-                "reference": "ff6c1bf2c7fb36a7c0984866f1e980151a2361c7",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/09137df4ece58d745a09958cd8e7db5f2e834b82",
+                "reference": "09137df4ece58d745a09958cd8e7db5f2e834b82",
                 "shasum": ""
             },
             "require": {
@@ -4087,10 +4087,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.2.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.2.1",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2022-04-04T05:11:17+00:00"
+            "time": "2022-04-12T06:05:23+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -4254,16 +4254,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.6.12",
+            "version": "2.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "495c79aca944169602a6f31e4c82df3e66522b82"
+                "reference": "5c8d370a525bb2991e277542e5f3c0b9a1391e1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/495c79aca944169602a6f31e4c82df3e66522b82",
-                "reference": "495c79aca944169602a6f31e4c82df3e66522b82",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/5c8d370a525bb2991e277542e5f3c0b9a1391e1f",
+                "reference": "5c8d370a525bb2991e277542e5f3c0b9a1391e1f",
                 "shasum": ""
             },
             "require": {
@@ -4370,10 +4370,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.12",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.13",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-04-06T13:01:55+00:00"
+            "time": "2022-04-11T21:15:45+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -8395,16 +8395,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69"
+                "reference": "3e4a35d756eedc67096f30240a68a3149120dae7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/aa70e813a6ad3d1558fc927863d47309b4c23e69",
-                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3e4a35d756eedc67096f30240a68a3149120dae7",
+                "reference": "3e4a35d756eedc67096f30240a68a3149120dae7",
                 "shasum": ""
             },
             "require": {
@@ -8435,7 +8435,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.9.0"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.10.0"
             },
             "funding": [
                 {
@@ -8447,7 +8447,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-21T11:48:40+00:00"
+            "time": "2022-04-11T12:49:04+00:00"
         },
         {
             "name": "league/uri",
