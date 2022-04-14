@@ -75,6 +75,7 @@ module:
   linkit: 0
   locale: 0
   media: 0
+  media_entity_file_replace: 0
   media_entity_soundcloud: 0
   media_library: 0
   menu_block_current_language: 0
@@ -143,7 +144,6 @@ module:
   publication_date: 99
   minimal: 1000
   eu_cookie_compliance: 1001
-  media_entity_file_replace: 0
 theme:
   claro: 0
   stable9: 0
