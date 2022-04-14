@@ -4253,16 +4253,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.6.12",
+            "version": "2.6.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "495c79aca944169602a6f31e4c82df3e66522b82"
+                "reference": "03fc307fb7f1056dd8df2c7a12bf0946e32cf927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/495c79aca944169602a6f31e4c82df3e66522b82",
-                "reference": "495c79aca944169602a6f31e4c82df3e66522b82",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/03fc307fb7f1056dd8df2c7a12bf0946e32cf927",
+                "reference": "03fc307fb7f1056dd8df2c7a12bf0946e32cf927",
                 "shasum": ""
             },
             "require": {
@@ -4295,6 +4295,7 @@
                 "drupal/linkit": "^6.0@beta",
                 "drupal/matomo": "^1.11",
                 "drupal/matomo_reports": "^1.1",
+                "drupal/media_entity_file_replace": "^1.0",
                 "drupal/media_entity_soundcloud": "^3.0.0",
                 "drupal/menu_block_current_language": "^1.5",
                 "drupal/menu_link_attributes": "^1.2",
@@ -4369,10 +4370,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.12",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/2.6.15",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2022-04-06T13:01:55+00:00"
+            "time": "2022-04-14T08:10:44+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -4803,6 +4804,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/matomo_reports",
                 "issues": "https://www.drupal.org/project/issues/matomo_reports"
+            }
+        },
+        {
+            "name": "drupal/media_entity_file_replace",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_entity_file_replace.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_file_replace-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "a22fb6b946dade434301b85c249d8621d0fc6654"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1618180544",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                }
+            ],
+            "description": "Allows content editors to easily replace source files associated with any file-based media entity, preserving the original filename.",
+            "homepage": "https://www.drupal.org/project/media_entity_file_replace",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_entity_file_replace"
             }
         },
         {
@@ -17428,5 +17473,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
