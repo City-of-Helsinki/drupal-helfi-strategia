@@ -52,7 +52,7 @@ dependencies:
 _core:
   default_config_hash: 7RTyCpgMKCMdwkxYrpzYOCq7DQDHO0SrTjB7xwFaIyI
 id: admin
-label: Pääkäyttäjä
+label: Administrator
 weight: 5
 is_admin: null
 permissions:
