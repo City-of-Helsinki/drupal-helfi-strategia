@@ -1,0 +1,6 @@
+name: HELfi Ahjo SOTE
+description: Organisation information for SOTE section of päätökset site
+package: Custom
+type: module
+version: 1.0
+core_version_requirement: ^9

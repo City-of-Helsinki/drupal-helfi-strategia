@@ -1,0 +1,36 @@
+{
+    "name": "drupal/helfi_ajho",
+    "description": "Organisation information for SOTE section of päätökset site",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "composer/composer": "*"
+    },
+    "require-dev": {
+        "drupal/coder": "dev-8.x-3.x"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "src/"
+            }
+        },
+        "enable-patching": true
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repository.drupal.hel.ninja"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ]
+}

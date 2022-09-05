@@ -1,0 +1,65 @@
+<?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\taxonomy\Entity\Vocabulary;
+
+/**
+ * @file
+ * Installation related hooks and functions.
+ */
+
+
+function helfi_ahjo_install() {
+  $vid = 'sote_section';
+  $vocabularies = Vocabulary::loadMultiple();
+  if (!isset($vocabularies[$vid])) {
+    $vocabulary = Vocabulary::create([
+      'vid' => 'sote_section',
+      'description' => '',
+      'name' => 'Sote Section',
+    ]);
+    $vocabulary->save();
+  }
+
+  FieldStorageConfig::create([
+    'field_name' => 'field_external_id',
+    'entity_type' => 'taxonomy_term',
+    'type' => 'text',
+  ])->save();
+
+  FieldConfig::create([
+    'field_name' => 'field_external_id',
+    'entity_type' => 'taxonomy_term',
+    'bundle' => 'sote_section',
+    'label' => 'External ID',
+  ])->save();
+
+  FieldStorageConfig::create([
+    'field_name' => 'field_external_parent_id',
+    'entity_type' => 'taxonomy_term',
+    'type' => 'text',
+  ])->save();
+
+  FieldConfig::create([
+    'field_name' => 'field_external_parent_id',
+    'entity_type' => 'taxonomy_term',
+    'bundle' => 'sote_section',
+    'label' => 'External Parent ID',
+  ])->save();
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function helfi_ahjo_uninstall($is_syncing) {
+  Vocabulary::load('sote_section')->delete();
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function helfi_ahjo_update_8101(&$sandbox) {
+  \Drupal::service('helfi_ahjo.ahjo_service')->insertData();
+}
