@@ -1,0 +1,12 @@
+helfi_ahjo.settings:
+  title: 'Helfi Ahjo Settings'
+  description: 'Configure Ahjo API.'
+  route_name: helfi_ahjo.config
+  menu_name: admin
+  parent: system.admin_config_services
+helfi_ahjo.cron_job:
+  title: 'Helfi Ahjo Cron'
+  description: 'Run cron job to sync sections.'
+  route_name: helfi_ahjo.cron_job
+  menu_name: admin
+  parent: helfi_ahjo.settings

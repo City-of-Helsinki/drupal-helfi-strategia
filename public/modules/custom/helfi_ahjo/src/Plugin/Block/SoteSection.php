@@ -48,7 +48,7 @@ class SoteSection extends BlockBase implements ContainerFactoryPluginInterface {
    *   The module extension list.
    */
   public function __construct(array $configuration,
-                              $plugin_id,
+                                    $plugin_id,
                               array $plugin_definition,
                               AhjoService $ahjoService) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -73,6 +73,7 @@ class SoteSection extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $max_age = 0;
+
     return [
       '#theme' => 'hierarchical_taxonomy_tree',
       '#menu_tree' => $this->ahjoService->showDataAsTree(),
@@ -96,4 +97,5 @@ class SoteSection extends BlockBase implements ContainerFactoryPluginInterface {
   }
 
 }
+
 

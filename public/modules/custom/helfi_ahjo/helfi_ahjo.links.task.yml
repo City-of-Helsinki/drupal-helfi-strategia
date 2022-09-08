@@ -1,0 +1,10 @@
+helfi_ahjo.config:
+  route_name : helfi_ahjo.config
+  title: Ahjo Configurations
+  base_route: helfi_ahjo.config
+  weight: 0
+helfi_ahjo.cron_job:
+  route_name : helfi_ahjo.cron_job
+  title: Ahjo Cron Job
+  base_route: helfi_ahjo.config
+  weight: 0

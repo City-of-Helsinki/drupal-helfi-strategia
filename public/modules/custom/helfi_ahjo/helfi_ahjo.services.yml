@@ -4,4 +4,4 @@ services:
     arguments: [ '@entity_type.manager' ]
   helfi_ahjo.ahjo_service:
     class: Drupal\helfi_ahjo\Services\AhjoService
-    arguments: [ '@extension.list.module', '@helfi_ahjo.taxonomy_utils', '@entity_type.manager' ]
+    arguments: [ '@extension.list.module', '@helfi_ahjo.taxonomy_utils', '@entity_type.manager', '@http_client' ]

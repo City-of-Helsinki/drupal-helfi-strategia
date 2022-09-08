@@ -1,0 +1,14 @@
+helfi_ahjo.config:
+  path: '/admin/config/ahjo'
+  defaults:
+    _form: '\Drupal\helfi_ahjo\Form\AhjoConfigForm'
+    _title: 'Helfi Ahjo Config'
+  requirements:
+    _permission: 'administer site configuration'
+helfi_ahjo.cron_job:
+  path: '/admin/config/ahjo/cron'
+  defaults:
+    _form: '\Drupal\helfi_ahjo\Form\AhjoCronJob'
+    _title: 'Helfi Ahjo Cron Job'
+  requirements:
+    _permission: 'administer site configuration'

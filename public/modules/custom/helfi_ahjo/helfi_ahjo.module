@@ -41,22 +41,38 @@ function helfi_ahjo_theme($existing, $type, $theme, $path) {
  * Implements hook_cron().
  */
 function helfi_ahjo_cron() {
+  $config = \Drupal::configFactory()->get('helfi_ahjo.config');
   /** @var int $last_run */
-  $last_run = \Drupal::state()->get('helfi_gredi_image.last_run', 0);
+  $last_run = \Drupal::state()->get('helfi_ahjo.last_run', 0);
   /** @var int $request_time */
   $request_time = \Drupal::time()->getRequestTime();
-  // If 60 minutes passed since last time.
-  if (($request_time - $last_run) > 60 * 60 * 24) {
-    $jsonFile = Json::decode(file_get_contents(
-      \Drupal::service('extension.list.module')->getPath('helfi_ahjo')
-      . '/helsinkiorgchartesimerkki.json'));
+  $interval = $config->get('sync_interval') ?? 3600;
 
-    $queue = \Drupal::queue('sote_section_update');
-    foreach ($jsonFile as $section) {
-      $queue->createItem($section);
-
-
-    }
-
+  // Check if we need to execute.
+  if ($interval !== -1 && $last_run + $interval >= $request_time) {
+    return;
   }
+
+  $count = \Drupal::queue('sote_section_update')->numberOfItems();
+
+  if ($count > 0) {
+    $logger = \Drupal::service('logger.factory')->get('helfi_ahjo');
+    $logger->info('Cron execution has been cancelled because the queue @queue_name is not empty (@count items)..', [
+      '@count' => $count,
+      '@queue_name' => 'Acquia DAM Asset Refresh',
+    ]);
+    return;
+  }
+
+  $jsonFile = Json::decode(\Drupal::service('helfi_ahjo.ahjo_service')->fetchDataFromRemote());
+  $queue = \Drupal::queue('sote_section_update');
+  \Drupal::service('helfi_ahjo.ahjo_service')->addToCron($jsonFile, $queue);
+
+  $count = \Drupal::queue('sote_section_update')->numberOfItems();
+
+  /** @var \Drupal\Core\Logger\LoggerChannelInterface $logger */
+  $logger = \Drupal::service('logger.factory')->get('helfi_ahjo');
+  $logger->info('Total items in the queue: @count.', ['@count' => $count]);
+
+  \Drupal::state()->set('helfi_ahjo.last_run', $request_time);
 }

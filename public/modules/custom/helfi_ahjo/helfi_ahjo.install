@@ -22,32 +22,27 @@ function helfi_ahjo_install() {
     $vocabulary->save();
   }
 
-  FieldStorageConfig::create([
-    'field_name' => 'field_external_id',
-    'entity_type' => 'taxonomy_term',
-    'type' => 'text',
-  ])->save();
+  $field_list = [
+    'field_external_id' => 'External ID',
+    'field_external_parent_id' => 'External Parent ID',
+    'field_section_type' => 'Section Type',
+    'field_section_type_id' => 'Section Type ID',
+  ];
 
-  FieldConfig::create([
-    'field_name' => 'field_external_id',
-    'entity_type' => 'taxonomy_term',
-    'bundle' => 'sote_section',
-    'label' => 'External ID',
-  ])->save();
+  foreach ($field_list as $key => $label) {
+    FieldStorageConfig::create([
+      'field_name' => $key,
+      'entity_type' => 'taxonomy_term',
+      'type' => 'text',
+    ])->save();
 
-  FieldStorageConfig::create([
-    'field_name' => 'field_external_parent_id',
-    'entity_type' => 'taxonomy_term',
-    'type' => 'text',
-  ])->save();
-
-  FieldConfig::create([
-    'field_name' => 'field_external_parent_id',
-    'entity_type' => 'taxonomy_term',
-    'bundle' => 'sote_section',
-    'label' => 'External Parent ID',
-  ])->save();
-
+    FieldConfig::create([
+      'field_name' => $key,
+      'entity_type' => 'taxonomy_term',
+      'bundle' => 'sote_section',
+      'label' => $label,
+    ])->save();
+  }
 }
 
 /**
@@ -57,9 +52,3 @@ function helfi_ahjo_uninstall($is_syncing) {
   Vocabulary::load('sote_section')->delete();
 }
 
-/**
- * Implements hook_update_N().
- */
-function helfi_ahjo_update_8101(&$sandbox) {
-  \Drupal::service('helfi_ahjo.ahjo_service')->insertData();
-}
