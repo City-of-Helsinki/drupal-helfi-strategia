@@ -7,6 +7,7 @@ use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleExtensionList;
+use Drupal\helfi_ahjo\AhjoServiceInterface;
 use Drupal\helfi_ahjo\Utils\TaxonomyUtils;
 use Drupal\taxonomy\Entity\Term;
 use GuzzleHttp\ClientInterface;
@@ -17,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * Factory class for Client.
  */
-class AhjoService implements ContainerInjectionInterface {
+class AhjoService implements ContainerInjectionInterface, AhjoServiceInterface {
 
   /**
    * The module extension list.
@@ -91,11 +92,7 @@ class AhjoService implements ContainerInjectionInterface {
   }
 
   /**
-   * Get data from api and add it as taxonomy terms tree.
-   *
-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
-   * @throws \Drupal\Core\Entity\EntityStorageException
+   * {@inheritDoc}
    */
   public function fetchDataFromRemote(): string {
     $config = self::getConfig();
@@ -106,6 +103,9 @@ class AhjoService implements ContainerInjectionInterface {
     return $response->getBody()->getContents();
   }
 
+  /**
+   * Call createTaxonomyTermsTree() and syncTaxonomyTree functions.
+   */
   public function insertSyncData() {
     $this->createTaxonomyTermsTree($this->fetchDataFromRemote());
     $this->syncTaxonomyTermsTree();
@@ -118,17 +118,17 @@ class AhjoService implements ContainerInjectionInterface {
    *   Data param.
    * @param array $hierarchy
    *   Hierarchy param.
-   * @param bool|string $parentId
+   * @param string|null $parentId
    *   Parent id param.
    *
-   * @return array|mixed
+   * @return array
    *   Retrun array or mixed value.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  private function createTaxonomyTermsTree($data, &$hierarchy = [], $parentId = NULL) {
+  private function createTaxonomyTermsTree($data, array &$hierarchy = [], $parentId = NULL): array {
     if (!is_array($data)) {
       $data = Json::decode($data);
     }
@@ -152,8 +152,9 @@ class AhjoService implements ContainerInjectionInterface {
           'vid' => 'sote_section',
           'field_external_id' => $content['ID'],
           'field_external_parent_id' => $parentId ?? 0,
+          'field_section_type' => $content['Type'],
+          'field_section_type_id' => $content['TypeId'],
         ]);
-
         $term->save();
       }
       if (isset($content['OrganizationLevelBelow'])) {
@@ -164,12 +165,15 @@ class AhjoService implements ContainerInjectionInterface {
     return $hierarchy;
   }
 
-  public function addToCron($data, $queue = NULL, $parentId = NULL) {
+  /**
+   * {@inheritDoc}
+   */
+  public function addToCron($data, $queue, $parentId = NULL) {
     if (!is_array($data)) {
       $data = Json::decode($data);
     }
 
-    foreach ($data as $key => $section) {
+    foreach ($data as $section) {
       $section['parentId'] = $parentId ?? 0;
       $queue->createItem($section);
 
@@ -179,6 +183,9 @@ class AhjoService implements ContainerInjectionInterface {
     }
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public function syncTaxonomyTermsTree() {
     $terms = $this->entityTypeManager
       ->getStorage('taxonomy_term')
@@ -201,13 +208,9 @@ class AhjoService implements ContainerInjectionInterface {
   }
 
   /**
-   * Create taxonomy tree for twig.
-   *
-   * @return array
-   *   Return taxonomy tree.
+   * {@inheritDoc}
    */
   public function showDataAsTree() {
-    dump(Json::decode($this->fetchDataFromRemote()));
     return $this->taxonomyUtils->load('sote_section', TRUE);
   }
 

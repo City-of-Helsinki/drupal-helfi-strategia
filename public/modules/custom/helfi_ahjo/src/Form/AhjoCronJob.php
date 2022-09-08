@@ -6,6 +6,7 @@ use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Cron;
+use Drupal\Core\CronInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -37,7 +38,7 @@ class AhjoCronJob extends ConfigFormBase {
   /**
    * Cron service.
    *
-   * @var \Drupal\Core\Cron
+   * @var \Drupal\Core\CronInterface
    */
   protected $cron;
 
@@ -78,7 +79,7 @@ class AhjoCronJob extends ConfigFormBase {
    *   Services for Ahjo API.
    * @param \Drupal\Core\Queue\QueueFactory $queue
    *   Service for queue.
-   * @param \Drupal\Core\Cron $cron
+   * @param \Drupal\Core\CronInterface $cron
    *   Service for cron.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerFactory
    *   Service for logger factory.
@@ -93,7 +94,7 @@ class AhjoCronJob extends ConfigFormBase {
     ConfigFactoryInterface $config_factory,
     AhjoService $ahjoService,
     QueueFactory $queue,
-    Cron $cron,
+    CronInterface $cron,
     LoggerChannelFactoryInterface $loggerFactory,
     StateInterface $state,
     TimeInterface $time,

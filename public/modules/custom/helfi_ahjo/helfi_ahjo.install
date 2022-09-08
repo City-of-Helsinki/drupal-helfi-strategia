@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\taxonomy\Entity\Vocabulary;
@@ -34,15 +36,17 @@ function helfi_ahjo_install() {
       'field_name' => $key,
       'entity_type' => 'taxonomy_term',
       'type' => 'text',
-    ])->save();
+    ])->setSetting('region', 'content')->save();
 
     FieldConfig::create([
       'field_name' => $key,
       'entity_type' => 'taxonomy_term',
       'bundle' => 'sote_section',
       'label' => $label,
-    ])->save();
+      'required' => TRUE,
+    ])->setSetting('region', 'content')->save();
   }
+
 }
 
 /**

@@ -5,8 +5,7 @@ use Drupal\Component\Serialization\Json;
 /**
  * Implements hook_entity_form_display_alter().
  */
-function helfi_ahjo_entity_form_display_alter(EntityFormDisplayInterface $form_display, array $context)
-{
+function helfi_ahjo_entity_form_display_alter(EntityFormDisplayInterface $form_display, array $context) {
   if ($context['entity_type'] == 'taxonomy_term' && $context['form_mode'] == 'default') {
     $form_display
       ->setComponent('field_external_id', [
@@ -15,7 +14,28 @@ function helfi_ahjo_entity_form_display_alter(EntityFormDisplayInterface $form_d
       ->setComponent('field_external_parent_id', [
         'region' => 'content',
       ]);
+    $form_display
+      ->setComponent('field_section_type', [
+        'region' => 'content',
+      ])
+      ->setComponent('field_section_type_id', [
+        'region' => 'content',
+      ]);
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function helfi_ahjo_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form['#form_id'] == 'taxonomy_term_sote_section_form') {
+    $form['field_external_id']['widget'][0]['#type'] = 'textfield';
+    $form['field_external_parent_id']['widget'][0]['#type'] = 'textfield';
+    $form['field_section_type']['widget'][0]['#type'] = 'textfield';
+    $form['field_section_type_id']['widget'][0]['#type'] = 'textfield';
+  }
+
 }
 
 /**

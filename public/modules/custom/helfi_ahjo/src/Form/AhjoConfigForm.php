@@ -6,6 +6,8 @@ use Drupal\Component\Utility\Xss;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\helfi_ahjo\Services\AhjoService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -22,16 +24,40 @@ class AhjoConfigForm extends ConfigFormBase {
   protected $ahjoService;
 
   /**
+   * Messenger service.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
+  /**
+   * Logger factory service.
+   *
+   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
+   */
+  protected $loggerFactory;
+
+  /**
    * Constructor.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The factory for configuration objects.
    * @param \Drupal\helfi_ahjo\Services\AhjoService $ahjoService
    *   Services for Ahjo API.
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   Service for messenger.
+   * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerFactory
+   *   Service for logger factory.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, AhjoService $ahjoService) {
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    AhjoService $ahjoService,
+    MessengerInterface $messenger,
+    LoggerChannelFactoryInterface $loggerFactory) {
     parent::__construct($config_factory);
     $this->ahjoService = $ahjoService;
+    $this->messenger = $messenger;
+    $this->loggerFactory = $loggerFactory;
   }
 
   /**
@@ -40,7 +66,9 @@ class AhjoConfigForm extends ConfigFormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory'),
-      $container->get('helfi_ahjo.ahjo_service')
+      $container->get('helfi_ahjo.ahjo_service'),
+      $container->get('messenger'),
+      $container->get('logger.factory')
     );
   }
 
@@ -130,6 +158,7 @@ class AhjoConfigForm extends ConfigFormBase {
       ->save();
 
     $this->ahjoService->insertSyncData();
+    $this->messenger->addStatus('Settings are updated and sections imported!');
   }
 
 }
