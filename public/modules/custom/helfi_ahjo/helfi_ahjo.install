@@ -21,6 +21,7 @@ function helfi_ahjo_install() {
       'description' => '',
       'name' => 'Sote Section',
     ]);
+    $vocabulary->setThirdPartySetting('organigrams', 'is_organigram', TRUE);
     $vocabulary->save();
   }
 
@@ -36,7 +37,7 @@ function helfi_ahjo_install() {
       'field_name' => $key,
       'entity_type' => 'taxonomy_term',
       'type' => 'text',
-    ])->setSetting('region', 'content')->save();
+    ])->save();
 
     FieldConfig::create([
       'field_name' => $key,
@@ -44,7 +45,7 @@ function helfi_ahjo_install() {
       'bundle' => 'sote_section',
       'label' => $label,
       'required' => TRUE,
-    ])->setSetting('region', 'content')->save();
+    ])->save();
   }
 
 }

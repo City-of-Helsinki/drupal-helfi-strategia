@@ -110,11 +110,25 @@ class AhjoConfigForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['organigram_max_depth'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Organigram Max Depth'),
+      '#default_value' => $config->get('organigram_max_depth'),
+      '#description' => $this->t('Default: 3'),
+      '#required' => TRUE,
+    ];
+
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Save Ahjo Configuration and Import Data'),
+      '#value' => $this->t('Save Ahjo Configuration'),
       '#button_type' => 'primary',
+    ];
+    $form['actions']['import_sync'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Import Data and Sync'),
+      '#button_type' => 'primary',
+      '#submit' => ['::importSyncData'],
     ];
 
     return $form;
@@ -146,6 +160,14 @@ class AhjoConfigForm extends ConfigFormBase {
       );
     }
 
+    $organigram_max_depth = Xss::filter($form_state->getValue('organigram_max_depth'));
+    if (!$organigram_max_depth || is_int($organigram_max_depth)) {
+      $form_state->setErrorByName(
+        'organigram_max_depth',
+        $this->t('Provided max depth is not valid.')
+      );
+    }
+
   }
 
   /**
@@ -155,10 +177,18 @@ class AhjoConfigForm extends ConfigFormBase {
     $this->config('helfi_ahjo.config')
       ->set('base_url', $form_state->getValue('helfi_ahjo_base_url'))
       ->set('api_key', $form_state->getValue('helfi_ahjo_api_key'))
+      ->set('organigram_max_depth', $form_state->getValue('organigram_max_depth'))
       ->save();
+    $this->messenger->addStatus('Settings are updated!');
 
+  }
+
+  /**
+   * Import data and sync it.
+   */
+  public function importSyncData(array &$form, FormStateInterface $form_state) {
     $this->ahjoService->insertSyncData();
-    $this->messenger->addStatus('Settings are updated and sections imported!');
+    $this->messenger->addStatus('Sections imported! and synchronized!');
   }
 
 }

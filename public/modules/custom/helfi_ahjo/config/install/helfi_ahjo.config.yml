@@ -1,2 +1,3 @@
 base_url: ''
 api_key: ''
+organigram_max_depth: '3'

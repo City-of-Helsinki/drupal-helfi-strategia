@@ -173,7 +173,7 @@ class AhjoCronJob extends ConfigFormBase {
     ];
     $form['actions']['run_cron'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Run Cron Job'),
+      '#value' => $this->t('Run Cron Job Now'),
       '#button_type' => 'primary',
       '#submit' => ['::runCronNow'],
     ];

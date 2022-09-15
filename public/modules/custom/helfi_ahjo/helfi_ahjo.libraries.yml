@@ -9,3 +9,15 @@ hierarchical_taxonomy_tree:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+organigram:
+  version: VERSION
+  css:
+    theme:
+      css/orgchart.css: { }
+  js:
+    js/orgchart.js: {}
+    js/buildTree.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

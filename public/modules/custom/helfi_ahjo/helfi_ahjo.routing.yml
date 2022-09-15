@@ -12,3 +12,10 @@ helfi_ahjo.cron_job:
     _title: 'Helfi Ahjo Cron Job'
   requirements:
     _permission: 'administer site configuration'
+helfi_ahjo.organizations:
+  path: '/organizationchart'
+  defaults:
+    _controller: '\Drupal\helfi_ahjo\Controller\OrganizationChart::viewOrganigram'
+    _title: 'Organigram'
+  requirements:
+    _permission: 'access content'

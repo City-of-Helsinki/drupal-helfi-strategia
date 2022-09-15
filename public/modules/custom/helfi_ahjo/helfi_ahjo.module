@@ -13,12 +13,14 @@ function helfi_ahjo_entity_form_display_alter(EntityFormDisplayInterface $form_d
       ])
       ->setComponent('field_external_parent_id', [
         'region' => 'content',
-      ]);
-    $form_display
+      ])
       ->setComponent('field_section_type', [
         'region' => 'content',
       ])
       ->setComponent('field_section_type_id', [
+        'region' => 'content',
+      ])
+      ->setComponent('field_o_position', [
         'region' => 'content',
       ]);
   }
@@ -51,6 +53,11 @@ function helfi_ahjo_theme($existing, $type, $theme, $path) {
         'current_depth' => 0,
         'max_depth' => 0,
         'collapsible' => NULL,
+      ],
+    ],
+    'organigram_container' => [
+      'variables' => [
+        'menu_tree' => [],
       ],
     ],
   ];
@@ -93,6 +100,6 @@ function helfi_ahjo_cron() {
   /** @var \Drupal\Core\Logger\LoggerChannelInterface $logger */
   $logger = \Drupal::service('logger.factory')->get('helfi_ahjo');
   $logger->info('Total items in the queue: @count.', ['@count' => $count]);
-
+  \Drupal::service('helfi_ahjo.ahjo_service')->syncTaxonomyTermsTree();
   \Drupal::state()->set('helfi_ahjo.last_run', $request_time);
 }
