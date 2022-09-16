@@ -10,7 +10,6 @@ use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\helfi_ahjo\AhjoServiceInterface;
 use Drupal\helfi_ahjo\Utils\TaxonomyUtils;
 use Drupal\taxonomy\Entity\Term;
-use Drupal\taxonomy\Entity\Vocabulary;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -213,7 +212,7 @@ class AhjoService implements ContainerInjectionInterface, AhjoServiceInterface {
    * {@inheritDoc}
    */
   public function showDataAsTree() {
-    return $this->taxonomyUtils->load('sote_section', TRUE);
+    return $this->taxonomyUtils->load('sote_section');
   }
 
 }

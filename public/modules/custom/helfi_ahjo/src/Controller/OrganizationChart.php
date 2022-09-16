@@ -55,7 +55,7 @@ class OrganizationChart extends ControllerBase {
    */
   public function viewOrganigram() {
     $max_age = 0;
-//    dump(count($this->taxonomyUtils->loadJs('sote_section')));
+
     return [
       '#theme' => 'organigram_container',
       '#cache' => [

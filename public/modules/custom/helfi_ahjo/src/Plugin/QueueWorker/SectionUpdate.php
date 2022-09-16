@@ -2,11 +2,8 @@
 
 namespace Drupal\helfi_ahjo\Plugin\QueueWorker;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\taxonomy\Entity\Term;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * A worker that updates metadata for every image.
