@@ -1,6 +1,7 @@
 <?php
 use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_entity_form_display_alter().
@@ -29,7 +30,7 @@ function helfi_ahjo_entity_form_display_alter(EntityFormDisplayInterface $form_d
 /**
  * Implements hook_form_alter().
  */
-function helfi_ahjo_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+function helfi_ahjo_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
   if ($form['#form_id'] == 'taxonomy_term_sote_section_form') {
     $form['field_external_id']['widget'][0]['#type'] = 'textfield';

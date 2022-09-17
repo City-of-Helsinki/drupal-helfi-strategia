@@ -2,7 +2,6 @@
 namespace Drupal\helfi_ahjo\Utils;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\helfi_ahjo\Services\AhjoService;
 
 /**
  * Class TaxonomyUtils to create taxonomy tree.
@@ -125,11 +124,12 @@ class TaxonomyUtils {
     if ($object->depth != 0) {
       return [];
     }
-
+    $taxonomyTerm = $this->entityTypeManager->getStorage('taxonomy_term')->load($object->tid);
     $tree[$key] = [
       'id' => $object->tid,
       'pid' => $object->parents[0],
       'name' => $object->name,
+      'type' => 'Type: ' . $taxonomyTerm->get('field_section_type')->value,
     ];
 
     $object_children = &$tree;

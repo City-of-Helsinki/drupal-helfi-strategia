@@ -3,19 +3,9 @@
 namespace Drupal\helfi_ahjo\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Component\Serialization\Json;
-use Drupal\Core\Cache\Cache;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\helfi_ahjo\Services\AhjoService;
-use Drupal\taxonomy\Entity\Vocabulary;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\Core\Database\Connection;
-use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Routing\ResettableStackedRouteMatchInterface;
 
 /**
  * Provides a 'Hello' Block.

@@ -9,6 +9,7 @@ hierarchical_taxonomy_tree:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+    - core/once
 organigram:
   version: VERSION
   css:
@@ -21,3 +22,4 @@ organigram:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+    - core/once
