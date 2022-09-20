@@ -12,9 +12,8 @@
   {% endif %}
   <a href="{{ item.url }}" class="block-taxonomymenu__link">{{ item.name }}{% if item.show_count == true %} [{{ item.entities|length }}]{% endif %}
     {% if item.subitem and current_depth < max_depth %}
-    {% if item.interactive_parent %}
       <i class="arrow-right parent-toggle" aria-hidden="true"></i><span class="visually-hidden">Expand Secondary Navigation Menu</span>
-    {% endif %} {% endif %}</a>
+{% endif %}</a>
   {% if item.subitem and current_depth < max_depth %}
 
   {% if collapsible == TRUE %}
