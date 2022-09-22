@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba7785c00f8558a4df227c6f1924f466",
+    "content-hash": "bb0a01b451651b09bac018b52f7ef0ee",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4049,16 +4049,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "4.0.0-rc6",
+            "version": "dev-UHF-X-4.0.0-rc",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "98a00cce09593da83189c880dd98d62b8758a124"
+                "reference": "b8710aab79f82edefd4c152bd69bdfb2c7e1bb28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/98a00cce09593da83189c880dd98d62b8758a124",
-                "reference": "98a00cce09593da83189c880dd98d62b8758a124",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/b8710aab79f82edefd4c152bd69bdfb2c7e1bb28",
+                "reference": "b8710aab79f82edefd4c152bd69bdfb2c7e1bb28",
                 "shasum": ""
             },
             "require": {
@@ -4073,10 +4073,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/4.0.0-rc6",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/UHF-X-4.0.0-rc",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2022-09-21T11:58:57+00:00"
+            "time": "2022-09-22T09:01:35+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -17643,6 +17643,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/hdbt": 20,
         "drupal/helfi_drupal_tools": 20,
         "drupal/helfi_navigation": 20
     },
