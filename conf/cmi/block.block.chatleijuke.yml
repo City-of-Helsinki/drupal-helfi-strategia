@@ -1,5 +1,5 @@
-uuid: 05865586-1549-49cb-beae-ffce86d8811a
-langcode: en
+uuid: c1580372-3c2f-49ea-b3cb-118588cc4df0
+langcode: fi
 status: true
 dependencies:
   module:
@@ -7,17 +7,19 @@ dependencies:
     - system
   theme:
     - hdbt
-id: genesyschatneuvonta
+id: chatleijuke
 theme: hdbt
 region: attachments
 weight: 0
 provider: null
-plugin: genesys_neuvonta
+plugin: chat_leijuke
 settings:
-  id: genesys_neuvonta
-  label: 'Genesys Chat (Neuvonta)'
+  id: chat_leijuke
+  label: 'Chat Leijuke Neuvonta'
   label_display: '0'
   provider: helfi_platform_config
+  chat_title: 'Kysy kaupungista!'
+  chat_selection: genesys_neuvonta
 visibility:
   request_path:
     id: request_path
