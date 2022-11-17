@@ -30,7 +30,6 @@ class SectionUpdate extends QueueWorkerBase {
       $loadTerm->set('name', $data['Name']);
       if (isset($data['parentId'])) {
         $loadTerm->set('parent', $data['parentId']);
-        $loadTerm->set('parent', $data['parentId']);
       }
 
       $loadTerm->set('field_section_type', $data['Type']);

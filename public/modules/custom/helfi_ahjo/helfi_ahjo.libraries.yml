@@ -1,5 +1,4 @@
 hierarchical_taxonomy_tree:
-  version: VERSION
   css:
     theme:
       css/hierarchical-taxonomy-tree.css: {}
@@ -11,7 +10,6 @@ hierarchical_taxonomy_tree:
     - core/drupalSettings
     - core/once
 organigram:
-  version: VERSION
   css:
     theme:
       css/orgchart.css: { }
