@@ -341,3 +341,9 @@ ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
   }
 
 }
+
+@media (min-width: 768px) {
+  .toolbar-horizontal .layout-main-wrapper * {
+    margin-top: 1.1%;
+  }
+}
