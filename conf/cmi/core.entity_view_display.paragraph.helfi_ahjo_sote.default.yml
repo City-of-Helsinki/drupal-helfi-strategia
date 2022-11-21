@@ -1,0 +1,14 @@
+uuid: d6419373-518b-48b9-a52a-991f71ab2c8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.helfi_ahjo_sote.field_max_depth
+    - paragraphs.paragraphs_type.helfi_ahjo_sote
+id: paragraph.helfi_ahjo_sote.default
+targetEntityType: paragraph
+bundle: helfi_ahjo_sote
+mode: default
+content: {  }
+hidden:
+  field_max_depth: true

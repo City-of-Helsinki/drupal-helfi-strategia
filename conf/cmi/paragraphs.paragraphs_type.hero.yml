@@ -1,7 +1,12 @@
 uuid: 747a11be-5fcc-46cd-966c-cb87a46c0546
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 _core:
   default_config_hash: 31vwh07b3R-C4R_1h0Et07iqgNhXLGPlx8UZRTEu8Uo
 id: hero

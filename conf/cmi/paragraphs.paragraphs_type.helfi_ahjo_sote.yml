@@ -1,0 +1,15 @@
+uuid: beb0991b-aaa9-469b-9dd3-3bf6f93f49d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: helfi_ahjo_sote
+label: 'Helfi Ahjo Sote'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

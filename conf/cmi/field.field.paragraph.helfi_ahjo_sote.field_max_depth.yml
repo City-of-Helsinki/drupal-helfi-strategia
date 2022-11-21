@@ -1,0 +1,23 @@
+uuid: 46ce352b-124b-4189-97ca-a7c4f420da1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_max_depth
+    - paragraphs.paragraphs_type.helfi_ahjo_sote
+id: paragraph.helfi_ahjo_sote.field_max_depth
+field_name: field_max_depth
+entity_type: paragraph
+bundle: helfi_ahjo_sote
+label: 'Max Depth'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer
