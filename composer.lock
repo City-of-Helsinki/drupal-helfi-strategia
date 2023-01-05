@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f8cf9c8b08fe93fbc862c3fa5194402",
+    "content-hash": "4883494297f6e5f2cc6542389062d7ec",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4505,16 +4505,16 @@
         },
         {
             "name": "drupal/helfi_proxy",
-            "version": "2.3.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy.git",
-                "reference": "cae301f5f3b2d5a2dc723cbc03d6cc9a47bec6f7"
+                "reference": "569383371028ec22e3a82c9ebc2c20ddced5a075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/cae301f5f3b2d5a2dc723cbc03d6cc9a47bec6f7",
-                "reference": "cae301f5f3b2d5a2dc723cbc03d6cc9a47bec6f7",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-proxy/zipball/569383371028ec22e3a82c9ebc2c20ddced5a075",
+                "reference": "569383371028ec22e3a82c9ebc2c20ddced5a075",
                 "shasum": ""
             },
             "require": {
@@ -4539,10 +4539,10 @@
             ],
             "description": "Provides various fixes so we can serve multiple Drupal instances in one domain.",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/2.3.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/tree/3.0.0",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-proxy/issues"
             },
-            "time": "2022-11-08T11:03:23+00:00"
+            "time": "2022-11-10T04:53:14+00:00"
         },
         {
             "name": "drupal/helfi_tpr",
