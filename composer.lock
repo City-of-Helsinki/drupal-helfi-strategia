@@ -4489,7 +4489,7 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "2.16.6",
+            "version": "2.16.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
