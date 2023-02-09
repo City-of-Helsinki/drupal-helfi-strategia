@@ -19,7 +19,7 @@ settings:
   label: 'Chat Leijuke - TALPA Watson'
   label_display: visible
   provider: helfi_platform_config
-  chat_title: Talbotti
+  chat_title: 'Aloita chatti'
   chat_selection: watson_talpa
 visibility:
   language:
