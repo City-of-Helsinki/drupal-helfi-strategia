@@ -10,7 +10,6 @@ dependencies:
     - media.type.helfi_chart
     - media.type.image
     - media.type.remote_video
-    - media.type.soundcloud
     - node.type.announcement
     - node.type.landing_page
     - node.type.news_item
@@ -101,7 +100,6 @@ permissions:
   - 'create paragraph library item'
   - 'create remote entities'
   - 'create remote_video media'
-  - 'create soundcloud media'
   - 'create terms in keywords'
   - 'create terms in news_tags'
   - 'create url aliases'
@@ -117,7 +115,6 @@ permissions:
   - 'delete any news_item content'
   - 'delete any page content'
   - 'delete any remote_video media'
-  - 'delete any soundcloud media'
   - 'delete content translations'
   - 'delete landing_page revisions'
   - 'delete media'
@@ -131,7 +128,6 @@ permissions:
   - 'delete own news_item content'
   - 'delete own page content'
   - 'delete own remote_video media'
-  - 'delete own soundcloud media'
   - 'delete page revisions'
   - 'delete remote entities'
   - 'delete terms in keywords'
@@ -145,7 +141,6 @@ permissions:
   - 'edit any news_item content'
   - 'edit any page content'
   - 'edit any remote_video media'
-  - 'edit any soundcloud media'
   - 'edit own announcement content'
   - 'edit own file media'
   - 'edit own hel_map media'
@@ -155,7 +150,6 @@ permissions:
   - 'edit own news_item content'
   - 'edit own page content'
   - 'edit own remote_video media'
-  - 'edit own soundcloud media'
   - 'edit paragraph library item'
   - 'edit remote entities'
   - 'edit terms in keywords'
@@ -186,7 +180,6 @@ permissions:
   - 'translate news_tags taxonomy_term'
   - 'translate page node'
   - 'translate remote_video media'
-  - 'translate soundcloud media'
   - 'translate tpr_errand_service'
   - 'translate tpr_service'
   - 'translate tpr_service_channel'
