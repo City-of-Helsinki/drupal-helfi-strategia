@@ -3,21 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.full_html
-    - filter.format.minimal
     - rest.resource.helfi_global_mobile_menu
   module:
     - eu_cookie_compliance
-    - filter
     - helfi_api_base
     - helfi_tpr
     - media
-    - system
     - rest
+    - system
+    - toolbar
 _core:
   default_config_hash: 83Nuup-6oYkkdAsvg3nrR2pBOgtTXEV1JrzpCCLkYLM
 id: authenticated
-label: 'Authenticated user'
+label: 'Sisäänkirjautunut käyttäjä'
 weight: 1
 is_admin: false
 permissions:
