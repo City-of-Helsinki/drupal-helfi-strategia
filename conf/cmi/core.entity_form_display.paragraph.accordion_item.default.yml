@@ -2,16 +2,16 @@ uuid: 38f5a1f9-bc3a-430c-a369-c399663417a8
 langcode: en
 status: true
 dependencies:
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion_item
   config:
     - field.field.paragraph.accordion_item.field_accordion_item_content
     - field.field.paragraph.accordion_item.field_accordion_item_heading
     - field.field.paragraph.accordion_item.field_icon
-    - paragraphs.paragraphs_type.accordion_item
   module:
     - paragraphs
-    - select2_icon
-_core:
-  default_config_hash: xQxl3DJdyXGfIMoF68zkvPXCgW-oWKdsAFKm2mhn7PM
+    - hdbt_admin_tools
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item

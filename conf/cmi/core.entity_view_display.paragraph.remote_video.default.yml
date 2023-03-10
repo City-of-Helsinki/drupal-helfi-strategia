@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.remote_video
   module:
     - text
-_core:
-  default_config_hash: gmvd3NpBqlZGO-d_PTKw53sTWYa01VHkHeH0-D1GGLI
 id: paragraph.remote_video.default
 targetEntityType: paragraph
 bundle: remote_video
@@ -60,7 +58,4 @@ content:
     region: content
 hidden:
   field_iframe_title: true
-  field_remote_video_description: true
-  field_remote_video_title: true
-  field_remote_video_video_desc: true
-  field_remote_video_video_title: true
+  search_api_excerpt: true

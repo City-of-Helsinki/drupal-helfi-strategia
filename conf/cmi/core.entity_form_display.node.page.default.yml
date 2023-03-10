@@ -13,13 +13,13 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - hdbt_admin_tools
     - media_library
     - metatag
     - paragraphs
     - path
+    - publication_date
     - scheduler
-_core:
-  default_config_hash: f5M5pHQck1Hx-L9w995ZeW8AoZtpOKtLtW6ZOy2ezro
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -116,6 +116,7 @@ content:
     region: content
     settings:
       sidebar: false
+      use_details: true
     third_party_settings: {  }
   field_sidebar_content:
     type: paragraphs
@@ -177,6 +178,11 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
