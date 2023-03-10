@@ -2,12 +2,13 @@ uuid: 4b9f86e2-3ed0-4651-862a-8236114ea9f5
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - helfi_base_content
   module:
     - entity_reference_revisions
     - node
     - paragraphs
-_core:
-  default_config_hash: 1YzXf_JJz7epb6-RuHKcK4j0oUU2yif53ZHQw96j3bI
 id: node.field_hero
 field_name: field_hero
 entity_type: node

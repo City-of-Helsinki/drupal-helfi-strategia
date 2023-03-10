@@ -1,4 +1,5 @@
 uuid: f524932d-9b31-42d3-924c-c3d76193b8c8
+config_rewrite: replace
 langcode: en
 status: true
 dependencies:
@@ -7,8 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.from_library
   module:
     - select2
-_core:
-  default_config_hash: RBhuX9npNnq2pmFG3bnj9977tRJQYZ1VTb45-BHjmqE
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -19,7 +18,6 @@ content:
     weight: 0
     region: content
     settings:
-      width: 100%
       autocomplete: false
       match_operator: CONTAINS
       match_limit: 20

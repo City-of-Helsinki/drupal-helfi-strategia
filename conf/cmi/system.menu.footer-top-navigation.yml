@@ -2,9 +2,7 @@ uuid: 2888873b-fa72-4740-9ab9-132401fa2352
 langcode: und
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 2hOSHqwYGp6jDaE7507hPlKjTfWiJ2IsbTLwSq6Jnek
 id: footer-top-navigation
-label: 'Footer - Top navigation'
+label: 'Footer - Top navigation - First'
 description: 'Top navigation for footer block.'
 locked: false

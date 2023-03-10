@@ -13,8 +13,6 @@ dependencies:
     - entity_reference_revisions
     - metatag
     - user
-_core:
-  default_config_hash: LuhyhnsQ44RvvqWLYbkgiR7_IFywxuxn3pPaBDaYIgc
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -47,4 +45,5 @@ hidden:
   field_liftup_image: true
   langcode: true
   published_at: true
+  search_api_excerpt: true
   toc_enabled: true

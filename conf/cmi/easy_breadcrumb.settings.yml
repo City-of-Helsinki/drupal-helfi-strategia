@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: WIMIX8ESpGpyAoJDBXSTqTb7Th3BDpJP3CTLc6M7Rl4
 applies_admin_routes: false
 include_invalid_paths: false
 excluded_paths: ''
@@ -7,7 +5,7 @@ replaced_titles: ''
 custom_paths: ''
 include_home_segment: true
 alternative_title_field: ''
-home_segment_title: Decision-making
+home_segment_title: ''
 home_segment_keep: false
 include_title_segment: true
 title_from_page_when_available: true
