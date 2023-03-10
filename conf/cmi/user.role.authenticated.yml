@@ -20,10 +20,10 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access toolbar'
   - 'display eu cookie compliance popup'
+  - 'restful get helfi_global_mobile_menu'
   - 'view media'
   - 'view remote entities'
   - 'view tpr_service'
   - 'view tpr_unit'
-  - 'access toolbar'
-  - 'restful get helfi_global_mobile_menu'
