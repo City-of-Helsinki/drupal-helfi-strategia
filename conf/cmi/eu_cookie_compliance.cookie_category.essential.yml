@@ -2,6 +2,8 @@ uuid: 8eb1492b-85a3-4228-9941-0f528a6644ac
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: rGoImbDv3rEsa4i5S8EBti47kcF9V7nGB3DOiwIcyhs
 id: essential
 label: 'Essential cookies'
 description:
