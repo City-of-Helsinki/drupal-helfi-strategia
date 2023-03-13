@@ -16,6 +16,8 @@ dependencies:
     - entity_reference_revisions
     - metatag
     - user
+_core:
+  default_config_hash: kjY3udpiVEZdIZPO_RlDmhY5vnV6Z7Cod8EhCtX1oxg
 id: node.page.default
 targetEntityType: node
 bundle: page
