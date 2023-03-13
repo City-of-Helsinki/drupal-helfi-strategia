@@ -17,6 +17,8 @@ dependencies:
     - path
     - publication_date
     - scheduler
+_core:
+  default_config_hash: 2UzmhcoLdP813geh94iPT1sXBgLAMVxYuUQcmTqnl5M
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

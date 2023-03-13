@@ -7,6 +7,8 @@ dependencies:
     - media.type.hel_map
   module:
     - helfi_media_map
+_core:
+  default_config_hash: xWSewtEWch8WXKgsaRmJi4JxBLjRP0B3hD1JoodX99E
 id: media.hel_map.default
 targetEntityType: media
 bundle: hel_map

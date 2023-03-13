@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.from_library
   module:
     - select2
+_core:
+  default_config_hash: RBhuX9npNnq2pmFG3bnj9977tRJQYZ1VTb45-BHjmqE
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
