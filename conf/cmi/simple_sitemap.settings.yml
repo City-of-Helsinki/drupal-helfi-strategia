@@ -16,9 +16,3 @@ enabled_entity_types:
   - menu_link_content
   - tpr_service
   - tpr_unit
-  - tpr_service
-  - tpr_unit
-  - tpr_service
-  - tpr_unit
-  - tpr_service
-  - tpr_unit
