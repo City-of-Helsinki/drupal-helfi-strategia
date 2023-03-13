@@ -2,12 +2,12 @@ uuid: 3bacd6c9-e988-4702-a681-7a08084127ee
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.contact_card_listing
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.contact_card_listing
 id: paragraph.field_contact_card
 field_name: field_contact_card
 entity_type: paragraph

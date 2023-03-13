@@ -2,12 +2,12 @@ uuid: 5322ca4f-f97c-4f4c-9439-ac7f92366b1c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.contact_card
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.contact_card
 id: paragraph.field_contact_social_media
 field_name: field_contact_social_media
 entity_type: paragraph

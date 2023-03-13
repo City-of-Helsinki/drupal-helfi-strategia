@@ -2,9 +2,6 @@ uuid: d453eaef-b389-4913-9425-b2b335251a53
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - hdbt_admin_tools
   config:
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
@@ -16,6 +13,9 @@ dependencies:
   module:
     - hdbt_admin_tools
     - text
+  enforced:
+    module:
+      - hdbt_admin_tools
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
@@ -40,8 +40,8 @@ content:
     weight: 4
     region: content
     settings:
-      linkit_auto_link_text: false
       linkit_profile: helfi
+      linkit_auto_link_text: false
     third_party_settings: {  }
   field_banner_link_design:
     type: design_field_widget
