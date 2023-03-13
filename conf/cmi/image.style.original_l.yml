@@ -2,6 +2,8 @@ uuid: ed2e62fb-6ad8-49f4-9e82-bcd79cfe81b0
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: xNj4uho3-eLZgZEB-QW1gSHrWNfzDifsXlURLQDZGXE
 name: original_l
 label: 'Original L'
 effects:
