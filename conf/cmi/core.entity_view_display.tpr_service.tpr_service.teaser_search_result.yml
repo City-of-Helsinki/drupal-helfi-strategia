@@ -1,3 +1,4 @@
+uuid: 21d8204e-5c43-44b9-bbb2-4baf20ead564
 langcode: en
 status: true
 dependencies:
@@ -30,8 +31,8 @@ content:
       sort_order:
         ESERVICE:
           label: E-service
-          weight: 0
           show: false
+          weight: 0
         CHAT:
           label: Chat
           show: true
@@ -49,29 +50,29 @@ content:
           show: true
           weight: 4
         LOCAL:
-          label: Local service
-          weight: 5
+          label: 'Local service'
           show: false
+          weight: 5
         SMS:
           label: SMS
-          weight: 6
           show: false
+          weight: 6
         WEBPAGE:
           label: Webpage
+          show: false
           weight: 7
-          show: false
         MAIL:
-          label: Postal mail
-          weight: 8
+          label: 'Postal mail'
           show: false
+          weight: 8
         TELEFAX:
           label: Telefax
+          show: false
           weight: 9
-          show: false
         OFFICE:
-          label: Service point
-          weight: 99
+          label: 'Service point'
           show: false
+          weight: 99
     third_party_settings: {  }
     weight: 2
     region: content

@@ -55,3 +55,4 @@ settings:
     drupallink:
       linkit_enabled: true
       linkit_profile: helfi
+image_upload: {  }

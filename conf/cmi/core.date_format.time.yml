@@ -2,8 +2,6 @@ uuid: bc195e9d-950a-4dea-9356-1d6cebc4d101
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: m9KQTmQxMNWAdMMidmQsDSS4daorJXBZWqvHoIk7dAs
 id: time
 label: 'Default time'
 locked: false
