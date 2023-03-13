@@ -2,12 +2,12 @@ uuid: 72be4440-f211-41bf-a081-a0117e8b22df
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.columns
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.columns
 id: paragraph.field_columns_left_column
 field_name: field_columns_left_column
 entity_type: paragraph

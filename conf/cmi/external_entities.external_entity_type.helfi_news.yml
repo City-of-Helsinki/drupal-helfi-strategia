@@ -32,5 +32,9 @@ field_mapper_config:
     short_title:
       value: '$.attributes[''short_title'']'
 storage_client_id: helfi_news
+storage_client_config: {  }
 persistent_cache_max_age: 10800
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
 inherits_annotation_fields: false
