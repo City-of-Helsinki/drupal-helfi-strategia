@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
-_core:
-  default_config_hash: G0XIMKXx8apK0uBqDSIJEWOXrbDnUoORLCeka-ydj4I
 id: content_cards
 label: 'Content cards'
 icon_uuid: null

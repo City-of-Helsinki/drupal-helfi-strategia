@@ -2,11 +2,11 @@ uuid: 9cc3fc2e-eee6-4bce-846b-a9deb4eb2b3b
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - helfi_base_content
-  module:
-    - node
 id: node.field_has_hero
 field_name: field_has_hero
 entity_type: node

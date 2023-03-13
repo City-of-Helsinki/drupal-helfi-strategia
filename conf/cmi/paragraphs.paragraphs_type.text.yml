@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
-_core:
-  default_config_hash: quCqNy8X3E6ITit4b7BJnq9E6Ai6Tx3xYpBz1pByy0E
 id: text
 label: Text
 icon_uuid: null

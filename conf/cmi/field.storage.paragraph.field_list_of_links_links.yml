@@ -2,12 +2,12 @@ uuid: f603c425-ee37-4aef-bbe1-075346b56ca2
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.list_of_links
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.list_of_links
 id: paragraph.field_list_of_links_links
 field_name: field_list_of_links_links
 entity_type: paragraph

@@ -2,12 +2,12 @@ uuid: a56cd443-ead8-4298-bce7-691eff70d6bc
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion
 id: paragraph.field_accordion_items
 field_name: field_accordion_items
 entity_type: paragraph

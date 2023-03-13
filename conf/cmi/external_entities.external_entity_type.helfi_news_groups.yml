@@ -2,8 +2,6 @@ uuid: 56fd142f-ec0a-4fed-a7f0-1b9ceb68fa86
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: XSm-lbRmOWP_eJRFTo14HMiNtxsc5scm42lmq8Qjcy8
 id: helfi_news_groups
 label: 'Helfi: News groups'
 label_plural: 'Helfi: News groups'
