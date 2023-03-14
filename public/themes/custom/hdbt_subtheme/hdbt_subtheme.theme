@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the HDBT Subtheme.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function hdbt_subtheme_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['block_id'] = $variables['elements']['#id'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hdbt_subtheme_theme_suggestions_block_alter(&$suggestions) {
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('hdbt_subtheme_', '', $suggestion);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
+  if (isset($variables['attributes']['block_id'])) {
+    $block_id = str_replace('hdbt_subtheme_', '', $variables['attributes']['block_id']);
+
+    $suggestions[] = match ($block_id) {
+      'mobile_navigation' => 'menu__mobile',
+      'mainnavigation' => 'menu__main__desktop',
+      'main_navigation_level_2' => 'menu__main__sidebar',
+      'brandingnavigation' => 'menu__main__branding',
+      default => 'menu__' . $variables['attributes']['block_id'],
+    };
+  }
+}
