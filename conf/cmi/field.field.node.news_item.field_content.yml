@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.news_item
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
@@ -62,12 +61,6 @@ settings:
         enabled: false
       from_library:
         weight: -32
-        enabled: false
-      gallery:
-        weight: -39
-        enabled: false
-      gallery_slide:
-        weight: -31
         enabled: false
       hero:
         weight: -30
