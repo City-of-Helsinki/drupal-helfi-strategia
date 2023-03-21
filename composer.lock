@@ -3738,16 +3738,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "5.0.4",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "4ac08c4e2eda9a6267fba0f9613bf782669b3e28"
+                "reference": "11d5ac970c3d4f01c6ea5e1b598eafc476649ff7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/4ac08c4e2eda9a6267fba0f9613bf782669b3e28",
-                "reference": "4ac08c4e2eda9a6267fba0f9613bf782669b3e28",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/11d5ac970c3d4f01c6ea5e1b598eafc476649ff7",
+                "reference": "11d5ac970c3d4f01c6ea5e1b598eafc476649ff7",
                 "shasum": ""
             },
             "require": {
@@ -3765,27 +3765,26 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.0.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.0.6",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-03-15T08:11:43+00:00"
+            "time": "2023-03-21T12:02:40+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "476a848ec263b51b47352a1d5c6dd241a83786e6"
+                "reference": "7804dee9c95afbeeffa3031af89a95773d329cb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/476a848ec263b51b47352a1d5c6dd241a83786e6",
-                "reference": "476a848ec263b51b47352a1d5c6dd241a83786e6",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/7804dee9c95afbeeffa3031af89a95773d329cb8",
+                "reference": "7804dee9c95afbeeffa3031af89a95773d329cb8",
                 "shasum": ""
             },
             "require": {
-                "drupal/admin_toolbar": "^2.3",
                 "drupal/gin": "3.0.0-beta5"
             },
             "conflict": {
@@ -3800,10 +3799,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/2.0.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/2.0.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2023-03-02T08:43:59+00:00"
+            "time": "2023-03-21T10:00:05+00:00"
         },
         {
             "name": "drupal/health_check",
@@ -3989,16 +3988,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "f89a373804373fcb19e199e60624454ef39d4172"
+                "reference": "a42c18ad40c85d82dc52180727cae02cc5214923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f89a373804373fcb19e199e60624454ef39d4172",
-                "reference": "f89a373804373fcb19e199e60624454ef39d4172",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/a42c18ad40c85d82dc52180727cae02cc5214923",
+                "reference": "a42c18ad40c85d82dc52180727cae02cc5214923",
                 "shasum": ""
             },
             "require": {
@@ -4103,10 +4102,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.0.10",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/3.0.11",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2023-03-17T09:21:10+00:00"
+            "time": "2023-03-17T09:55:17+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -7846,30 +7845,30 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.16.1",
+            "version": "3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "f4f773641807c7ccee59b758bfe4ac4ba33ecb17"
+                "reference": "dd35c868075bad80b6718959740913e178eb4274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/f4f773641807c7ccee59b758bfe4ac4ba33ecb17",
-                "reference": "f4f773641807c7ccee59b758bfe4ac4ba33ecb17",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/dd35c868075bad80b6718959740913e178eb4274",
+                "reference": "dd35c868075bad80b6718959740913e178eb4274",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+                "php": "~8.1.0 || ~8.2.0"
             },
             "conflict": {
                 "zendframework/zend-stdlib": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "^2.4.0",
-                "phpbench/phpbench": "^1.2.7",
-                "phpunit/phpunit": "^9.5.26",
-                "psalm/plugin-phpunit": "^0.18.0",
-                "vimeo/psalm": "^5.0.0"
+                "laminas/laminas-coding-standard": "^2.5",
+                "phpbench/phpbench": "^1.2.9",
+                "phpunit/phpunit": "^10.0.16",
+                "psalm/plugin-phpunit": "^0.18.4",
+                "vimeo/psalm": "^5.8"
             },
             "type": "library",
             "autoload": {
@@ -7901,7 +7900,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-12-03T18:48:01+00:00"
+            "time": "2023-03-20T13:51:37+00:00"
         },
         {
             "name": "league/container",
