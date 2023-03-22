@@ -9,3 +9,4 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'ru' => 'test-administration',
 ];
 
+$config['helfi_global_announcement.settings']['source_environment'] = 'test';
