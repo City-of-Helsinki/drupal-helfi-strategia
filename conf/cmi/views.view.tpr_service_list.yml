@@ -5,8 +5,6 @@ dependencies:
   module:
     - helfi_tpr
     - user
-_core:
-  default_config_hash: rO8m-2SU4UjJoGRHWn5CfFPKwy59J2U_J0xJq6MZpjA
 id: tpr_service_list
 label: 'TPR service list'
 module: views
@@ -726,8 +724,7 @@ display:
     position: 1
     display_options:
       rendering_language: '***LANGUAGE_entity_translation***'
-      display_extenders:
-        metatag_display_extender: {  }
+      display_extenders: {  }
       path: admin/content/integrations/tpr-service
     cache_metadata:
       max-age: 0
