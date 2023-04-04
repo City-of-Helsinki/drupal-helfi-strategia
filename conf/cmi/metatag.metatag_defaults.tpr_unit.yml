@@ -2,6 +2,8 @@ uuid: 2c0df1e1-f03d-4984-9948-aafad8479c1f
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: uQHYkeDAlKDP9QzcRcKciZc5r2PVOzL_jXwfU2ac4iY
 id: tpr_unit
 label: 'TPR - Unit'
 tags:
