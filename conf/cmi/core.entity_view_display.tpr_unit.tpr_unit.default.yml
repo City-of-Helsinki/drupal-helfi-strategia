@@ -1,10 +1,9 @@
-uuid: b972317f-2e8a-4303-96d4-c2e0996e2e83
+uuid: 939d9592-eb60-4d6a-9435-0c78e4114a5d
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.tpr_unit.tpr_unit.field_content
-    - field.field.tpr_unit.tpr_unit.field_districts
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_unit_type
@@ -218,11 +217,11 @@ content:
     region: content
 hidden:
   created: true
-  field_districts: true
   field_unit_type: true
   hide_description: true
   langcode: true
   latitude: true
   longitude: true
+  search_api_excerpt: true
   show_www: true
   streetview_entrance_url: true
