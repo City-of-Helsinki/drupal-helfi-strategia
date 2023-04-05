@@ -1,11 +1,10 @@
-uuid: 2adf4f31-0bfe-4714-9eec-0c690600be0a
+uuid: be00bb0c-4fd8-45e3-9219-ca7bd76e89a0
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_unit.minimal
     - field.field.tpr_unit.tpr_unit.field_content
-    - field.field.tpr_unit.tpr_unit.field_districts
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
     - field.field.tpr_unit.tpr_unit.field_unit_type
@@ -53,7 +52,6 @@ hidden:
   description: true
   email: true
   field_content: true
-  field_districts: true
   field_lower_content: true
   field_metatags: true
   field_unit_type: true
@@ -67,6 +65,7 @@ hidden:
   picture_url: true
   picture_url_override: true
   provided_languages: true
+  search_api_excerpt: true
   service_map_embed: true
   services: true
   show_www: true
