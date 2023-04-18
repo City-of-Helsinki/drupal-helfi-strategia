@@ -2650,17 +2650,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.0.12",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.0.12"
+                "reference": "2.0.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.0.12.zip",
-                "reference": "2.0.12",
-                "shasum": "e0e584a2f409709f4547dfe9cc7376a80f8fa317"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.0.11.zip",
+                "reference": "2.0.11",
+                "shasum": "08e690cdf40d44a6d9386b393f83259a2cf07a21"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -2668,8 +2668,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.12",
-                    "datestamp": "1680556093",
+                    "version": "2.0.11",
+                    "datestamp": "1679952007",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3741,16 +3741,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "5.0.15",
+            "version": "5.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "65d144fe8ae6d655549ea1fb5616e9b78fe60422"
+                "reference": "a44d2c229bd5dd8fc301004f0e126671afc2df1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/65d144fe8ae6d655549ea1fb5616e9b78fe60422",
-                "reference": "65d144fe8ae6d655549ea1fb5616e9b78fe60422",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/a44d2c229bd5dd8fc301004f0e126671afc2df1f",
+                "reference": "a44d2c229bd5dd8fc301004f0e126671afc2df1f",
                 "shasum": ""
             },
             "require": {
@@ -3768,10 +3768,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.0.15",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/5.0.20",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2023-04-13T13:46:48+00:00"
+            "time": "2023-04-18T09:55:29+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -6178,26 +6178,26 @@
         },
         {
             "name": "drupal/view_unpublished",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/view_unpublished.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/view_unpublished-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "74ebdf1b4f6963f7bb63192bc314014c0132d03c"
+                "url": "https://ftp.drupal.org/files/projects/view_unpublished-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "f9f5e88cbaf1a1e71952d94cf67ef2f180e292be"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.4 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1597688978",
+                    "version": "8.x-1.1",
+                    "datestamp": "1681757575",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7096,22 +7096,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.5.0",
+            "version": "7.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba"
+                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b50a2a1251152e43f6a37f0fa053e730a67d25ba",
-                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b964ca597e86b752cd994f27293e9fa6b6a95ed9",
+                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.5",
-                "guzzlehttp/psr7": "^1.9 || ^2.4",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
                 "symfony/deprecation-contracts": "^2.2 || ^3.0"
@@ -7204,7 +7204,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.5.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.5.1"
             },
             "funding": [
                 {
@@ -7220,7 +7220,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-28T15:39:27+00:00"
+            "time": "2023-04-17T16:30:08+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -7308,16 +7308,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "e98e3e6d4f86621a9b75f623996e6bbdeb4b9318"
+                "reference": "e4490cabc77465aaee90b20cfc9a770f8c04be6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e98e3e6d4f86621a9b75f623996e6bbdeb4b9318",
-                "reference": "e98e3e6d4f86621a9b75f623996e6bbdeb4b9318",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e4490cabc77465aaee90b20cfc9a770f8c04be6b",
+                "reference": "e4490cabc77465aaee90b20cfc9a770f8c04be6b",
                 "shasum": ""
             },
             "require": {
@@ -7336,11 +7336,6 @@
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "src/functions_include.php"
@@ -7398,7 +7393,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.9.0"
+                "source": "https://github.com/guzzle/psr7/tree/1.9.1"
             },
             "funding": [
                 {
@@ -7414,7 +7409,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-20T21:43:03+00:00"
+            "time": "2023-04-17T16:00:37+00:00"
         },
         {
             "name": "http-interop/http-factory-guzzle",
@@ -7535,16 +7530,16 @@
         },
         {
             "name": "laminas/laminas-diactoros",
-            "version": "2.25.1",
+            "version": "2.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "13f45e5ba09c9b27752247d3be186fc49c2ca3a5"
+                "reference": "9f3f4bf5b99c9538b6f1dbcc20f6fec357914f9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/13f45e5ba09c9b27752247d3be186fc49c2ca3a5",
-                "reference": "13f45e5ba09c9b27752247d3be186fc49c2ca3a5",
+                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/9f3f4bf5b99c9538b6f1dbcc20f6fec357914f9e",
+                "reference": "9f3f4bf5b99c9538b6f1dbcc20f6fec357914f9e",
                 "shasum": ""
             },
             "require": {
@@ -7628,7 +7623,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2023-04-08T00:31:34+00:00"
+            "time": "2023-04-17T15:44:17+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
