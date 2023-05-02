@@ -20,6 +20,7 @@ dependencies:
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list_search
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.unit_search
   module:
@@ -28,7 +29,7 @@ id: node.page.field_content
 field_name: field_content
 entity_type: node
 bundle: page
-label: 'Upper content region'
+label: 'Ylempi sisältöalue'
 description: ''
 required: false
 translatable: true
@@ -38,28 +39,32 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      text: text
-      columns: columns
-      image: image
       accordion: accordion
-      list_of_links: list_of_links
+      banner: banner
+      chart: chart
+      columns: columns
       contact_card_listing: contact_card_listing
       content_cards: content_cards
       content_liftup: content_liftup
-      banner: banner
       event_list: event_list
-      news_list: news_list
       from_library: from_library
-      phasing: phasing
-      chart: chart
-      remote_video: remote_video
+      image: image
+      list_of_links: list_of_links
       map: map
+      news_list: news_list
+      phasing: phasing
+      remote_video: remote_video
+      text: text
       unit_search: unit_search
+      service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 0
         enabled: true
+      accordion_item:
+        weight: 33
+        enabled: false
       banner:
         weight: 0
         enabled: true
@@ -69,6 +74,9 @@ settings:
       columns:
         weight: 0
         enabled: true
+      contact_card:
+        weight: 37
+        enabled: false
       contact_card_listing:
         weight: 0
         enabled: true
@@ -84,12 +92,21 @@ settings:
       from_library:
         weight: 0
         enabled: true
+      hero:
+        weight: 43
+        enabled: false
       image:
         weight: 0
         enabled: true
+      liftup_with_image:
+        weight: 45
+        enabled: false
       list_of_links:
         weight: 0
         enabled: true
+      list_of_links_item:
+        weight: 47
+        enabled: false
       map:
         weight: 0
         enabled: true
@@ -99,9 +116,36 @@ settings:
       phasing:
         weight: 0
         enabled: true
+      phasing_item:
+        weight: 51
+        enabled: false
+      popular_service_item:
+        weight: 52
+        enabled: false
+      popular_services:
+        weight: 53
+        enabled: false
       remote_video:
         weight: 0
         enabled: true
+      service_list:
+        weight: 55
+        enabled: false
+      service_list_search:
+        weight: 56
+        enabled: true
+      sidebar_text:
+        weight: 57
+        enabled: false
+      social_media_link:
+        weight: 58
+        enabled: false
+      target_group_link_item:
+        weight: 59
+        enabled: false
+      target_group_links:
+        weight: 60
+        enabled: false
       text:
         weight: 0
         enabled: true
