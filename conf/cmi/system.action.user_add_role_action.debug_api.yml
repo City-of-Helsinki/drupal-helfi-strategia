@@ -1,0 +1,14 @@
+uuid: 4575ab22-7428-43c4-9abd-876145f8be2d
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.debug_api
+  module:
+    - user
+id: user_add_role_action.debug_api
+label: 'Add the Debug API role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: debug_api
