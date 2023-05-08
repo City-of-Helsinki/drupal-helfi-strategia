@@ -5,9 +5,9 @@ dependencies:
   module:
     - helfi_navigation
   theme:
-    - hdbt
+    - hdbt_subtheme
 id: external_fallback_menu
-theme: hdbt
+theme: hdbt_subtheme
 region: header_branding
 weight: 0
 provider: null

@@ -5,9 +5,9 @@ dependencies:
   module:
     - helfi_navigation
   theme:
-    - hdbt
+    - hdbt_subtheme
 id: external_header_top_navigation
-theme: hdbt
+theme: hdbt_subtheme
 region: header_top
 weight: 0
 provider: null
