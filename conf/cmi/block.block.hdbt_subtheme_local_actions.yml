@@ -1,0 +1,20 @@
+uuid: bd2ab3f2-914b-48a3-b4d4-a571e2150c5b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hdbt_subtheme
+_core:
+  default_config_hash: H69FvwR04I2gfiz-9B_vOzX7lLLZrz-6FJvXMvMR1yc
+id: hdbt_subtheme_local_actions
+theme: hdbt_subtheme
+region: tools
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
