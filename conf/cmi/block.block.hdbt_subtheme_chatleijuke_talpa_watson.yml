@@ -1,5 +1,5 @@
 uuid: d0eff99f-8c0d-44bb-80bb-5f4b4372881c
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -19,7 +19,7 @@ settings:
   label: 'Chat Leijuke - TALPA Watson'
   label_display: visible
   provider: helfi_platform_config
-  chat_title: 'Aloita chatti'
+  chat_title: 'Start chat'
   chat_selection: watson_talpa
 visibility:
   language:
