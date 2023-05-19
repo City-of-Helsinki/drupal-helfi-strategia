@@ -39,26 +39,32 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      banner: banner
+      chart: chart
       columns: columns
-      list_of_links: list_of_links
       content_cards: content_cards
       content_liftup: content_liftup
-      banner: banner
-      liftup_with_image: liftup_with_image
+      event_list: event_list
       from_library: from_library
-      chart: chart
-      remote_video: remote_video
+      liftup_with_image: liftup_with_image
+      list_of_links: list_of_links
       map: map
       news_list: news_list
-      event_list: event_list
       phasing: phasing
       popular_services: popular_services
-      target_group_links: target_group_links
-      unit_search: unit_search
+      remote_video: remote_video
       service_list: service_list
       service_list_search: service_list_search
+      target_group_links: target_group_links
+      unit_search: unit_search
     negate: 0
     target_bundles_drag_drop:
+      accordion:
+        weight: 32
+        enabled: false
+      accordion_item:
+        weight: 33
+        enabled: false
       banner:
         weight: 0
         enabled: true
@@ -68,6 +74,12 @@ settings:
       columns:
         weight: 0
         enabled: true
+      contact_card:
+        weight: 37
+        enabled: false
+      contact_card_listing:
+        weight: 38
+        enabled: false
       content_cards:
         weight: 0
         enabled: true
@@ -80,12 +92,21 @@ settings:
       from_library:
         weight: 0
         enabled: true
+      hero:
+        weight: 43
+        enabled: false
+      image:
+        weight: 44
+        enabled: false
       liftup_with_image:
         weight: 0
         enabled: true
       list_of_links:
         weight: 0
         enabled: true
+      list_of_links_item:
+        weight: 47
+        enabled: false
       map:
         weight: 0
         enabled: true
@@ -95,6 +116,12 @@ settings:
       phasing:
         weight: 0
         enabled: true
+      phasing_item:
+        weight: 51
+        enabled: false
+      popular_service_item:
+        weight: 52
+        enabled: false
       popular_services:
         weight: 0
         enabled: true
@@ -107,9 +134,21 @@ settings:
       service_list_search:
         weight: 0
         enabled: true
+      sidebar_text:
+        weight: 57
+        enabled: false
+      social_media_link:
+        weight: 58
+        enabled: false
+      target_group_link_item:
+        weight: 59
+        enabled: false
       target_group_links:
         weight: 0
         enabled: true
+      text:
+        weight: 61
+        enabled: false
       unit_search:
         weight: 0
         enabled: true

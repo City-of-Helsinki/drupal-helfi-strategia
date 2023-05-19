@@ -120,10 +120,10 @@ settings:
         weight: 51
         enabled: false
       popular_service_item:
-        weight: 53
+        weight: 52
         enabled: false
       popular_services:
-        weight: 52
+        weight: 53
         enabled: false
       remote_video:
         weight: 0
@@ -132,7 +132,7 @@ settings:
         weight: 55
         enabled: false
       service_list_search:
-        weight: 56
+        weight: 0
         enabled: true
       sidebar_text:
         weight: 57
@@ -141,10 +141,10 @@ settings:
         weight: 58
         enabled: false
       target_group_link_item:
-        weight: 60
+        weight: 59
         enabled: false
       target_group_links:
-        weight: 59
+        weight: 60
         enabled: false
       text:
         weight: 0
