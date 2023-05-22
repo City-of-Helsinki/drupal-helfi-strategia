@@ -11,6 +11,8 @@ dependencies:
   module:
     - helfi_tpr
     - text
+_core:
+  default_config_hash: ujJDnxXZHiN-DByQZHw7_ftiBEHe7NVqg8JElL2XkCw
 id: tpr_service.tpr_service.teaser_search_result
 targetEntityType: tpr_service
 bundle: tpr_service
