@@ -1,14 +1,14 @@
-uuid: c786bc09-2e9a-4ef9-8b51-c1dab7262461
-langcode: en
+uuid: 63a30a19-824a-4d40-8f66-031d56598f8f
+langcode: fi
 status: true
 dependencies:
   module:
     - helfi_platform_config
     - system
   theme:
-    - hdbt
+    - hdbt_subtheme
 id: ibmchatapp_watson_talpa
-theme: hdbt
+theme: hdbt_subtheme
 region: attachments
 weight: 0
 provider: null
@@ -16,7 +16,7 @@ plugin: ibm_chat_app
 settings:
   id: ibm_chat_app
   label: 'IBM Chat App Watson - TALPA'
-  label_display: '0'
+  label_display: visible
   provider: helfi_platform_config
   hostname: 'https://coh-chat-app-prod.ow6i4n9pdzm.eu-de.codeengine.appdomain.cloud'
   engagementId: talpa
