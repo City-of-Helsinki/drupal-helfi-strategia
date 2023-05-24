@@ -14,8 +14,8 @@ provider: null
 plugin: ibm_chat_app
 settings:
   id: ibm_chat_app
-  label: 'IBM Chat App'
-  label_display: visible
+  label: 'Watson Sotebot / Hester'
+  label_display: '0'
   provider: helfi_platform_config
   hostname: 'https://coh-chat-app-prod.ow6i4n9pdzm.eu-de.codeengine.appdomain.cloud'
   engagementId: sote-bot
