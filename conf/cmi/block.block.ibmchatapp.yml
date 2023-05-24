@@ -1,0 +1,28 @@
+uuid: 0eefae0c-6c94-4469-bd30-88296f804061
+langcode: fi
+status: true
+dependencies:
+  module:
+    - helfi_platform_config
+  theme:
+    - hdbt_subtheme
+id: ibmchatapp
+theme: hdbt_subtheme
+region: attachments
+weight: 0
+provider: null
+plugin: ibm_chat_app
+settings:
+  id: ibm_chat_app
+  label: 'IBM Chat App'
+  label_display: visible
+  provider: helfi_platform_config
+  hostname: 'https://coh-chat-app-prod.ow6i4n9pdzm.eu-de.codeengine.appdomain.cloud'
+  engagementId: sote-bot
+  tenantId: sote-prod
+  assistantId: sote-bot
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/city-organization/divisions/social-services-health-care-and-rescue-services-division/digital-services\r\n/beslutsfattande-och-forvaltning/stadens-organisation/sektorer/social-halsovards-och-raddningssektorn/digitala-tjanster\r\n/paatoksenteko-ja-hallinto/kaupungin-organisaatio/toimialat/sosiaali-terveys-ja-pelastustoimiala/digitaaliset-palvelut"
