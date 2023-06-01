@@ -25,4 +25,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/city-organization/divisions/social-services-health-care-and-rescue-services-division/digital-services\r\n/beslutsfattande-och-forvaltning/stadens-organisation/sektorer/social-halsovards-och-raddningssektorn/digitala-tjanster\r\n/paatoksenteko-ja-hallinto/kaupungin-organisaatio/toimialat/sosiaali-terveys-ja-pelastustoimiala/digitaaliset-palvelut"
+    pages: "/city-organization/divisions/social-services-health-care-and-rescue-services-division/digital-services\r\n/stadens-organisation/sektorer/social-halsovards-och-raddningssektorn/digitala-tjanster\r\n/kaupungin-organisaatio/toimialat/sosiaali-terveys-ja-pelastustoimiala/digitaaliset-palvelut"
