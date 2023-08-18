@@ -5,6 +5,7 @@ dependencies:
   module:
     - helfi_platform_config
     - node
+    - system
   theme:
     - hdbt_subtheme
 _core:
@@ -21,11 +22,7 @@ settings:
   label_display: '0'
   provider: helfi_platform_config
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  request_path:
+    id: request_path
     negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      announcement: announcement
-      news_item: news_item
+    pages: "/news/*\r\n/uutiset/*\r\n/nyheter/*"
