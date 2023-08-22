@@ -7,5 +7,6 @@ $config['helfi_proxy.settings']['prefixes'] = [
   'fi' => 'test-paatoksenteko-ja-hallinto',
   'sv' => 'test-beslutsfattande-och-forvaltning',
   'ru' => 'test-administration',
+  'zxx' => 'test-decision-making',
 ];
 
