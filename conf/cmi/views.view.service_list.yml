@@ -645,7 +645,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 15
           total_pages: null
           id: 0
           tags:
@@ -896,7 +896,10 @@ display:
         filters: false
         filter_groups: false
       relationships: {  }
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
