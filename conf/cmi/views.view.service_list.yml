@@ -800,7 +800,7 @@ display:
             operator: combine_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: service-list-search
+            identifier: combine
             required: false
             remember: false
             multiple: false
