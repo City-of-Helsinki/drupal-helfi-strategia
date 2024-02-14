@@ -8,6 +8,20 @@
 if ($hotjar_id = getenv('HOTJAR_ID')) {
   $config['helfi_hotjar.settings']['hjid'] = $hotjar_id;
 }
+$config['openid_connect.client.tunnistamo']['settings']['ad_roles'] = [
+  [
+    'ad_role' => 'Drupal_Helfi_kaupunkitaso_paakayttajat',
+    'roles' => ['admin'],
+  ],
+  [
+    'ad_role' => 'Drupal_Helfi_Paatoksenteko_ja_hallinto_sisallontuottajat_laaja',
+    'roles' => ['editor'],
+  ],
+  [
+    'ad_role' => 'Drupal_Helfi_Paatoksenteko_ja_hallinto_sisallontuottajat_suppea',
+    'roles' => ['content_producer'],
+  ],
+];
 
 $additionalEnvVars = [
   'AZURE_BLOB_STORAGE_SAS_TOKEN|BLOBSTORAGE_SAS_TOKEN',
