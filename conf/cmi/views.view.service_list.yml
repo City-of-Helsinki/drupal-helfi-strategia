@@ -896,10 +896,7 @@ display:
         filters: false
         filter_groups: false
       relationships: {  }
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
