@@ -3,7 +3,7 @@ display:
   default:
     display_title: Oletus
     display_options:
-      title: 'Locked content'
+      title: 'Lukitut sisällöt'
       exposed_form:
         options:
           submit_button: Käytä
