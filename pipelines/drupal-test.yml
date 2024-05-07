@@ -2,9 +2,15 @@
 # an update to the specified branches or you push specified tags.
 trigger:
   batch: true
-  tags:
+  branches:
     include:
-      - drupal-helfi-strategia-v*
+      - dev
+  paths:
+    exclude:
+    - '*.md'
+    - '.github/'
+    - 'pipelines/drupal-staging.yml'
+    - 'pipelines/drupal-production.yml'
 
 # Pull request (PR) triggers cause a pipeline to run whenever a pull request is
 # opened with one of the specified target branches, or when updates are made to
@@ -30,19 +36,14 @@ resources:
 
 extends:
   # Filename in Azure DevOps Repository
-  template: azure-pipelines-drupal-release.yml@strategia-talous-pipelines
+  template: components/drupal/pipelines/drupal-test.yml@strategia-talous-pipelines
   # parameters:
     # Application build arguments and config map values as key value pairs.
     # Does not contain all buildArguments or configMap values, the rest located in strategia-talous-pipelines
     # Default value to phpVersion is set on template.
     # The values here will override the values defined in the strategia-talous-pipelines repository
-    ## Staging definitions
-    # buildArgsStage:
+    # buildArgs:
     #   DEBUG: 1
-    # configMapStage: # pod environment variables
-    #   DEBUG: 1
-    ## Production definitions
-    ## Production is using staging image
     # configMap: # pod environment variables
     #   DEBUG: 1
     ## Used tool version

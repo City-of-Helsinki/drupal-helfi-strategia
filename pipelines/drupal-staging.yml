@@ -4,15 +4,13 @@ trigger:
   batch: true
   branches:
     include:
-      - dev
+      - main
   paths:
     exclude:
-    - '*release-please*'
     - '*.md'
     - '.github/'
-    - 'pipelines/drupal-release.yml'
-    - 'pipelines/drupal-review.yml'
-    - 'docker-compose*'
+    - 'pipelines/drupal-test.yml'
+    - 'pipelines/drupal-production.yml'
 
 # Pull request (PR) triggers cause a pipeline to run whenever a pull request is
 # opened with one of the specified target branches, or when updates are made to
@@ -38,7 +36,7 @@ resources:
 
 extends:
   # Filename in Azure DevOps Repository
-  template: azure-pipelines-drupal-dev.yml@strategia-talous-pipelines
+  template: components/drupal/pipelines/drupal-staging.yml@strategia-talous-pipelines
   # parameters:
     # Application build arguments and config map values as key value pairs.
     # Does not contain all buildArguments or configMap values, the rest located in strategia-talous-pipelines
