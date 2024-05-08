@@ -47,5 +47,3 @@ extends:
     #   DEBUG: 1
     # configMap: # pod environment variables
     #   DEBUG: 1
-    ## Used tool version
-    # phpVersion: 
