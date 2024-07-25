@@ -43,6 +43,11 @@ $ make shell
 
 ## Instance specific features
 
+### Chat implementations
+
+Strategia has Watson chatbot enablen on few pages. Chat implementations have plenty of documentation elsewhere. (confluence)
+
+
 The site has a minimal amount of instance specific features
 
 ### Menu depth override
