@@ -48,11 +48,10 @@ $ make shell
 Strategia has Watson chatbot enablen on few pages. Chat implementations have plenty of documentation elsewhere. (confluence)
 
 
-The site has a minimal amount of instance specific features
-
 ### Menu depth override
 
 Menu depth has been set to 6 (default is 4). Menu depth affects mainly the sidebar menu
+
 
 ### Form template changes
 
