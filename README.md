@@ -45,7 +45,8 @@ $ make shell
 
 ### Chat implementations
 
-Strategia has Watson chatbot enablen on few pages. Chat implementations have plenty of documentation elsewhere. (confluence)
+Strategia has Watson chatbot enabled on few pages.
+Chat implementations have plenty of documentation elsewhere. (confluence)
 
 
 ### Menu depth override
