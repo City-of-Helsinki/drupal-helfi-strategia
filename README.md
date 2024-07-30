@@ -62,3 +62,8 @@ site. These files are:
 - `form--views-exposed-form-service-list-block-search`
 - `input--textfield--service-list-search`
 Since the paragraph is globally available, it might be a good idea in the future to move these files to the hdbt theme.
+
+### News feature
+For some reason the News feature is on in this instance and there is also news_item content in the database, and they
+are even published. At the time of writing it is not clear why and other topic-related news is created in the Etusivu
+instance in the same manner as other news, and the enabled news feature does not affect this process.
