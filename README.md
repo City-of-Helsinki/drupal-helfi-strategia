@@ -62,3 +62,8 @@ site. These files are:
 - `form--views-exposed-form-service-list-block-search`
 - `input--textfield--service-list-search`
 Since the paragraph is globally available, it might be a good idea in the future to move these files to the hdbt theme.
+
+### News feature
+For some reason, the News feature is enabled in this instance, and there are also published news_item contents in the
+database. At the time of writing, it is unclear why this is the case. Other topic-related news is created in the
+Etusivu instance in the same manner as other news, and the enabled News feature does not affect this process.
