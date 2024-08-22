@@ -8,7 +8,7 @@ Helsinki.
 
 Env | Branch | Drush alias | URL
 --- | ------ | ----------- | ---
-development | * | - | http://strategia.docker.so/
+development | * | - | http://helfi-strategia.docker.so/
 production | main | @main | https://hel.fi/fi/paatoksenteko-ja-hallinto
 
 ## Requirements
