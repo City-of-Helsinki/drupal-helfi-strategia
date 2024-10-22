@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.curated_event_list
     - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.hearings
@@ -61,6 +62,7 @@ settings:
       service_list_search: service_list_search
       unit_search: unit_search
       unit_contact_card: unit_contact_card
+      curated_event_list: curated_event_list
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -74,6 +76,9 @@ settings:
         enabled: true
       content_cards:
         weight: 1
+        enabled: true
+      curated_event_list:
+        weight: 15
         enabled: true
       event_list:
         weight: 13
