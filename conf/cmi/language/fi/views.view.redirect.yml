@@ -14,10 +14,10 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ edellinen'
+            next: 'seuraava ›'
+            first: '« ensimmäinen'
+            last: 'viimeinen »'
           expose:
             items_per_page_label: 'Merkintöjä sivua kohti'
             items_per_page_options_all_label: '- Kaikki -'
@@ -44,7 +44,7 @@ display:
             label: Tilakoodi
             group_items:
               7:
-                title: '300 Multiple Choices'
+                title: '307 Tilapäinen uudelleenohjaus'
         language:
           expose:
             label: 'Alkuperäinen kieli'
