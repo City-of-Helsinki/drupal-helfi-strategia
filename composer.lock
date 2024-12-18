@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f683eee3a4d505ea9156a46362e1deeb",
+    "content-hash": "d0478a3cbbeb2828230230f1ee668f14",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4202,16 +4202,16 @@
         },
         {
             "name": "drupal/helfi_api_base",
-            "version": "2.7.19",
+            "version": "2.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base.git",
-                "reference": "096a75dd49d1ae4db5959980337de4b77d10cce5"
+                "reference": "4f747fe4aed94ed98f6fa18c87578aebd2b84560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/096a75dd49d1ae4db5959980337de4b77d10cce5",
-                "reference": "096a75dd49d1ae4db5959980337de4b77d10cce5",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-api-base/zipball/4f747fe4aed94ed98f6fa18c87578aebd2b84560",
+                "reference": "4f747fe4aed94ed98f6fa18c87578aebd2b84560",
                 "shasum": ""
             },
             "require": {
@@ -4243,10 +4243,10 @@
             ],
             "description": "Helfi - API Base",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.7.19",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/tree/2.7.21",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-api-base/issues"
             },
-            "time": "2024-11-29T09:44:21+00:00"
+            "time": "2024-12-17T09:15:47+00:00"
         },
         {
             "name": "drupal/helfi_azure_fs",
@@ -4418,16 +4418,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.10.1",
+            "version": "4.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "79ab4aca9d4734e6bd8fd86c696ead5f6a78b618"
+                "reference": "7c52e541f43948f3ad5603a07690f946c6604241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/79ab4aca9d4734e6bd8fd86c696ead5f6a78b618",
-                "reference": "79ab4aca9d4734e6bd8fd86c696ead5f6a78b618",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/7c52e541f43948f3ad5603a07690f946c6604241",
+                "reference": "7c52e541f43948f3ad5603a07690f946c6604241",
                 "shasum": ""
             },
             "require": {
@@ -4496,8 +4496,9 @@
                 "ruflin/elastica": "^8.0"
             },
             "conflict": {
-                "drupal/core": "<10.3.10",
-                "drupal/core-composer-scaffold": "<10.3",
+                "drupal/core": ">=10.4.0",
+                "drupal/core-composer-scaffold": ">=10.4.0",
+                "drupal/core-dev": ">=10.4.0",
                 "drupal/ctools": "<3.11 || ^4.0.1",
                 "drupal/default_content": ">2.0.0-alpha2",
                 "drupal/gin_toolbar": ">1.0.0-rc6",
@@ -4553,10 +4554,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.10.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.10.5",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2024-12-11T07:54:12+00:00"
+            "time": "2024-12-18T08:08:55+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -5841,7 +5842,11 @@
                     "homepage": "https://www.drupal.org/user/99012"
                 },
                 {
-                    "name": "Sheldon Rampton",
+                    "name": "mably",
+                    "homepage": "https://www.drupal.org/user/3375160"
+                },
+                {
+                    "name": "sheldon rampton",
                     "homepage": "https://www.drupal.org/user/13085"
                 },
                 {
@@ -5921,17 +5926,17 @@
         },
         {
             "name": "drupal/raven",
-            "version": "6.0.12",
+            "version": "6.0.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "6.0.12"
+                "reference": "6.0.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-6.0.12.zip",
-                "reference": "6.0.12",
-                "shasum": "5ba241ff4109be407cb9660a8743aad5a24b9fba"
+                "url": "https://ftp.drupal.org/files/projects/raven-6.0.13.zip",
+                "reference": "6.0.13",
+                "shasum": "7b92e693dae63859457ba734c57382511b91af86"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -5945,8 +5950,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.12",
-                    "datestamp": "1733335477",
+                    "version": "6.0.13",
+                    "datestamp": "1734389510",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6627,10 +6632,6 @@
             ],
             "authors": [
                 {
-                    "name": "bartvig",
-                    "homepage": "https://www.drupal.org/user/3107079"
-                },
-                {
                     "name": "beltofte",
                     "homepage": "https://www.drupal.org/user/151799"
                 },
@@ -6645,6 +6646,10 @@
                 {
                     "name": "kreynen",
                     "homepage": "https://www.drupal.org/user/48877"
+                },
+                {
+                    "name": "mortenthorpe",
+                    "homepage": "https://www.drupal.org/user/870762"
                 },
                 {
                     "name": "rofejo",
@@ -6727,27 +6732,27 @@
         },
         {
             "name": "drupal/sophron",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sophron.git",
-                "reference": "2.1.0"
+                "reference": "2.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sophron-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "0742562897ae9b202e472a1edef75844b6452e39"
+                "url": "https://ftp.drupal.org/files/projects/sophron-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "fa4670e775443db3f465cc25b02c7c82e5c382bf"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
-                "fileeye/mimemap": "^2.1.1"
+                "fileeye/mimemap": "^2.2.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1718011690",
+                    "version": "2.2.0",
+                    "datestamp": "1734432598",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7995,16 +8000,16 @@
         },
         {
             "name": "fileeye/mimemap",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FileEye/MimeMap.git",
-                "reference": "c8c686cc6f77316b23128a83334877debf645dfb"
+                "reference": "f37ea54dab6f286dd37d937c069b80b601003df0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/c8c686cc6f77316b23128a83334877debf645dfb",
-                "reference": "c8c686cc6f77316b23128a83334877debf645dfb",
+                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/f37ea54dab6f286dd37d937c069b80b601003df0",
+                "reference": "f37ea54dab6f286dd37d937c069b80b601003df0",
                 "shasum": ""
             },
             "require": {
@@ -8047,9 +8052,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FileEye/MimeMap/issues",
-                "source": "https://github.com/FileEye/MimeMap/tree/2.2.0"
+                "source": "https://github.com/FileEye/MimeMap/tree/2.2.1"
             },
-            "time": "2024-10-20T18:59:36+00:00"
+            "time": "2024-12-16T19:03:35+00:00"
         },
         {
             "name": "fileeye/pel",
@@ -11267,16 +11272,16 @@
         },
         {
             "name": "stomp-php/stomp-php",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stomp-php/stomp-php.git",
-                "reference": "cf1fbd79cf48b9701909e42205f1d968cec6ff7a"
+                "reference": "942d93563eefc9dee40e836e594ee16dd08653f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stomp-php/stomp-php/zipball/cf1fbd79cf48b9701909e42205f1d968cec6ff7a",
-                "reference": "cf1fbd79cf48b9701909e42205f1d968cec6ff7a",
+                "url": "https://api.github.com/repos/stomp-php/stomp-php/zipball/942d93563eefc9dee40e836e594ee16dd08653f0",
+                "reference": "942d93563eefc9dee40e836e594ee16dd08653f0",
                 "shasum": ""
             },
             "require": {
@@ -11324,7 +11329,7 @@
             ],
             "support": {
                 "issues": "https://github.com/stomp-php/stomp-php/issues",
-                "source": "https://github.com/stomp-php/stomp-php/tree/5.1.0"
+                "source": "https://github.com/stomp-php/stomp-php/tree/5.1.1"
             },
             "funding": [
                 {
@@ -11336,7 +11341,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-19T17:34:28+00:00"
+            "time": "2024-12-13T08:48:49+00:00"
         },
         {
             "name": "symfony/console",
@@ -14224,16 +14229,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.17.0",
+            "version": "v3.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d3a64b742a5e74c57e3964d766e1032982145872"
+                "reference": "677ef8da6497a03048192aeeb5aa3018e379ac71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d3a64b742a5e74c57e3964d766e1032982145872",
-                "reference": "d3a64b742a5e74c57e3964d766e1032982145872",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/677ef8da6497a03048192aeeb5aa3018e379ac71",
+                "reference": "677ef8da6497a03048192aeeb5aa3018e379ac71",
                 "shasum": ""
             },
             "require": {
@@ -14288,7 +14293,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.17.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.17.1"
             },
             "funding": [
                 {
@@ -14300,7 +14305,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-10T15:19:11+00:00"
+            "time": "2024-12-12T09:58:10+00:00"
         },
         {
             "name": "twistor/flysystem-stream-wrapper",
