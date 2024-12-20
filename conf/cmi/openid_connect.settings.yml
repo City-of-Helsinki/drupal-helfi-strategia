@@ -9,3 +9,4 @@ userinfo_mappings:
   timezone: zoneinfo
   metatag: '0'
   path: '0'
+role_mappings: {  }
