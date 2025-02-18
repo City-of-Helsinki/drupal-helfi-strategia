@@ -1837,6 +1837,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
+                },
+                {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
                 },
@@ -3331,17 +3335,17 @@
         },
         {
             "name": "drupal/entity_usage",
-            "version": "2.0.0-beta18",
+            "version": "2.0.0-beta19",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_usage.git",
-                "reference": "8.x-2.0-beta18"
+                "reference": "8.x-2.0-beta19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta18.zip",
-                "reference": "8.x-2.0-beta18",
-                "shasum": "d7303b5b0384da129580236cc96bb06990eeadef"
+                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta19.zip",
+                "reference": "8.x-2.0-beta19",
+                "shasum": "61c0540d1a2731f085ade5fc8a4b3d5f57cecb1e"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11"
@@ -3362,8 +3366,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta18",
-                    "datestamp": "1739640732",
+                    "version": "8.x-2.0-beta19",
+                    "datestamp": "1739870536",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -4069,16 +4073,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.9.21",
+            "version": "6.9.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "a414f2e44295948058e7a90434755d1d36d97889"
+                "reference": "84e25ebf887736af78bae1a906592276dff49c73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/a414f2e44295948058e7a90434755d1d36d97889",
-                "reference": "a414f2e44295948058e7a90434755d1d36d97889",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/84e25ebf887736af78bae1a906592276dff49c73",
+                "reference": "84e25ebf887736af78bae1a906592276dff49c73",
                 "shasum": ""
             },
             "require": {
@@ -4097,10 +4101,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.9.21",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.9.24",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2025-02-14T10:43:01+00:00"
+            "time": "2025-02-18T14:49:50+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4406,16 +4410,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "4.12.18",
+            "version": "4.12.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "06ae3bf2e741d88ad542a8d2c5f261ed80765936"
+                "reference": "6f07f3063f1d65d40f63d3e0c04e9ec7bdbfaf9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/06ae3bf2e741d88ad542a8d2c5f261ed80765936",
-                "reference": "06ae3bf2e741d88ad542a8d2c5f261ed80765936",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/6f07f3063f1d65d40f63d3e0c04e9ec7bdbfaf9c",
+                "reference": "6f07f3063f1d65d40f63d3e0c04e9ec7bdbfaf9c",
                 "shasum": ""
             },
             "require": {
@@ -4539,10 +4543,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.12.18",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/4.12.19",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2025-02-14T06:03:48+00:00"
+            "time": "2025-02-17T10:50:28+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -7261,39 +7265,31 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/varnish_purge.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "9fbddb71417113d58345d2fbe9d0a1aa9c5d5c36"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "e4a8b45ab81923ec8f250b385dd71f1178fa1ca9"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "drupal/purge": "~3.0"
+                "drupal/core": "^9.1 || ^10 || ^11"
             },
             "require-dev": {
-                "behat/mink-extension": "v2.2",
-                "behat/mink-selenium2-driver": "1.3.x-dev",
-                "bex/behat-screenshot": "dev-master",
-                "drupal/coder": "^8.3",
-                "drupal/drupal-extension": "master-dev",
-                "drupal/purge": "dev-3.x",
+                "drupal/purge": "*",
                 "drupal/purge_tokens": "*",
-                "drupal/varnish_purger-varnish_purger": "*",
-                "phpmd/phpmd": "dev-master",
-                "phpmetrics/phpmetrics": "dev-master"
+                "drupal/varnish_purger-varnish_purger": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1681218333",
+                    "version": "8.x-2.3",
+                    "datestamp": "1739875635",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7302,7 +7298,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -7326,7 +7322,6 @@
                     "homepage": "https://www.drupal.org/user/382892"
                 }
             ],
-            "description": "Provides a purger for Varnish for Purger module.",
             "homepage": "https://www.drupal.org/project/varnish_purge",
             "support": {
                 "source": "https://git.drupalcode.org/project/varnish_purge"
