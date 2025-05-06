@@ -8,7 +8,7 @@ dependencies:
     - system
   theme:
     - hdbt_subtheme
-id: hdbt_subtheme_teliaacewidget
+id: hdbt_subtheme_teliaacewidget_2
 theme: hdbt_subtheme
 region: attachments
 weight: 0
