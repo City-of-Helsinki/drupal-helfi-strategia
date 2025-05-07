@@ -20,7 +20,7 @@ settings:
   label_display: visible
   provider: helfi_platform_config
   chat_id: helsinki-infochat_en
-  chat_title: 'Kysy kaupungista!'
+  chat_title: 'Ask about the city!'
 visibility:
   language:
     id: language
