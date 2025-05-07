@@ -32,4 +32,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/neuvonta-ja-tuki/helsinki-info\r\n/neuvonta-ja-tuki/helsinki-info/*\r\n/ota-yhteytta/helsinki-info\r\n/ota-yhteytta-helsingin-kaupunkiin"
+    pages: "/informationstjanster-och-stod/helsingfors-info\r\n/informationstjanster-och-stod/helsingfors-info/*\r\n/ta-kontakt/helsingfors-info\r\n/kontakta-helsingfors-stad"
