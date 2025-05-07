@@ -1,6 +1,6 @@
 uuid: 668f3637-c3f7-4d37-973f-71d624f8bd9b
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - helfi_platform_config
