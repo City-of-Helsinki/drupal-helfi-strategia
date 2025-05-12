@@ -74,6 +74,7 @@ module:
   helfi_paragraphs_map: 0
   helfi_paragraphs_news_list: 0
   helfi_paragraphs_number_highlights: 0
+  helfi_paragraphs_org_chart: 0
   helfi_paragraphs_phasing: 0
   helfi_paragraphs_popular_services: 0
   helfi_paragraphs_remote_video: 0
