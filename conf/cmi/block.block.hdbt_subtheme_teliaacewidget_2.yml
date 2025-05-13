@@ -1,6 +1,6 @@
-uuid: 7f625e65-71c3-4f95-842a-bfdc8b1c2109
+uuid: 668f3637-c3f7-4d37-973f-71d624f8bd9b
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - helfi_platform_config
@@ -8,21 +8,19 @@ dependencies:
     - system
   theme:
     - hdbt_subtheme
-id: ibmchatapp_neuvonta_en
+id: hdbt_subtheme_teliaacewidget_2
 theme: hdbt_subtheme
 region: attachments
 weight: 0
 provider: null
-plugin: ibm_chat_app
+plugin: telia_ace_widget
 settings:
-  id: ibm_chat_app
-  label: 'IBM Chat App Neuvonta EN'
+  id: telia_ace_widget
+  label: 'Telia ACE Widget EN'
   label_display: visible
   provider: helfi_platform_config
-  hostname: 'https://coh-chat-app-prod.ow6i4n9pdzm.eu-de.codeengine.appdomain.cloud'
-  engagementId: helsinki-info-chat-en
-  tenantId: www-hel-fi-prod
-  assistantId: ace
+  chat_id: helsinki-infochat_en
+  chat_title: 'Ask about the city!'
 visibility:
   language:
     id: language
