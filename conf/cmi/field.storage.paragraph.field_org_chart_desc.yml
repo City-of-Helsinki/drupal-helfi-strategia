@@ -1,0 +1,21 @@
+uuid: 411a558f-8c0a-475d-bcf7-199b5145ced4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 05-8gg5cdT2lNuNESa0Ug7TeIB2OSxl8zQxoM-rTzHM
+id: paragraph.field_org_chart_desc
+field_name: field_org_chart_desc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
