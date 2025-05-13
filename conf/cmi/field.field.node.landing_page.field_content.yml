@@ -19,7 +19,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.number_highlights
-    - paragraphs.paragraphs_type.org_chart
     - paragraphs.paragraphs_type.phasing
     - paragraphs.paragraphs_type.popular_services
     - paragraphs.paragraphs_type.remote_video
@@ -68,7 +67,6 @@ settings:
       service_list_search: service_list_search
       unit_search: unit_search
       unit_contact_card: unit_contact_card
-      org_chart: org_chart
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -112,9 +110,6 @@ settings:
         enabled: true
       number_highlights:
         weight: 16
-        enabled: true
-      org_chart:
-        weight: -99
         enabled: true
       phasing:
         weight: 7
