@@ -1,0 +1,35 @@
+uuid: efc39ffc-5c92-47ee-8144-8105f6358e41
+langcode: en
+status: false
+dependencies:
+  module:
+    - helfi_platform_config
+    - language
+    - system
+  theme:
+    - hdbt_subtheme
+id: hdbt_subtheme_teliaacewidget
+theme: hdbt_subtheme
+region: attachments
+weight: 0
+provider: null
+plugin: telia_ace_widget
+settings:
+  id: telia_ace_widget
+  label: 'Telia ACE Widget FI'
+  label_display: visible
+  provider: helfi_platform_config
+  chat_id: helsinki-infochat_fi
+  chat_title: 'Kysy kaupungista!'
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fi: fi
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/neuvonta-ja-tuki/helsinki-info\r\n/neuvonta-ja-tuki/helsinki-info/*\r\n/ota-yhteytta/helsinki-info\r\n/ota-yhteytta-helsingin-kaupunkiin"
