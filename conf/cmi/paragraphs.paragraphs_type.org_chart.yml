@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: lwFGplZOl-ZyFO20pBfBgtzLSdZYqzADYO17oSFuXBs
+  default_config_hash: mnVuLHURTpsziuzsqcuu9cGtyI2ShA2CVFLaRUjcrQA
 id: org_chart
-label: 'Org chart'
+label: 'Organization chart'
 icon_uuid: null
 icon_default: null
 description: ''
