@@ -61,10 +61,10 @@ settings:
       news_list: news_list
       image_gallery: image_gallery
       number_highlights: number_highlights
+      org_chart: org_chart
       service_list_search: service_list_search
       unit_search: unit_search
       unit_contact_card: unit_contact_card
-      org_chart: org_chart
     negate: 0
     target_bundles_drag_drop:
       accordion:
