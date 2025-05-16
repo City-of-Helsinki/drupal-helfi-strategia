@@ -35,3 +35,4 @@ content:
 hidden:
   field_org_chart_depth: true
   field_org_chart_start: true
+  search_api_excerpt: true
