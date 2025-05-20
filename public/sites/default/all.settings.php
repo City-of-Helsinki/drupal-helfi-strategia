@@ -45,6 +45,7 @@ $additionalEnvVars = [
   'TUNNISTAMO_ENVIRONMENT_URL',
   'SENTRY_DSN',
   'SENTRY_ENVIRONMENT',
+  'MATOMO_SITE_ID',
   // 'AMQ_BROKERS',
   // 'AMQ_USER',
   // 'AMQ_PASSWORD',
