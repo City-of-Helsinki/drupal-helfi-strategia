@@ -6,7 +6,9 @@ id: helfi_node_announcement
 label: 'Helfi: Announcements'
 label_plural: 'Helfi: Announcements'
 description: ''
+content_class: Drupal\external_entities\Entity\ExternalEntity
 read_only: true
+debug_level: null
 generate_aliases: null
 field_mappers:
   id:
@@ -65,13 +67,12 @@ field_mappers:
               -
                 id: default
                 config: {  }
+field_mapping_notes: ''
 data_aggregator:
   id: single
   config:
-    storage_clients:
-      -
-        id: helfi_node_announcement
-        config: {  }
+    storage_clients: {  }
+data_aggregator_notes: ''
 persistent_cache_max_age: 600
 annotation_entity_type_id: null
 annotation_bundle_id: null
