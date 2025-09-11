@@ -117,6 +117,9 @@ if ($reverse_proxy_address = getenv('DRUPAL_REVERSE_PROXY_ADDRESS')) {
   $reverse_proxy_address = explode(',', $reverse_proxy_address);
 
   if (isset($_SERVER['REMOTE_ADDR'])) {
+    // The application sits behind multiple proxies in the OpenShift
+    // environment. The nginx configuration uses ngx_http_realip_module to
+    // set the correct headers for Drupal.
     $reverse_proxy_address[] = $_SERVER['REMOTE_ADDR'];
   }
   $settings['reverse_proxy'] = TRUE;
@@ -384,6 +387,12 @@ $settings['helfi_api_base.log_level'] = getenv('LOG_LEVEL') ?: $default_log_leve
 // Turn sentry JS error tracking on if SENTRY_DSN_PUBLIC is defined.
 if (getenv('SENTRY_DSN_PUBLIC')) {
   $config['raven.settings']['javascript_error_handler'] = TRUE;
+}
+
+// Turn sentry drupal cron monitor on if SENTRY_CRON_MONITOR_ID is defined.
+if (getenv('SENTRY_CRON_MONITOR_ID')) {
+  // Preferably the id should be {site-name}-{env-name}-cron-monitor
+  $config['raven.settings']['cron_monitor_id'] = getenv('SENTRY_CRON_MONITOR_ID');
 }
 
 // Environment specific overrides.
