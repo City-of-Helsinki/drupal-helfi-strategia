@@ -5,11 +5,11 @@ dependencies: {  }
 id: helfi_node_announcement
 label: 'Helfi: Announcements'
 label_plural: 'Helfi: Announcements'
+base_path: helfi_node_announcement
 description: ''
 content_class: Drupal\external_entities\Entity\ExternalEntity
 read_only: true
 debug_level: null
-generate_aliases: null
 field_mappers:
   id:
     id: generic
@@ -19,34 +19,6 @@ field_mappers:
           id: jsonpath
           config:
             mapping: $.id
-            required_field: false
-            main_property: true
-            data_processors:
-              -
-                id: default
-                config: {  }
-  uuid:
-    id: generic
-    config:
-      property_mappings:
-        value:
-          id: jsonpath
-          config:
-            mapping: $.id
-            required_field: false
-            main_property: true
-            data_processors:
-              -
-                id: default
-                config: {  }
-  title:
-    id: generic
-    config:
-      property_mappings:
-        value:
-          id: jsonpath
-          config:
-            mapping: "$.attributes['title']"
             required_field: false
             main_property: true
             data_processors:
@@ -67,6 +39,34 @@ field_mappers:
               -
                 id: default
                 config: {  }
+  title:
+    id: generic
+    config:
+      property_mappings:
+        value:
+          id: jsonpath
+          config:
+            mapping: "$.attributes['title']"
+            required_field: false
+            main_property: true
+            data_processors:
+              -
+                id: default
+                config: {  }
+  uuid:
+    id: generic
+    config:
+      property_mappings:
+        value:
+          id: jsonpath
+          config:
+            mapping: $.id
+            required_field: false
+            main_property: true
+            data_processors:
+              -
+                id: default
+                config: {  }
 field_mapping_notes: ''
 data_aggregator:
   id: single
@@ -77,4 +77,5 @@ persistent_cache_max_age: 600
 annotation_entity_type_id: null
 annotation_bundle_id: null
 annotation_field_name: null
-inherits_annotation_fields: false
+annotation_inherited_fields: {  }
+generate_aliases: null
