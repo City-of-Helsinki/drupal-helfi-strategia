@@ -73,9 +73,10 @@ data_aggregator:
   config:
     storage_clients: {  }
 data_aggregator_notes: ''
+language_settings: {  }
 persistent_cache_max_age: 600
 annotation_entity_type_id: null
 annotation_bundle_id: null
 annotation_field_name: null
 annotation_inherited_fields: {  }
-generate_aliases: null
+locks: {  }
