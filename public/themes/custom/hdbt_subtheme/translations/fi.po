@@ -1,3 +1,53 @@
 # Finnish translations
 msgid ""
 msgstr ""
+
+msgctxt "Hyte search"
+msgid "For example, skating or nature trail"
+msgstr "Esim. luistelu tai luontopolku"
+
+msgctxt "Hyte search"
+msgid "Culture, creativity and art"
+msgstr "Kulttuuri, luovuus ja taide"
+
+msgctxt "Hyte search"
+msgid "Physical activities, outdoor activities and nature"
+msgstr "Liikkuminen, ulkoilu ja luonto"
+
+msgctxt "Hyte search"
+msgid "Mental wellbeing"
+msgstr "Mielen hyvinvointi"
+
+msgctxt "Hyte search"
+msgid "Guidance and support"
+msgstr "Neuvontaa ja tukea"
+
+msgctxt "Hyte search"
+msgid "Learning new things"
+msgstr "Uuden oppiminen"
+
+msgctxt "Hyte search"
+msgid "Nutrition, sleep and addiction management"
+msgstr "Ravitsemus, uni ja riippuvuuksien hallinta"
+
+msgctxt "Hyte search"
+msgid "Volunteer activities"
+msgstr "Vapaaehtoistoiminta"
+
+msgctxt "Hyte search"
+msgid "Meeting places and community"
+msgstr "Kohtaamispaikat ja yhteisöllisyys"
+
+msgctxt "Hyte search"
+msgid "Find wellbeing services"
+msgstr "Etsi hyvinvointia edistäviä palveluita"
+
+msgctxt "Hyte search"
+msgid "Find wellbeing services in Helsinki near you by entering your address, entering a search term, or selecting one of the themes."
+msgstr "Löydä Helsingin kaupungin hyvinvointia edistäviä palveluita lähelläsi kirjoittamalla osoitteesi, antamalla hakusanan tai valitsemalla jokin teemoista."
+
+msgctxt "Hyte search"
+msgid "1 result"
+msgid_plural "@count results"
+msgstr[0] "1 hakutulos"
+msgstr[1] "@count hakutulosta"
