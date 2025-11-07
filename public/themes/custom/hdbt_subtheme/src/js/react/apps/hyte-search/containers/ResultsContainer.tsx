@@ -1,16 +1,17 @@
-import { useCallback } from 'react';
+import { useAtomCallback } from 'jotai/react/utils';
+import { useCallback, useEffect } from 'react';
 import useSwr from 'swr';
 
 import { AddressNotFound } from '@/react/common/AddressNotFound';
+import { Components } from 'src/js/react/enum/Components';
 import { estypes } from '@elastic/elasticsearch';
+import { getPageAtom, initializedAtom, setPageAtom, shouldScrollAtom, submittedStateAtom } from '../store';
 import { GhostList } from '@/react/common/GhostList';
-import { getPageAtom, initializedAtom, setPageAtom, submittedStateAtom } from '../store';
 import { ResultCard } from '../components/ResultCard';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { Service } from '../types/Service';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useQuery } from '../hooks/useQuery';
-import { Components } from 'src/js/react/enum/Components';
 
 export const ResultsContainer  = ({
   url,
@@ -22,6 +23,10 @@ export const ResultsContainer  = ({
   const submittedState = useAtomValue(submittedStateAtom);
   const currentPage = useAtomValue(getPageAtom);
   const setPage = useSetAtom(setPageAtom);
+  const readShouldScroll = useAtomCallback(
+    useCallback((get) => get(shouldScrollAtom), [])
+  );
+  const setShouldScroll = useSetAtom(shouldScrollAtom);
 
   const fetcher = useCallback((query: string) => fetch(url, {
     method: 'POST',
@@ -37,6 +42,15 @@ export const ResultsContainer  = ({
     revalidateOnFocus: false,
   });
 
+  const loading = isLoading || isValidating;
+  console.log(loading, readShouldScroll())
+
+  useEffect(() => {
+    if (!readShouldScroll() && !loading && initialized) {
+      setShouldScroll(true);
+    }
+  }, [loading, readShouldScroll, setShouldScroll]);
+
   if (!initialized) {
     return <GhostList count={10} />
   }
@@ -45,23 +59,22 @@ export const ResultsContainer  = ({
     return <AddressNotFound />
   }
 
-  const loading = isLoading || isValidating;
-
   const resultItemCallBack = (item: estypes.SearchHit<any>) => <ResultCard
     key={item._id}
     {...item.fields as Service}
   />;
+  
 
   return (
     <ResultsWrapper
       currentPage={currentPage}
-      getHeaderText={() => Drupal.formatPlural(data?.hits.total.value ?? 0, '1 result', '@count results', {}, {context: 'Hyte search'})}
       data={data}
       error={error}
+      getHeaderText={() => Drupal.formatPlural(data?.hits.total.value ?? 0, '1 result', '@count results', {}, {context: 'Hyte search'})}
       isLoading={loading}
       resultItemCallBack={resultItemCallBack}
       setPage={setPage}
-      shouldScroll={initialized}
+      shouldScroll={readShouldScroll() && !loading}
       size={10}
     />
   );
