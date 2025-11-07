@@ -111,3 +111,4 @@ export const setPageAtom = atom(null, (get, set, page: number) => {
 });
 
 export const initializedAtom = atom<boolean>(false);
+export const shouldScrollAtom = atom<boolean>(false);
