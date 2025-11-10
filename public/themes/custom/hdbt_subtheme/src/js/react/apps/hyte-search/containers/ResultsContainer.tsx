@@ -43,7 +43,6 @@ export const ResultsContainer  = ({
   });
 
   const loading = isLoading || isValidating;
-  console.log(loading, readShouldScroll())
 
   useEffect(() => {
     if (!readShouldScroll() && !loading && initialized) {

@@ -54,7 +54,7 @@ export const SearchContainer  = ({
     if (!initialized && !loading && data) {
       initializeApp({
         themes: data.aggregations?.themes.buckets,
-      });
+      }); 
     }
   }, [data]);
 

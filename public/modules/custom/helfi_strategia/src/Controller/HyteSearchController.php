@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_strategia\Controller;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
@@ -32,7 +33,7 @@ class HyteSearchController extends ControllerBase {
         '#tag' => 'div',
         '#attributes' => [
           'id' => 'hyte-search',
-          'data-url' => '',
+          'data-url' => $this->config('elastic_proxy.settings')?->get('elastic_proxy_url'),
         ],
       ],
     ];
