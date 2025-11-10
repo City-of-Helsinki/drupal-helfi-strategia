@@ -1,6 +1,6 @@
 import { estypes } from '@elastic/elasticsearch';
 import { useAtomValue } from 'jotai';
-import { IndexFields, UnitFields } from 'src/js/react/enum/IndexFields';
+import { IndexFields, UnitFields, UnitImageFields } from 'src/js/react/enum/IndexFields';
 import { submittedStateAtom } from '../store';
 import { useMemo } from 'react';
 import { Components } from 'src/js/react/enum/Components';
@@ -136,6 +136,7 @@ export const useQuery = (): estypes.SearchRequest|null => {
         IndexFields.URL,
         UnitFields.NAME_OVERRIDE,
         UnitFields.NAME,
+        ...Object.values(UnitImageFields)
       ],
       query,
       size,

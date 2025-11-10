@@ -1,6 +1,5 @@
 export const IndexFields = {
   DESCRIPTION_SUMMARY: 'description_summary',
-  IMAGE: 'image',
   NAME: 'name',
   NAME_OVERRIDE: 'name_override',
   NAME_SYNONYMS: 'name_synonyms',
@@ -13,7 +12,16 @@ export const IndexFields = {
 
 export const UnitFields = {
   ADDRESS: 'units.address',
+  IMAGE: 'units.image',
   LOCATION: 'units.location',
   NAME: 'units.name',
   NAME_OVERRIDE: 'units.name_override',
+};
+
+export const UnitImageFields = {
+  ALT: 'units.image.alt',
+  PHOTOGRAPHER: 'units.image.photographer',
+  TITLE: 'units.image.title',
+  URL: 'units.image.url',
+  VARIANT: 'units.image.variants.1.5_1022w_682h_LQ',
 };

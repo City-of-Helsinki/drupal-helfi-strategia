@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     throw new Error('Root id missing for Hyte Search React app');
   }
 
-  const elasticUrl = rootElement.dataset.url || 'https://etusivu-elastic-proxy-test.agw.arodevtest.hel.fi/hyte/_search';
+  const elasticUrl = rootElement.dataset.url;
 
   if (!elasticUrl) {
     throw new Error('Elastic URL missing for Hyte Search React app');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <React.StrictMode>
       <Suspense fallback={<div>Loading...</div>}>
-        <SearchContainer url={elasticUrl} />
+        <SearchContainer url={`${elasticUrl}/hyte/_search`} />
       </Suspense>
     </React.StrictMode>,
     rootElement

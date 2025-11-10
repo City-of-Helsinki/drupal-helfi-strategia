@@ -38,8 +38,28 @@ export const ResultCard  = ({
     }));
   };
 
+  const getImage = (): JSX.Element|undefined => {
+    if (!units?.[0]?.['image.url']) {
+      return;
+    }
+
+    const srcSet = units[0]?.['image.variants.1.5_1022w_682h_LQ'] ?
+      `${units[0]?.['image.variants.1.5_1022w_682h_LQ']} 2x` :
+      undefined;
+
+    return <img
+      alt={units[0]?.['image.alt']?.toString() || ''}
+      data-photographer={units[0]?.['image.photographer']?.toString() || ''}
+      className="card__image"
+      src={units[0]?.['image.url']?.[0]}
+      srcSet={srcSet}
+      title={units[0]?.['image.title']?.toString() || ''}
+    />;
+  };
+
   return <CardItem
     cardDescription={description_summary?.toString()}
+    cardImage={getImage()}
     cardTags={getTags()}
     cardTitle={name_override?.toString() || name.toString()}
     cardUrl={url.toString()}
