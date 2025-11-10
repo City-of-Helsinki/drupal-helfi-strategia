@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\helfi_strategia\Controller;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
@@ -38,4 +37,5 @@ class HyteSearchController extends ControllerBase {
       ],
     ];
   }
+
 }

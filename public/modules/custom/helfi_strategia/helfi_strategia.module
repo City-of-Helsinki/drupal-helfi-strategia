@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * helfi_strategia.module
+ */
+
 declare(strict_types=1);
 
 /**
