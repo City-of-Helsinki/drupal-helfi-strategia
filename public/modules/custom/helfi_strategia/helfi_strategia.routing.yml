@@ -4,7 +4,8 @@ helfi_strategia.hyte_search.fi:
     _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
     _title: 'Etsi hyvinvointia edistäviä palveluita'
   requirements:
-    _permission: 'access content'
+    # Change to _permission: 'access content' when enabling the route
+    _access: 'FALSE'
 
 helfi_strategia.hyte_search.sv:
   path: 'söktjänster'
@@ -12,7 +13,7 @@ helfi_strategia.hyte_search.sv:
     _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
     _title: 'Hitta tjänster som främjar välbefinnande'
   requirements:
-    _permission: 'access content'
+    _access: 'FALSE'
 
 helfi_strategia.hyte_search_en:
   path: 'find-services'
@@ -20,4 +21,4 @@ helfi_strategia.hyte_search_en:
     _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
     _title: 'Find wellbeing services'
   requirements:
-    _permission: 'access content'
+    _access: 'FALSE'
