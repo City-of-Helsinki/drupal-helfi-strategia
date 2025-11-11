@@ -16,7 +16,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.2",
+    "@elastic/elasticsearch": "^9.2.0",
     "@hdbt/theme-builder": "file:../../contrib/hdbt/theme-builder",
+    "@sentry/react": "^10.22.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
     "breakpoint-sass": "^3.0.0",
     "css-declaration-sorter": "^7.2.0",
     "eslint": "^8.57.1",
@@ -24,13 +28,18 @@
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-jsdoc": "^51.0.0",
     "glob": "^11.0.0",
-    "hds-design-tokens": "^2.0.0",
+    "hds-design-tokens": "^4.4.0",
+    "hds-react": "^4.4.0",
     "html-loader": "^4.0.0",
     "joi": "^17.4.0",
+    "jotai": "^2.15.1",
     "js-yaml": "^4.1.0",
     "npm-run-all2": "^8.0.4",
     "postcss-cli": "^11.0.1",
-    "stylelint-config-standard-scss": "^15.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "stylelint-config-standard-scss": "^15.0.0",
+    "swr": "^2.3.6"
   },
   "browserslist": [
     "last 3 major versions",
