@@ -1,0 +1,19 @@
+<article>
+  <div class="components components--computed">
+    {% embed "@hdbt/misc/component.twig" with
+      {
+        component_classes: [
+        'component--full-width',
+        'component--react-search',
+        ],
+        component_description: description,
+        component_title: 'Find wellbeing services'|trans({}, {'context': 'Hyte search'}),
+        component_title_level: 'h1',
+      }
+    %}
+      {% block component_content %}
+        {{ search_element|render }}
+      {% endblock component_content %}
+    {% endembed %}
+  </div>
+</article>

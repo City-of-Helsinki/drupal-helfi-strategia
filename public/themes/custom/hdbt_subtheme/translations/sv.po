@@ -1,3 +1,43 @@
 # Swedish translations
 msgid ""
 msgstr ""
+
+msgctxt "Hyte search"
+msgid "For example, skating or nature trail"
+msgstr "Till exempel, skridskoåkning eller naturstig"
+
+msgctxt "Hyte search"
+msgid "For example, skating or nature trail"
+msgstr "Esim. luistelu tai luontopolku"
+
+msgctxt "Hyte search"
+msgid "Culture, creativity and art"
+msgstr "Kultur, kreativitet och konst"
+
+msgctxt "Hyte search"
+msgid "Physical activities, outdoor activities and nature"
+msgstr "Motion, friluftsliv och natur"
+
+msgctxt "Hyte search"
+msgid "Mental wellbeing"
+msgstr "Psykiskt välbefinnande"
+
+msgctxt "Hyte search"
+msgid "Guidance and support"
+msgstr "Råd och stöd"
+
+msgctxt "Hyte search"
+msgid "Learning new things"
+msgstr "Lära sig nytt"
+
+msgctxt "Hyte search"
+msgid "Nutrition, sleep and addiction management"
+msgstr "Näring, sömn och hantering av beroenden"
+
+msgctxt "Hyte search"
+msgid "Volunteer activities"
+msgstr "Frivilligverksamhet"
+
+msgctxt "Hyte search"
+msgid "Meeting places and community"
+msgstr "Mötesplatser och gemenskap"
