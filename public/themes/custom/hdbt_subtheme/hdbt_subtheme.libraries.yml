@@ -1,7 +1,12 @@
-#global-styling:
-#  version: 1.x
-#  css:
-#    theme:
-#      dist/css/styles.min.css: {}
-#     Uncomment following line to load custom svg icon styles.
-#     dist/css/hdbt-subtheme-icons.css: {}
+hyte-search:
+  version: 1.0.0
+  js:
+    dist/js/hyte-search.min.js: {
+      attributes: {
+        minified: true,
+        preprocess: false
+      }
+    }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings 
