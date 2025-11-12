@@ -6,10 +6,7 @@ type Address = {
   postal_code: string[];
 };
 
-type Location = {
-  lat: string[];
-  lon: string[];
-};
+type Location = { lat: string[]; lon: string[] };
 
 export type Unit = {
   'image.alt'?: string[];
@@ -32,6 +29,6 @@ export type Service = {
   search_api_data_source: string[];
   search_api_id: string[];
   search_api_language: string[];
-  units?: Unit[]; 
+  units?: Unit[];
   url: string[];
 };

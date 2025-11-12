@@ -1,9 +1,11 @@
 import { TextInput } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
-
-import { AddressSearch, AddressWithCoordinates } from '@/react/common/AddressSearch';
-import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 import { Components } from 'src/js/react/enum/Components';
+import {
+  AddressSearch,
+  type AddressWithCoordinates,
+} from '@/react/common/AddressSearch';
+import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 export const SearchBar = () => {
   const initialized = useAtomValue(initializedAtom);
@@ -18,12 +20,12 @@ export const SearchBar = () => {
         id='search-bar'
         value={address || ''}
       />
-    )
+    );
   }
 
   const onChange = (address: string) => {
-    setSearchState({[Components.ADDRESS]: address});
-  }
+    setSearchState({ [Components.ADDRESS]: address });
+  };
 
   const onSubmit = (address: AddressWithCoordinates) => {
     setSearchState({
@@ -37,10 +39,18 @@ export const SearchBar = () => {
       id={Components.ADDRESS}
       includeCoordinates
       className='hdbt-search__filter hdbt-search--react__text-field'
-      label={Drupal.t('Home address', {}, { context: 'React search: home address' })}
+      label={Drupal.t(
+        'Home address',
+        {},
+        { context: 'React search: home address' },
+      )}
       onChange={onChange}
       onSubmit={onSubmit}
-      placeholder={Drupal.t('For example, Kotikatu 1', {}, { context: 'React search: street input helper placeholder' })}
+      placeholder={Drupal.t(
+        'For example, Kotikatu 1',
+        {},
+        { context: 'React search: street input helper placeholder' },
+      )}
       value={address || ''}
     />
   );
