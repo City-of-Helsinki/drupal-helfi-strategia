@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import { ErrorBoundary } from '@sentry/react';
 
 import initSentry from '@/react/common/helpers/Sentry';
 import { SearchContainer } from './containers/SearchContainer';
@@ -28,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <SearchContainer url={`${elasticUrl}/hyte/_search`} />
       </Suspense>
     </React.StrictMode>,
-    rootElement
+    rootElement,
   );
 });

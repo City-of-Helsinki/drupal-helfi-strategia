@@ -1,8 +1,9 @@
+// biome-ignore-all lint/a11y/useSemanticElements: @todo UHF-12501
 import { Button } from 'hds-react';
+import { useSetAtom } from 'jotai';
 import { KeywordFilter } from '../components/KeywordFilter';
 import { SearchBar } from '../components/SearchBar';
 import { ThemeFilter } from '../components/ThemeFilter';
-import { useSetAtom } from 'jotai';
 import { submitStateAtom } from '../store';
 import { SelectionsContainer } from './SelectionsContainer';
 
@@ -23,11 +24,12 @@ export const FormContainer = () => {
         <KeywordFilter />
         <ThemeFilter />
       </div>
-      <Button
-        className='hdbt-search--react__submit-button'
-        type='submit'
-      >
-        {Drupal.t('Search', {}, {context: 'React search: submit button label'})}
+      <Button className='hdbt-search--react__submit-button' type='submit'>
+        {Drupal.t(
+          'Search',
+          {},
+          { context: 'React search: submit button label' },
+        )}
       </Button>
       <SelectionsContainer />
     </form>
