@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * helfi_strategia.module
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_theme().
+ */
+function helfi_strategia_theme(): array {
+  return [
+    'hyte_search' => [
+      'variables' => [
+        'search_element' => NULL,
+        'description' => NULL,
+      ],
+      'template' => 'hyte-search',
+    ],
+  ];
+}

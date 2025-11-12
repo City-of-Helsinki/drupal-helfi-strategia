@@ -5,6 +5,9 @@
  * Contains site specific overrides.
  */
 
+// Elastic proxy URL.
+$config['elastic_proxy.settings']['elastic_proxy_url'] = getenv('ELASTIC_PROXY_URL');
+
 $config['openid_connect.client.tunnistamo']['settings']['ad_roles'] = [
   [
     'ad_role' => 'Drupal_Helfi_kaupunkitaso_paakayttajat',
@@ -37,6 +40,7 @@ $additionalEnvVars = [
   'PROJECT_NAME',
   'DRUPAL_PUBSUB_VAULT',
   'DRUPAL_NAVIGATION_VAULT',
+  'ELASTIC_PROXY_URL',
   'REDIS_HOST',
   'REDIS_PORT',
   'REDIS_PASSWORD',
