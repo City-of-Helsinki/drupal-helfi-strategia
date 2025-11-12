@@ -18,7 +18,11 @@ export const KeywordFilter = () => {
       id={Components.KEYWORD}
       label={Drupal.t('Search term', {}, { context: 'Search keyword label' })}
       onChange={onChange}
-      placeholder={Drupal.t('For example, skating or nature trail', {}, { context: 'Hyte search' })}
+      placeholder={Drupal.t(
+        'For example, skating or nature trail',
+        {},
+        { context: 'Hyte search' },
+      )}
       value={keyword || ''}
     />
   );
