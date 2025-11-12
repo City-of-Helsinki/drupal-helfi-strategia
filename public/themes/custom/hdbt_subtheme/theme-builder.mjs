@@ -10,7 +10,7 @@ const outDir = path.resolve(__dirname, 'dist');
 
 // React apps.
 const reactApps = {
-  // 'app-name': './src/js/react/apps/app-nem/index.tsx',
+  'hyte-search': './src/js/react/apps/hyte-search/index.tsx',
 };
 
 // Vanilla JS files.
