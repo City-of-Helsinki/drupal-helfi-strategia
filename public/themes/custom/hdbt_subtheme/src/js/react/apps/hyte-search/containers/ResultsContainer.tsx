@@ -1,5 +1,3 @@
-// biome-ignore-all lint/correctness/useExhaustiveDependencies: @todo UHF-12501
-// biome-ignore-all lint/suspicious/noExplicitAny: @todo UHF-12501
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useAtomCallback } from 'jotai/react/utils';
@@ -12,6 +10,7 @@ import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
 import { useQuery } from '../hooks/useQuery';
 import {
+  getElasticUrlAtom,
   getPageAtom,
   initializedAtom,
   setPageAtom,
@@ -20,7 +19,8 @@ import {
 } from '../store';
 import type { Service } from '../types/Service';
 
-export const ResultsContainer = ({ url }: { url: string }) => {
+export const ResultsContainer = () => {
+  const url = useAtomValue(getElasticUrlAtom);
   const initialized = useAtomValue(initializedAtom);
   const query = useQuery();
   const submittedState = useAtomValue(submittedStateAtom);
@@ -33,7 +33,7 @@ export const ResultsContainer = ({ url }: { url: string }) => {
 
   const fetcher = useCallback(
     (query: string) =>
-      fetch(url, {
+      fetch(`${url}/hyte/_search`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: query,
@@ -57,7 +57,7 @@ export const ResultsContainer = ({ url }: { url: string }) => {
     if (!readShouldScroll() && !loading && initialized) {
       setShouldScroll(true);
     }
-  }, [loading, readShouldScroll, setShouldScroll]);
+  }, [initialized, loading, readShouldScroll, setShouldScroll]);
 
   if (!initialized) {
     return <GhostList count={10} />;
@@ -67,9 +67,15 @@ export const ResultsContainer = ({ url }: { url: string }) => {
     return <AddressNotFound />;
   }
 
-  const resultItemCallBack = (item: estypes.SearchHit<any>) => (
-    <ResultCard key={item._id} {...(item.fields as Service)} />
-  );
+  const resultItemCallBack = (item: estypes.SearchHit<Service>) => {
+    const service = item.inner_hits?.collapsed_services.hits.hits[0];
+
+    if (!service) {
+      throw new Error('Service inner hit is missing');
+    }
+
+    return <ResultCard key={item._id} {...(service.fields as Service)} />;
+  };
 
   return (
     <ResultsWrapper
@@ -78,7 +84,7 @@ export const ResultsContainer = ({ url }: { url: string }) => {
       error={error}
       getHeaderText={() =>
         Drupal.formatPlural(
-          data?.hits.total.value ?? 0,
+          data.aggregations?.total_services?.value ?? 0,
           '1 result',
           '@count results',
           {},

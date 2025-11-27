@@ -5,11 +5,17 @@ declare(strict_types=1);
 namespace Drupal\helfi_strategia\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\helfi_strategia\ElasticProxyResolver;
 
 /**
  * Controller for Hyte search page.
  */
 class HyteSearchController extends ControllerBase {
+
+  public function __construct(
+    private readonly ElasticProxyResolver $elasticProxyResolver,
+  ) {
+  }
 
   /**
    * Returns the search page render array.
@@ -17,6 +23,13 @@ class HyteSearchController extends ControllerBase {
   public function searchPage(): array {
     return [
       '#attached' => [
+        'drupalSettings' => [
+          'helfi_strategia' => [
+            'hyte_search' => [
+              'elastic_proxy_url' => $this->elasticProxyResolver->getElasticProxyUrl(),
+            ],
+          ],
+        ],
         'library' => [
           'hdbt_subtheme/hyte-search',
         ],
@@ -32,10 +45,9 @@ class HyteSearchController extends ControllerBase {
         '#tag' => 'div',
         '#attributes' => [
           'id' => 'hyte-search',
-          'data-url' => $this->config('elastic_proxy.settings')?->get('elastic_proxy_url'),
         ],
       ],
     ];
   }
 
-}
+} 
