@@ -50,4 +50,4 @@ class HyteSearchController extends ControllerBase {
     ];
   }
 
-} 
+}

@@ -13,7 +13,7 @@ use Drupal\helfi_strategia\ElasticProxyResolver;
 
 /**
  * Adds Elastic Proxy URL to CSP.
- * 
+ *
  * @package Drupal\helfi_strategia\EventSubscriber
  */
 class CspElasticProxySubscriber extends CspSubscriberBase {
@@ -29,7 +29,7 @@ class CspElasticProxySubscriber extends CspSubscriberBase {
 
   /**
    * Alter CSP policy to allow etusivu Elastic Proxy URL.
-   * 
+   *
    * @param \Drupal\csp\Event\PolicyAlterEvent $event
    *   The policy alter event.
    */
@@ -38,4 +38,5 @@ class CspElasticProxySubscriber extends CspSubscriberBase {
     $proxy_url = $this->elasticProxyResolver->getElasticProxyUrl();
     $policy->fallbackAwareAppendIfEnabled('connect-src', [$proxy_url]);
   }
+
 }
