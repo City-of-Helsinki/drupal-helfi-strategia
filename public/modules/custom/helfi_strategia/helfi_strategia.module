@@ -19,5 +19,25 @@ function helfi_strategia_theme(): array {
       ],
       'template' => 'hyte-search',
     ],
+    'hyte_search_hero_block' => [
+      'variables' => [
+        'hero_title' => NULL,
+        'hero_description' => NULL,
+      ],
+      'template' => 'hyte-search-hero-block',
+    ],
   ];
+}
+
+function helfi_strategia_preprocess_html(&$variables): void {
+  $route = \Drupal::routeMatch()->getRouteName();
+
+  // Set the theme color to suomenlinna on Helsinki near you landing pages.
+  $hyte_search = [
+    'helfi_strategia.hyte_search',
+  ];
+
+  if (in_array($route, $hyte_search)) {
+    $variables['theme_color'] = 'copper';
+  }
 }
