@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains helfi_strategia installation hooks.
+ */
+
+declare(strict_types=1);
+
+use Drupal\path_alias\Entity\PathAlias;
+
+
+/**
+ * UHF-10771: Add path aliases for helsinki-near-you url.
+ */
+function helfi_strategia_update_9001(): void {
+  $paths = [
+    [
+      'path' => '/find-services',
+      'alias' => '/palveluhaku',
+      'langcode' => 'fi',
+    ],
+    [
+      'path' => '/find-services',
+      'alias' => '/sok-tjanster',
+      'langcode' => 'sv',
+    ],
+  ];
+  foreach ($paths as $path) {
+    PathAlias::create($path)->save();
+  }
+}

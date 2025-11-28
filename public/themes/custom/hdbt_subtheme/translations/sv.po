@@ -8,7 +8,7 @@ msgstr "Till exempel, skridskoåkning eller naturstig"
 
 msgctxt "Hyte search"
 msgid "For example, skating or nature trail"
-msgstr "Esim. luistelu tai luontopolku"
+msgstr "Till exempel, skridskoåkning eller naturstig"
 
 msgctxt "Hyte search"
 msgid "Culture, creativity and art"
@@ -41,3 +41,19 @@ msgstr "Frivilligverksamhet"
 msgctxt "Hyte search"
 msgid "Meeting places and community"
 msgstr "Mötesplatser och gemenskap"
+
+msgctxt "Hyte search"
+msgid "Filter search results"
+msgstr "Filtrera sökresultat"
+
+msgctxt "Hyte search"
+msgid "Find wellbeing services"
+msgstr "Hitta tjänster som främjar välbefinnande"
+
+msgctxt "Hyte search"
+msgid "Find wellbeing services in Helsinki near you by entering your address, entering a search term, or selecting one of the themes."
+msgstr "Hitta tjänster som främjar välbefinnande i Helsingfors nära dig genom att ange din adress, skriva in ett sökord eller välja ett av teman."
+
+msgctxt "Hyte search"
+msgid "Select one or more themes"
+msgstr "Välj ett eller flera teman"

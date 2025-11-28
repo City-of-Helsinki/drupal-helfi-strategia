@@ -39,12 +39,20 @@ msgid "Meeting places and community"
 msgstr "Kohtaamispaikat ja yhteisöllisyys"
 
 msgctxt "Hyte search"
+msgid "Filter search results"
+msgstr "Rajaa hakutuloksia"
+
+msgctxt "Hyte search"
 msgid "Find wellbeing services"
 msgstr "Etsi hyvinvointia edistäviä palveluita"
 
 msgctxt "Hyte search"
 msgid "Find wellbeing services in Helsinki near you by entering your address, entering a search term, or selecting one of the themes."
 msgstr "Löydä Helsingin kaupungin hyvinvointia edistäviä palveluita lähelläsi kirjoittamalla osoitteesi, antamalla hakusanan tai valitsemalla jokin teemoista."
+
+msgctxt "Hyte search"
+msgid "Select one or more themes"
+msgstr "Valitse yksi tai useampi teema"
 
 msgctxt "Hyte search"
 msgid "1 result"
