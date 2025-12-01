@@ -1,6 +1,3 @@
-// biome-ignore-all lint/correctness/useJsxKeyInIterable: @todo UHF-12501
-// biome-ignore-all lint/style/noNonNullAssertion: @todo UHF-12501
-import { IconLocation } from 'hds-react';
 import { Themes } from 'src/js/react/enum/Themes';
 import type TagType from '@/common/types/TagType';
 import CardItem, { Metarow } from '@/react/common/Card';
@@ -22,25 +19,23 @@ export const ResultCard = ({
     return [
       <Metarow
         content={units.length.toString()}
-        icon={<IconLocation />}
+        icon={<span className='hel-icon hel-icon--location' />}
         label={`${Drupal.t('Locations', {}, { context: 'Hyte search' })}`}
+        key='location'
       />,
     ];
   };
 
   const getTags = (): TagType[] => {
-    /** @todo implement better once BE changes are made */
     const foundThemes = name_synonyms
-      ?.toString()
-      .split(',')
-      .map((tag) => tag.trim())
+      ?.map((tag) => tag.trim())
       .filter((tag) => Themes.has(tag));
 
     if (!foundThemes?.length) {
       return [];
     }
 
-    return foundThemes.map((theme: string) => ({ tag: Themes.get(theme)! }));
+    return foundThemes.map((theme: string) => ({ tag: Themes.get(theme) }));
   };
 
   const getImage = (): JSX.Element | undefined => {
