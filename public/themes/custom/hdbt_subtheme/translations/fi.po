@@ -42,7 +42,6 @@ msgctxt "Hyte search"
 msgid "Filter search results"
 msgstr "Rajaa hakutuloksia"
 
-msgctxt "Hyte search"
 msgid "Find wellbeing services"
 msgstr "Etsi hyvinvointia edistäviä palveluita"
 

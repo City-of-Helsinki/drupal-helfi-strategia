@@ -61,7 +61,7 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
       return [];
     }
 
-    $title = new TranslatableMarkup($this->routeMatch->getRouteObject()->getDefault('_title'), [], ['context' => 'Hyte search']);
+    $title = new TranslatableMarkup('Find wellbeing services');
 
     return $this->buildHero($title);
   }
