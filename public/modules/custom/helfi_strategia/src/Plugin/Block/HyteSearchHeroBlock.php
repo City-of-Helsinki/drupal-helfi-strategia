@@ -57,7 +57,7 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
       'helfi_strategia.hyte_search',
     ];
 
-    if (!isset($routes[$route])) {
+    if (!in_array($route, $routes, TRUE)) {
       return [];
     }
 
