@@ -29,6 +29,9 @@ function helfi_strategia_theme(): array {
   ];
 }
 
+/**
+ *
+ */
 function helfi_strategia_preprocess_html(&$variables): void {
   $route = \Drupal::routeMatch()->getRouteName();
 

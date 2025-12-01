@@ -74,7 +74,6 @@ class HyteSearchHeroBlockTest extends KernelTestBase {
     $this->assertEquals('Find wellbeing services', (string) $content['#hero_title']);
   }
 
-
   /**
    * Tests cache contexts.
    */
@@ -92,4 +91,5 @@ class HyteSearchHeroBlockTest extends KernelTestBase {
 
     $this->assertContains('route', $contexts);
   }
+
 }

@@ -66,11 +66,12 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
     return $this->buildHero($title);
   }
 
-    /**
+  /**
    * Builds a hero block.
    *
    * @param \Drupal\Core\StringTranslation\TranslatableMarkup $title
    *   The hero title.
+   *
    * @return array
    *   The render array.
    */
@@ -88,4 +89,5 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
   public function getCacheContexts() : array {
     return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
+
 }
