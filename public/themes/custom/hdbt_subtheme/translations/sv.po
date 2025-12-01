@@ -57,5 +57,6 @@ msgstr "Hitta tjänster som främjar välbefinnande i Helsingfors nära dig geno
 msgctxt "Hyte search"
 msgid "Select one or more themes"
 msgstr "Välj ett eller flera teman"
+
 msgid "Locations"
 msgstr "Kontor"
