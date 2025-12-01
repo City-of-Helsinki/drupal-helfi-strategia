@@ -22,7 +22,7 @@ function helfi_strategia_theme(): array {
     'hyte_search_hero_block' => [
       'variables' => [
         'hero_title' => NULL,
-        'hero_description' => NULL,
+        'first_paragraph_bg' => NULL,
       ],
       'template' => 'hyte-search-hero-block',
     ],

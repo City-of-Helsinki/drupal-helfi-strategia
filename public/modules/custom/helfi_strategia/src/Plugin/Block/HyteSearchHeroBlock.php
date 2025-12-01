@@ -54,6 +54,7 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
     $build['hyte_search_hero_block'] = [
       '#theme' => 'hyte_search_hero_block',
       '#hero_title' => $title,
+      '#first_paragraph_bg' => TRUE,
     ];
 
     return $build;
