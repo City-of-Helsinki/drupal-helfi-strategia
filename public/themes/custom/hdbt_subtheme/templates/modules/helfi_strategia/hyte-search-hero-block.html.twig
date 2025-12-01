@@ -1,4 +1,8 @@
-<div class="hero-wrapper has-first-gray-bg-block">
+{% if first_paragraph_bg %}
+  {% set modifier_class = ' has-first-gray-bg-block' %}
+{% endif %}
+
+<div class="hero-wrapper{{ modifier_class }}">
   {% embed '@hdbt/component/hero.twig' with {
     title: hero_title,
   } %}
