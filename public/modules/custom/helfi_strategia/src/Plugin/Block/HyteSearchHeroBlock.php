@@ -6,7 +6,6 @@ namespace Drupal\helfi_strategia\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Cache\Cache;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
@@ -41,8 +40,6 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
       $plugin_definition
     );
 
-    $instance->routeMatch = $container->get(RouteMatchInterface::class);
-
     return $instance;
   }
 
@@ -58,13 +55,6 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
     ];
 
     return $build;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getCacheContexts() : array {
-    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }
