@@ -50,36 +50,12 @@ final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPlu
    * {@inheritdoc}
    */
   public function build() : array {
-    $route = $this->routeMatch->getRouteName();
-
-    // Routes where the hero should appear.
-    $routes = [
-      'helfi_strategia.hyte_search',
-    ];
-
-    if (!in_array($route, $routes, TRUE)) {
-      return [];
-    }
-
     $title = new TranslatableMarkup('Find wellbeing services');
-
-    return $this->buildHero($title);
-  }
-
-  /**
-   * Builds a hero block.
-   *
-   * @param \Drupal\Core\StringTranslation\TranslatableMarkup $title
-   *   The hero title.
-   *
-   * @return array
-   *   The render array.
-   */
-  private function buildHero(TranslatableMarkup $title) : array {
     $build['hyte_search_hero_block'] = [
       '#theme' => 'hyte_search_hero_block',
       '#hero_title' => $title,
     ];
+
     return $build;
   }
 
