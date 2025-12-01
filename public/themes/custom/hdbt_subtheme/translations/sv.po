@@ -41,3 +41,7 @@ msgstr "Frivilligverksamhet"
 msgctxt "Hyte search"
 msgid "Meeting places and community"
 msgstr "Mötesplatser och gemenskap"
+
+msgctxt "Hyte search"
+msgid "Locations"
+msgstr "Kontor"
