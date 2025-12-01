@@ -51,3 +51,7 @@ msgid "1 result"
 msgid_plural "@count results"
 msgstr[0] "1 hakutulos"
 msgstr[1] "@count hakutulosta"
+
+msgctxt "Hyte search"
+msgid "Locations"
+msgstr "Toimipisteitä"

@@ -129,16 +129,31 @@ export const useQuery = (): estypes.SearchRequest | null => {
 
     const result = {
       _source: false,
+      aggs: {
+        total_services: {
+          cardinality: {
+            field: IndexFields.SEARCH_API_ID,
+            precision_threshold: 3000,
+          },
+        },
+      },
+      collapse: {
+        field: IndexFields.SEARCH_API_ID,
+        inner_hits: {
+          _source: false,
+          fields: [
+            IndexFields.DESCRIPTION_SUMMARY,
+            IndexFields.NAME,
+            IndexFields.NAME_SYNONYMS,
+            IndexFields.URL,
+            UnitFields.NAME_OVERRIDE,
+            UnitFields.NAME,
+            ...Object.values(UnitImageFields),
+          ],
+          name: 'collapsed_services',
+        },
+      },
       from: size * (page - 1),
-      fields: [
-        IndexFields.DESCRIPTION_SUMMARY,
-        IndexFields.NAME,
-        IndexFields.NAME_SYNONYMS,
-        IndexFields.URL,
-        UnitFields.NAME_OVERRIDE,
-        UnitFields.NAME,
-        ...Object.values(UnitImageFields),
-      ],
       query,
       size,
       sort,
