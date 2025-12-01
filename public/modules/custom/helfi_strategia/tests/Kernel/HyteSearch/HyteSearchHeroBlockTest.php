@@ -7,6 +7,7 @@ namespace Drupal\Tests\helfi_strategia\Kernel;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
+use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTrait;
 
 /**
  * Kernel tests for HyteSearchHeroBlock.
@@ -14,6 +15,8 @@ use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
  * @group helfi_strategia
  */
 class HyteSearchHeroBlockTest extends KernelTestBase {
+
+  use PropertyTrait;
 
   /**
    * {@inheritdoc}
@@ -46,8 +49,7 @@ class HyteSearchHeroBlockTest extends KernelTestBase {
     $routeMatch = $this->prophesize(RouteMatchInterface::class);
     $routeMatch->getRouteName()->willReturn('helfi_strategia.hyte_search');
     $this->container->set(RouteMatchInterface::class, $routeMatch->reveal());
-    $block = HyteSearchHeroBlock::create($this->container, [], 'hyte_search_hero_block', $plugin_definition
-    );
+    $block = HyteSearchHeroBlock::create($this->container, [], 'hyte_search_hero_block', $plugin_definition);
 
     $build = $block->build();
 
