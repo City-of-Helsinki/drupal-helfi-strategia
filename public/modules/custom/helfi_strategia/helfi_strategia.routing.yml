@@ -1,21 +1,4 @@
-helfi_strategia.hyte_search.fi:
-  path: 'palveluhaku'
-  defaults:
-    _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
-    _title: 'Etsi hyvinvointia edistäviä palveluita'
-  requirements:
-    # Change to _permission: 'access content' when enabling the route
-    _permission: 'access content'
-
-helfi_strategia.hyte_search.sv:
-  path: 'söktjänster'
-  defaults:
-    _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
-    _title: 'Hitta tjänster som främjar välbefinnande'
-  requirements:
-    _permission: 'access content'
-
-helfi_strategia.hyte_search_en:
+helfi_strategia.hyte_search:
   path: 'find-services'
   defaults:
     _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
