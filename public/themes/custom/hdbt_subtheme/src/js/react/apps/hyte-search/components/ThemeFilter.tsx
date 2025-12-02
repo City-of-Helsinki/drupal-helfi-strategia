@@ -25,7 +25,14 @@ export const ThemeFilter = () => {
       noTags
       options={options}
       onChange={setThemes}
-      texts={{ label: Drupal.t('Theme', {}, { context: 'React search' }) }}
+      texts={{
+        label: Drupal.t('Theme', {}, { context: 'React search' }),
+        placeholder: Drupal.t(
+          'Select one or more themes',
+          {},
+          { context: 'Hyte search' },
+        ),
+      }}
       value={themes}
     />
   );
