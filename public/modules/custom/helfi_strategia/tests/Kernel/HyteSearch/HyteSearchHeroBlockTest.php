@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\helfi_strategia\Kernel;
+namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
