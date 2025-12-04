@@ -7,7 +7,6 @@ namespace Drupal\helfi_strategia;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\DependencyInjection\ServiceProviderBase;
 use Drupal\helfi_strategia\EventSubscriber\CspElasticProxySubscriber;
-use Drupal\helfi_strategia\ElasticProxyResolver;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
