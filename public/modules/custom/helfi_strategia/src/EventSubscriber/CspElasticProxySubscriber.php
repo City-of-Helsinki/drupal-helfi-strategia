@@ -21,10 +21,10 @@ class CspElasticProxySubscriber extends CspSubscriberBase {
 
   public function __construct(
     private readonly ElasticProxyResolver $elasticProxyResolver,
-    EnvironmentResolverInterface $environmentResolver,
     ConfigFactoryInterface $configFactory,
     ModuleHandlerInterface $moduleHandler,
-    PolicyHelper $policyHelper
+    EnvironmentResolverInterface $environmentResolver,
+    PolicyHelper $policyHelper,
   ) {
     parent::__construct($configFactory, $moduleHandler, $environmentResolver, $policyHelper);
   }
