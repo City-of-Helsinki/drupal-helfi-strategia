@@ -5,6 +5,3 @@ services:
 
   Drupal\helfi_strategia\ElasticProxyResolver:
     class: Drupal\helfi_strategia\ElasticProxyResolver
-
-  Drupal\helfi_strategia\EventSubscriber\CspElasticProxySubscriber:
-    class: Drupal\helfi_strategia\EventSubscriber\CspElasticProxySubscriber
