@@ -1,7 +1,9 @@
 import { Themes } from 'src/js/react/enum/Themes';
 import type TagType from '@/common/types/TagType';
 import CardItem, { Metarow } from '@/react/common/Card';
-import type { Service } from '../types/Service';
+import type { Service, Unit } from '../types/Service';
+import { getElasticUrlAtom } from '../store';
+import { useAtomValue } from 'jotai';
 
 export const ResultCard = ({
   description_summary,
@@ -10,7 +12,9 @@ export const ResultCard = ({
   name_synonyms,
   units,
   url,
-}: Service) => {
+}: Service & { units: Unit[] }) => {
+  const elasticUrl = useAtomValue(getElasticUrlAtom);
+
   const getUnits = () => {
     if (!units?.length) {
       return [];
@@ -38,13 +42,21 @@ export const ResultCard = ({
     return foundThemes.map((theme: string) => ({ tag: Themes.get(theme) }));
   };
 
+  // For ease-of-testing, makes test environment images work
+  const enrichImageUrl = (imageUrl: string): string => {
+    if (elasticUrl.includes('arodevtest') && !/^https?:\/\//i.test(imageUrl)) {
+      return `https://www.test.hel.ninja${imageUrl}`;
+    }
+    return imageUrl;
+  };
+
   const getImage = (): JSX.Element | undefined => {
     if (!units?.[0]?.['image.url']) {
       return;
     }
 
     const srcSet = units[0]?.['image.variants.1.5_1022w_682h_LQ']
-      ? `${units[0]?.['image.variants.1.5_1022w_682h_LQ']} 2x`
+      ? `${enrichImageUrl(units[0]?.['image.variants.1.5_1022w_682h_LQ'].toString())} 2x`
       : undefined;
 
     return (
@@ -52,7 +64,7 @@ export const ResultCard = ({
         alt={units[0]?.['image.alt']?.toString() || ''}
         data-photographer={units[0]?.['image.photographer']?.toString() || ''}
         className='card__image'
-        src={units[0]?.['image.url']?.[0]}
+        src={enrichImageUrl(units[0]?.['image.url']?.[0])}
         srcSet={srcSet}
         title={units[0]?.['image.title']?.toString() || ''}
       />
