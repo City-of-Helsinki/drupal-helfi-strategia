@@ -87,8 +87,6 @@ export const ResultsContainer = () => {
       service.fields?.units ||
       [];
 
-    console.log(units);
-
     return (
       <ResultCard
         {...(service.fields as Service)}
