@@ -5,6 +5,8 @@ import type { Service, Unit } from '../types/Service';
 import { getElasticUrlAtom } from '../store';
 import { useAtomValue } from 'jotai';
 
+declare const ELASTIC_DEV_URL: string | undefined;
+
 export const ResultCard = ({
   description_summary,
   name,
@@ -44,7 +46,11 @@ export const ResultCard = ({
 
   // For ease-of-testing, makes test environment images work
   const enrichImageUrl = (imageUrl: string): string => {
-    if (elasticUrl.includes('arodevtest') && !/^https?:\/\//i.test(imageUrl)) {
+    if (
+      typeof ELASTIC_DEV_URL !== 'undefined' &&
+      elasticUrl.includes('arodevtest') &&
+      !/^https?:\/\//i.test(imageUrl)
+    ) {
       return `https://www.test.hel.ninja${imageUrl}`;
     }
     return imageUrl;
