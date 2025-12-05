@@ -15,16 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     throw new Error('Root id missing for Hyte Search React app');
   }
 
-  const elasticUrl = rootElement.dataset.url;
-
-  if (!elasticUrl) {
-    throw new Error('Elastic URL missing for Hyte Search React app');
-  }
-
   ReactDOM.render(
     <React.StrictMode>
       <Suspense fallback={<div>Loading...</div>}>
-        <SearchContainer url={`${elasticUrl}/hyte/_search`} />
+        <SearchContainer />
       </Suspense>
     </React.StrictMode>,
     rootElement,
