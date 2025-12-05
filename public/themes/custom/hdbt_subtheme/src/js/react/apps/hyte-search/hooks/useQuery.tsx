@@ -65,7 +65,24 @@ export const useQuery = (): estypes.SearchRequest | null => {
       const [lon, lat] = submittedState.addressWithCoordinates.value;
 
       filter.push({
-        nested: { path: 'units', query: { exists: { field: 'units.name' } } },
+        nested: {
+          inner_hits: {
+            _source: false,
+            fields: [...Object.values(UnitImageFields)],
+            name: 'sorted_units',
+            size: 100,
+            sort: [
+              {
+                _geo_distance: {
+                  [UnitFields.LOCATION]: { lat, lon },
+                  order: 'asc',
+                },
+              },
+            ],
+          },
+          path: 'units',
+          query: { exists: { field: UnitFields.NAME } },
+        },
       });
       sort.unshift({
         _geo_distance: {
@@ -115,6 +132,13 @@ export const useQuery = (): estypes.SearchRequest | null => {
           },
         },
       );
+      [
+        IndexFields.NAME,
+        IndexFields.NAME_OVERRIDE,
+        IndexFields.DESCRIPTION_SUMMARY,
+      ].forEach((field) => {
+        should.push({ wildcard: { [field]: `*${searchTerm.toLowerCase()}*` } });
+      });
     }
 
     const query: estypes.QueryDslQueryContainer = { bool: { filter } };
@@ -124,7 +148,7 @@ export const useQuery = (): estypes.SearchRequest | null => {
       query.bool.minimum_should_match = 1;
     }
 
-    const size = 10;
+    const size = 15;
     const page = submittedState.page || 1;
 
     const result = {
