@@ -1,5 +1,5 @@
 helfi_strategia.hyte_search:
-  path: 'find-services'
+  path: 'information-on-helsinki/wellbeing-in-helsinki/find-services'
   defaults:
     _controller: '\Drupal\helfi_strategia\Controller\HyteSearchController::searchPage'
     _title: 'Find wellbeing services'
