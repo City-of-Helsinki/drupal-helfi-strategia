@@ -50,7 +50,7 @@ function helfi_strategia_update_9003(): void {
     ],
     [
       'path' => $new_path,
-      'alias' => '/information-om-helsingfors/valbefinnande-i-helsingfors/wellbeing-in-helsinki/sok-tjanster',
+      'alias' => '/information-om-helsingfors/valbefinnande-i-helsingfors/sok-tjanster',
       'langcode' => 'sv',
     ],
   ];
