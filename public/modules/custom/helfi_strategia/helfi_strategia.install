@@ -10,7 +10,7 @@ declare(strict_types=1);
 use Drupal\path_alias\Entity\PathAlias;
 
 /**
- * Implements hook_install(). 
+ * Implements hook_install().
  */
 function helfi_strategia_install(): void {
   helfi_strategia_update_9002();
