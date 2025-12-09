@@ -17,7 +17,7 @@ import {
   shouldScrollAtom,
   submittedStateAtom,
 } from '../store';
-import type { Service } from '../types/Service';
+import type { Service, Unit } from '../types/Service';
 
 export const ResultsContainer = () => {
   const url = useAtomValue(getElasticUrlAtom);
@@ -74,7 +74,26 @@ export const ResultsContainer = () => {
       throw new Error('Service inner hit is missing');
     }
 
-    return <ResultCard key={item._id} {...(service.fields as Service)} />;
+    const units: Unit[] =
+      service.inner_hits?.sorted_units.hits.hits.reduce<Unit[]>(
+        (acc, unitHit) => {
+          unitHit?.fields?.units.forEach((unit: Unit) => {
+            acc.push(unit);
+          });
+          return acc;
+        },
+        [],
+      ) ||
+      service.fields?.units ||
+      [];
+
+    return (
+      <ResultCard
+        {...(service.fields as Service)}
+        key={item._id}
+        units={units}
+      />
+    );
   };
 
   return (
