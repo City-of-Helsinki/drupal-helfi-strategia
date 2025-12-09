@@ -35,7 +35,7 @@ function helfi_strategia_update_9001(): void {
  */
 function helfi_strategia_update_9003(): void {
   $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
-  
+
   $old_aliases = $storage->loadByProperties(['path' => '/find-services']);
   foreach ($old_aliases as $alias) {
     $alias->delete();
