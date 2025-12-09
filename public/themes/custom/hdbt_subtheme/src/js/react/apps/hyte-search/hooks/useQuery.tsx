@@ -65,7 +65,24 @@ export const useQuery = (): estypes.SearchRequest | null => {
       const [lon, lat] = submittedState.addressWithCoordinates.value;
 
       filter.push({
-        nested: { path: 'units', query: { exists: { field: 'units.name' } } },
+        nested: {
+          inner_hits: {
+            _source: false,
+            fields: [...Object.values(UnitImageFields)],
+            name: 'sorted_units',
+            size: 100,
+            sort: [
+              {
+                _geo_distance: {
+                  [UnitFields.LOCATION]: { lat, lon },
+                  order: 'asc',
+                },
+              },
+            ],
+          },
+          path: 'units',
+          query: { exists: { field: UnitFields.NAME } },
+        },
       });
       sort.unshift({
         _geo_distance: {
@@ -115,6 +132,13 @@ export const useQuery = (): estypes.SearchRequest | null => {
           },
         },
       );
+      [
+        IndexFields.NAME,
+        IndexFields.NAME_OVERRIDE,
+        IndexFields.DESCRIPTION_SUMMARY,
+      ].forEach((field) => {
+        should.push({ wildcard: { [field]: `*${searchTerm.toLowerCase()}*` } });
+      });
     }
 
     const query: estypes.QueryDslQueryContainer = { bool: { filter } };
@@ -124,21 +148,36 @@ export const useQuery = (): estypes.SearchRequest | null => {
       query.bool.minimum_should_match = 1;
     }
 
-    const size = 10;
+    const size = 15;
     const page = submittedState.page || 1;
 
     const result = {
       _source: false,
+      aggs: {
+        total_services: {
+          cardinality: {
+            field: IndexFields.SEARCH_API_ID,
+            precision_threshold: 3000,
+          },
+        },
+      },
+      collapse: {
+        field: IndexFields.SEARCH_API_ID,
+        inner_hits: {
+          _source: false,
+          fields: [
+            IndexFields.DESCRIPTION_SUMMARY,
+            IndexFields.NAME,
+            IndexFields.NAME_SYNONYMS,
+            IndexFields.URL,
+            UnitFields.NAME_OVERRIDE,
+            UnitFields.NAME,
+            ...Object.values(UnitImageFields),
+          ],
+          name: 'collapsed_services',
+        },
+      },
       from: size * (page - 1),
-      fields: [
-        IndexFields.DESCRIPTION_SUMMARY,
-        IndexFields.NAME,
-        IndexFields.NAME_SYNONYMS,
-        IndexFields.URL,
-        UnitFields.NAME_OVERRIDE,
-        UnitFields.NAME,
-        ...Object.values(UnitImageFields),
-      ],
       query,
       size,
       sort,
