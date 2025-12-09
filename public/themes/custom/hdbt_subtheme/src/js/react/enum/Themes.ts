@@ -27,5 +27,4 @@ export const Themes = new Map<string, string>([
     'hh_yht',
     Drupal.t('Meeting places and community', {}, { context: 'Hyte search' }),
   ],
-  /** @todo find out if there is a value for 'Wellbeing in Helsinki' */
 ]);
