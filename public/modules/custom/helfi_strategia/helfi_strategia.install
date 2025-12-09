@@ -29,3 +29,33 @@ function helfi_strategia_update_9001(): void {
     PathAlias::create($path)->save();
   }
 }
+
+/**
+ * UHF-12520: Edit path aliases.
+ */
+function helfi_strategia_update_9003(): void {
+  $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+  
+  $old_aliases = $storage->loadByProperties(['path' => '/find-services']);
+  foreach ($old_aliases as $alias) {
+    $alias->delete();
+  }
+
+  $new_path = '/information-on-helsinki/wellbeing-in-helsinki/find-services';
+  $new_aliases = [
+    [
+      'path' => $new_path,
+      'alias' => '/tietoa-helsingista/hyvinvoiva-helsinki/palveluhaku',
+      'langcode' => 'fi',
+    ],
+    [
+      'path' => $new_path,
+      'alias' => '/information-om-helsingfors/valbefinnande-i-helsingfors/wellbeing-in-helsinki/sok-tjanster',
+      'langcode' => 'sv',
+    ],
+  ];
+
+  foreach ($new_aliases as $path) {
+    PathAlias::create($path)->save();
+  }
+}
