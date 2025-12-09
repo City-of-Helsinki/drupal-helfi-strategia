@@ -22,4 +22,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/information-om-helsingfors/valbefinnande-i-helsingfors/sok-tjanster'\r\n/tietoa-helsingista/hyvinvoiva-helsinki/palveluhaku'\r\n/information-on-helsinki/wellbeing-in-helsinki/find-services"
+    pages: "/information-om-helsingfors/valbefinnande-i-helsingfors/sok-tjanster\r\n/tietoa-helsingista/hyvinvoiva-helsinki/palveluhaku\r\n/information-on-helsinki/wellbeing-in-helsinki/find-services"
