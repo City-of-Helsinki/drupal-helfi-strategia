@@ -10,30 +10,16 @@ declare(strict_types=1);
 use Drupal\path_alias\Entity\PathAlias;
 
 /**
- * UHF-12571: Add path aliases for find-services url.
+ * Implements hook_install(). 
  */
-function helfi_strategia_update_9001(): void {
-  $paths = [
-    [
-      'path' => '/find-services',
-      'alias' => '/palveluhaku',
-      'langcode' => 'fi',
-    ],
-    [
-      'path' => '/find-services',
-      'alias' => '/sok-tjanster',
-      'langcode' => 'sv',
-    ],
-  ];
-  foreach ($paths as $path) {
-    PathAlias::create($path)->save();
-  }
+function helfi_strategia_install(): void {
+  helfi_strategia_update_9002();
 }
 
 /**
  * UHF-12520: Edit path aliases.
  */
-function helfi_strategia_update_9003(): void {
+function helfi_strategia_update_9002(): void {
   $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
 
   $old_aliases = $storage->loadByProperties(['path' => '/find-services']);
