@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains helfi_strategia installation hooks.
+ */
+
+declare(strict_types=1);
+
+use Drupal\path_alias\Entity\PathAlias;
+
+/**
+ * Implements hook_install().
+ */
+function helfi_strategia_install(): void {
+  helfi_strategia_update_9002();
+}
+
+/**
+ * UHF-12520: Edit path aliases.
+ */
+function helfi_strategia_update_9002(): void {
+  $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+
+  $old_aliases = $storage->loadByProperties(['path' => '/find-services']);
+  foreach ($old_aliases as $alias) {
+    $alias->delete();
+  }
+
+  $new_path = '/information-on-helsinki/wellbeing-in-helsinki/find-services';
+  $new_aliases = [
+    [
+      'path' => $new_path,
+      'alias' => '/tietoa-helsingista/hyvinvoiva-helsinki/palveluhaku',
+      'langcode' => 'fi',
+    ],
+    [
+      'path' => $new_path,
+      'alias' => '/information-om-helsingfors/valbefinnande-i-helsingfors/sok-tjanster',
+      'langcode' => 'sv',
+    ],
+  ];
+
+  foreach ($new_aliases as $path) {
+    PathAlias::create($path)->save();
+  }
+}

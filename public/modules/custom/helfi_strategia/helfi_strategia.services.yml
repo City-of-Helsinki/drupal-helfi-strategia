@@ -2,3 +2,6 @@ services:
   _defaults:
     autowire: true
     autoconfigure: true
+
+  Drupal\helfi_strategia\ElasticProxyResolver:
+    class: Drupal\helfi_strategia\ElasticProxyResolver

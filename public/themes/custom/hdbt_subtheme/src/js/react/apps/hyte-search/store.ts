@@ -1,14 +1,13 @@
-// biome-ignore-all lint/suspicious/useIterableCallbackReturn: @todo UHF-12501
-// biome-ignore-all lint/correctness/useHookAtTopLevel: @todo UHF-12501
-// biome-ignore-all lint/correctness/noUnusedFunctionParameters: @todo UHF-12501
 import type { estypes } from '@elastic/elasticsearch';
 import type { Option } from 'hds-react';
 import { atom } from 'jotai';
 import { atomWithReset, RESET } from 'jotai/utils';
 import type { AddressWithCoordinates } from '@/react/common/AddressSearch';
-import useAddressToCoordsQuery from '../../../../../../../contrib/hdbt/src/js/react/common/hooks/useAddressToCoordsQuery';
+import useAddressToCoordsQuery from '@/react/common/hooks/useAddressToCoordsQuery';
 import { Components } from '../../enum/Components';
 import { Themes } from '../../enum/Themes';
+
+declare const ELASTIC_DEV_URL: string | undefined;
 
 type aggsType =
   | { [key: string]: estypes.AggregationsStringTermsBucket }
@@ -30,7 +29,7 @@ const initialParams: SearchState = {
   [Components.PAGE]: Number(urlParams.get(Components.PAGE)) || 1,
   [Components.THEME]: urlParams
     .getAll(Components.THEME)
-    .map((value) => ({ label: Themes.get(value), value })),
+    .map((value) => ({ label: Themes.get(value), value }) as Option),
 };
 
 /**
@@ -46,7 +45,9 @@ const selectionsToURLParams = (currentParams: SearchState): URLSearchParams => {
     .filter(([key]) => key !== 'addressWithCoordinates')
     .forEach(([key, value]) => {
       if (value && Array.isArray(value) && value.length) {
-        value.forEach((option) => params.append(key, option.value));
+        value.forEach((option) => {
+          params.append(key, option.value);
+        });
       } else if (value && !Array.isArray(value)) {
         params.set(key, value.toString());
       }
@@ -71,11 +72,13 @@ export const submitStateAtom = atom(null, (get, set) => {
 
 export const initializeAppAtom = atom(
   null,
-  async (get, set, aggs: aggsType) => {
+  async (_get, set, aggs: aggsType) => {
     set(aggsAtom, aggs);
     let coordinatesData: [number, number, string] | null = null;
 
     if (initialParams[Components.ADDRESS]) {
+      // @todo refactor address query functionality to have a non-hook version
+      // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
       coordinatesData = await useAddressToCoordsQuery(
         initialParams[Components.ADDRESS],
       );
@@ -134,3 +137,14 @@ export const setPageAtom = atom(null, (get, set, page: number) => {
 
 export const initializedAtom = atom<boolean>(false);
 export const shouldScrollAtom = atom<boolean>(false);
+
+export const getElasticUrl = () => {
+  const devUrl = typeof ELASTIC_DEV_URL !== 'undefined' ? ELASTIC_DEV_URL : '';
+
+  return (
+    devUrl ||
+    drupalSettings?.helfi_strategia?.hyte_search?.elastic_proxy_url ||
+    ''
+  );
+};
+export const getElasticUrlAtom = atom(getElasticUrl());
