@@ -7,7 +7,6 @@ namespace Drupal\helfi_strategia\EventSubscriber;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\csp\Event\PolicyAlterEvent;
-use Drupal\csp\PolicyHelper;
 use Drupal\helfi_api_base\Environment\EnvironmentResolverInterface;
 use Drupal\helfi_platform_config\EventSubscriber\CspSubscriberBase;
 use Drupal\helfi_strategia\ElasticProxyResolver;
@@ -24,9 +23,8 @@ class CspElasticProxySubscriber extends CspSubscriberBase {
     ConfigFactoryInterface $configFactory,
     ModuleHandlerInterface $moduleHandler,
     EnvironmentResolverInterface $environmentResolver,
-    PolicyHelper $policyHelper,
   ) {
-    parent::__construct($configFactory, $moduleHandler, $environmentResolver, $policyHelper);
+    parent::__construct($environmentResolver, $configFactory, $moduleHandler);
   }
 
   /**
