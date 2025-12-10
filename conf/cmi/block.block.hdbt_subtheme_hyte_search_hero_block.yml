@@ -1,0 +1,25 @@
+uuid: 6e8544b7-3420-41bd-9f48-8ec5978eef78
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_strategia
+    - system
+  theme:
+    - hdbt_subtheme
+id: hdbt_subtheme_hyte_search_hero_block
+theme: hdbt_subtheme
+region: before_content
+weight: 0
+provider: null
+plugin: hyte_search_hero_block
+settings:
+  id: hyte_search_hero_block
+  label: 'Hyte search hero block'
+  label_display: '0'
+  provider: helfi_strategia
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/information-om-helsingfors/valbefinnande-i-helsingfors/sok-tjanster\r\n/tietoa-helsingista/hyvinvoiva-helsinki/palveluhaku\r\n/information-on-helsinki/wellbeing-in-helsinki/find-services"

@@ -5,6 +5,9 @@ import { Themes } from 'src/js/react/enum/Themes';
 import { getThemeAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 const options = [...Themes]
+  .filter(([value]) =>
+    ['hh_kul', 'hh_liik', 'hh_opi', 'hh_vet', 'hh_yht'].includes(value),
+  )
   .map(([value, label]) => ({ value, label }))
   .sort((a, b) => a.label.localeCompare(b.label));
 
@@ -25,7 +28,14 @@ export const ThemeFilter = () => {
       noTags
       options={options}
       onChange={setThemes}
-      texts={{ label: Drupal.t('Theme', {}, { context: 'React search' }) }}
+      texts={{
+        label: Drupal.t('Theme', {}, { context: 'React search' }),
+        placeholder: Drupal.t(
+          'Select one or more themes',
+          {},
+          { context: 'Hyte search' },
+        ),
+      }}
       value={themes}
     />
   );
