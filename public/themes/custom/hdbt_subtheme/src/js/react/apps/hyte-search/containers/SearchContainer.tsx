@@ -5,25 +5,13 @@ import { useAtomValue, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 import { IndexFields } from 'src/js/react/enum/IndexFields';
 import useSWRImmutable from 'swr/immutable';
-import {
-  getElasticUrlAtom,
-  initializeAppAtom,
-  initializedAtom,
-} from '../store';
+import { getElasticUrlAtom, initializeAppAtom, initializedAtom } from '../store';
 import { FormContainer } from './FormContainer';
 import { ResultsContainer } from './ResultsContainer';
 
 const aggsQueryString = JSON.stringify({
   _source: false,
-  aggs: {
-    themes: {
-      terms: {
-        field: `${IndexFields.NAME_SYNONYMS}.keyword`,
-        size: 10000,
-        order: { _key: 'asc' },
-      },
-    },
-  },
+  aggs: { themes: { terms: { field: `${IndexFields.NAME_SYNONYMS}.keyword`, size: 10000, order: { _key: 'asc' } } } },
   query: { match_all: {} },
 });
 
@@ -46,10 +34,7 @@ export const SearchContainer = () => {
     return (await response.json()) as estypes.SearchResponse;
   };
 
-  const { data, isLoading, isValidating } = useSWRImmutable(
-    aggsQueryString,
-    fetcher,
-  );
+  const { data, isLoading, isValidating } = useSWRImmutable(aggsQueryString, fetcher);
   const loading = isLoading || isValidating;
 
   useEffect(() => {
