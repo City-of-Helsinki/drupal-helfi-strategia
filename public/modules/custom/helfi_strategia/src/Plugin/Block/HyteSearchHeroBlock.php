@@ -6,7 +6,6 @@ namespace Drupal\helfi_strategia\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
@@ -16,7 +15,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
   id: "hyte_search_hero_block",
   admin_label: new TranslatableMarkup("Hyte search hero block"),
 )]
-final class HyteSearchHeroBlock extends BlockBase implements ContainerFactoryPluginInterface {
+final class HyteSearchHeroBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
