@@ -33,9 +33,7 @@ export const ResultCard = ({
   };
 
   const getTags = (): TagType[] => {
-    const foundThemes = name_synonyms
-      ?.map((tag) => tag.trim())
-      .filter((tag) => Themes.has(tag));
+    const foundThemes = name_synonyms?.map((tag) => tag.trim()).filter((tag) => Themes.has(tag));
 
     if (!foundThemes?.length) {
       return [];

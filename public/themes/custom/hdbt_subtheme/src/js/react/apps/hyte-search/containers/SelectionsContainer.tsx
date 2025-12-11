@@ -5,11 +5,7 @@ import { RESET } from 'jotai/utils';
 import { Components } from 'src/js/react/enum/Components';
 import FilterButton from '@/react/common/FilterButton';
 import SelectionsWrapper from '@/react/common/SelectionsWrapper';
-import {
-  setSearchStateAtom,
-  submitStateAtom,
-  submittedStateAtom,
-} from '../store';
+import { setSearchStateAtom, submitStateAtom, submittedStateAtom } from '../store';
 
 export const SelectionsContainer = () => {
   const submittedState = useAtomValue(submittedStateAtom);
@@ -52,20 +48,14 @@ export const SelectionsContainer = () => {
         });
       } else if (typeof value === 'string' && value.length) {
         selections.push(
-          <FilterButton
-            key={`${key}-${value}`}
-            clearSelection={() => unsetStateItem(key)}
-            value={value}
-          />,
+          <FilterButton key={`${key}-${value}`} clearSelection={() => unsetStateItem(key)} value={value} />,
         );
       }
     });
 
   return (
     <SelectionsWrapper
-      showClearButton={
-        selections.length || submittedState[Components.ADDRESS]?.length
-      }
+      showClearButton={selections.length || submittedState[Components.ADDRESS]?.length}
       resetForm={() => setState(RESET)}
     >
       {selections}
