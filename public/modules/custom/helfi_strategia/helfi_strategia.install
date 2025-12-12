@@ -13,13 +13,6 @@ use Drupal\path_alias\Entity\PathAlias;
  * Implements hook_install().
  */
 function helfi_strategia_install(): void {
-  helfi_strategia_update_9002();
-}
-
-/**
- * UHF-12520: Edit path aliases.
- */
-function helfi_strategia_update_9002(): void {
   $storage = \Drupal::entityTypeManager()->getStorage('path_alias');
 
   $old_aliases = $storage->loadByProperties(['path' => '/find-services']);
@@ -44,4 +37,11 @@ function helfi_strategia_update_9002(): void {
   foreach ($new_aliases as $path) {
     PathAlias::create($path)->save();
   }
+}
+
+/**
+ * UHF-12520: Edit path aliases.
+ */
+function helfi_strategia_update_9002(): void {
+  helfi_strategia_install();
 }
