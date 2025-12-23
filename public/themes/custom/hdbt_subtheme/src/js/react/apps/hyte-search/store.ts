@@ -9,9 +9,7 @@ import { Themes } from '../../enum/Themes';
 
 declare const ELASTIC_DEV_URL: string | undefined;
 
-type aggsType =
-  | { [key: string]: estypes.AggregationsStringTermsBucket }
-  | undefined;
+type aggsType = { [key: string]: estypes.AggregationsStringTermsBucket } | undefined;
 export const aggsAtom = atom<aggsType>(undefined);
 
 type SearchState = {
@@ -70,61 +68,42 @@ export const submitStateAtom = atom(null, (get, set) => {
   setUrlParams(selectionsToURLParams(currentState));
 });
 
-export const initializeAppAtom = atom(
-  null,
-  async (_get, set, aggs: aggsType) => {
-    set(aggsAtom, aggs);
-    let coordinatesData: [number, number, string] | null = null;
+export const initializeAppAtom = atom(null, async (_get, set, aggs: aggsType) => {
+  set(aggsAtom, aggs);
+  let coordinatesData: [number, number, string] | null = null;
 
-    if (initialParams[Components.ADDRESS]) {
-      // @todo refactor address query functionality to have a non-hook version
-      // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
-      coordinatesData = await useAddressToCoordsQuery(
-        initialParams[Components.ADDRESS],
-      );
-    }
-    if (coordinatesData) {
-      const address = initialParams[Components.ADDRESS] || '';
-      initialParams.addressWithCoordinates = {
-        label: address,
-        value: coordinatesData,
-      };
-    }
+  if (initialParams[Components.ADDRESS]) {
+    // @todo refactor address query functionality to have a non-hook version
+    // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
+    coordinatesData = await useAddressToCoordsQuery(initialParams[Components.ADDRESS]);
+  }
+  if (coordinatesData) {
+    const address = initialParams[Components.ADDRESS] || '';
+    initialParams.addressWithCoordinates = { label: address, value: coordinatesData };
+  }
 
-    set(searchStateAtom, { ...initialParams });
-    set(submittedStateAtom, { ...initialParams });
-    set(initializedAtom, true);
-  },
-);
+  set(searchStateAtom, { ...initialParams });
+  set(submittedStateAtom, { ...initialParams });
+  set(initializedAtom, true);
+});
 
-export const setSearchStateAtom = atom(
-  null,
-  (get, set, update: Partial<SearchState> | typeof RESET) => {
-    if (update === RESET) {
-      set(searchStateAtom, RESET);
-      set(submittedStateAtom, RESET);
-      setUrlParams(new URLSearchParams());
-      return;
-    }
+export const setSearchStateAtom = atom(null, (get, set, update: Partial<SearchState> | typeof RESET) => {
+  if (update === RESET) {
+    set(searchStateAtom, RESET);
+    set(submittedStateAtom, RESET);
+    setUrlParams(new URLSearchParams());
+    return;
+  }
 
-    const currentState = get(searchStateAtom);
-    set(searchStateAtom, { ...currentState, ...update });
-  },
-);
+  const currentState = get(searchStateAtom);
+  set(searchStateAtom, { ...currentState, ...update });
+});
 
-export const getAddressAtom = atom(
-  (get) => get(searchStateAtom)[Components.ADDRESS] || '',
-);
-export const getKeywordAtom = atom(
-  (get) => get(searchStateAtom)[Components.KEYWORD] || '',
-);
-export const getThemeAtom = atom(
-  (get) => get(searchStateAtom)[Components.THEME] || [],
-);
+export const getAddressAtom = atom((get) => get(searchStateAtom)[Components.ADDRESS] || '');
+export const getKeywordAtom = atom((get) => get(searchStateAtom)[Components.KEYWORD] || '');
+export const getThemeAtom = atom((get) => get(searchStateAtom)[Components.THEME] || []);
 
-export const getPageAtom = atom(
-  (get) => get(submittedStateAtom)[Components.PAGE] || 1,
-);
+export const getPageAtom = atom((get) => get(submittedStateAtom)[Components.PAGE] || 1);
 export const setPageAtom = atom(null, (get, set, page: number) => {
   const currentState = get(submittedStateAtom);
   set(submittedStateAtom, { ...currentState, [Components.PAGE]: page });
@@ -141,10 +120,6 @@ export const shouldScrollAtom = atom<boolean>(false);
 export const getElasticUrl = () => {
   const devUrl = typeof ELASTIC_DEV_URL !== 'undefined' ? ELASTIC_DEV_URL : '';
 
-  return (
-    devUrl ||
-    drupalSettings?.helfi_strategia?.hyte_search?.elastic_proxy_url ||
-    ''
-  );
+  return devUrl || drupalSettings?.helfi_strategia?.hyte_search?.elastic_proxy_url || '';
 };
 export const getElasticUrlAtom = atom(getElasticUrl());
