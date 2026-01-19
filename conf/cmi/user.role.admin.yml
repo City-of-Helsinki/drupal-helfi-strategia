@@ -165,6 +165,7 @@ permissions:
   - 'edit terms in keywords'
   - 'edit terms in news_tags'
   - 'mark as hidden in editoria11y'
+  - 'rebuild node access permissions'
   - 'revert all revisions'
   - 'revert all tpr_service revisions'
   - 'revert all tpr_unit revisions'
