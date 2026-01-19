@@ -26,9 +26,7 @@ export const ResultsContainer = () => {
   const submittedState = useAtomValue(submittedStateAtom);
   const currentPage = useAtomValue(getPageAtom);
   const setPage = useSetAtom(setPageAtom);
-  const readShouldScroll = useAtomCallback(
-    useCallback((get) => get(shouldScrollAtom), []),
-  );
+  const readShouldScroll = useAtomCallback(useCallback((get) => get(shouldScrollAtom), []));
   const setShouldScroll = useSetAtom(shouldScrollAtom);
 
   const fetcher = useCallback(
@@ -42,14 +40,11 @@ export const ResultsContainer = () => {
   );
 
   const unknownCoordinates =
-    submittedState[Components.ADDRESS]?.length &&
-    !submittedState.addressWithCoordinates?.value;
+    submittedState[Components.ADDRESS]?.length && !submittedState.addressWithCoordinates?.value;
   const shouldFetch = initialized && !unknownCoordinates;
-  const { data, isLoading, isValidating, error } = useSwr(
-    shouldFetch ? JSON.stringify(query) : null,
-    fetcher,
-    { revalidateOnFocus: false },
-  );
+  const { data, isLoading, isValidating, error } = useSwr(shouldFetch ? JSON.stringify(query) : null, fetcher, {
+    revalidateOnFocus: false,
+  });
 
   const loading = isLoading || isValidating;
 
@@ -75,25 +70,16 @@ export const ResultsContainer = () => {
     }
 
     const units: Unit[] =
-      service.inner_hits?.sorted_units.hits.hits.reduce<Unit[]>(
-        (acc, unitHit) => {
-          unitHit?.fields?.units.forEach((unit: Unit) => {
-            acc.push(unit);
-          });
-          return acc;
-        },
-        [],
-      ) ||
+      service.inner_hits?.sorted_units.hits.hits.reduce<Unit[]>((acc, unitHit) => {
+        unitHit?.fields?.units.forEach((unit: Unit) => {
+          acc.push(unit);
+        });
+        return acc;
+      }, []) ||
       service.fields?.units ||
       [];
 
-    return (
-      <ResultCard
-        {...(service.fields as Service)}
-        key={item._id}
-        units={units}
-      />
-    );
+    return <ResultCard {...(service.fields as Service)} key={item._id} units={units} />;
   };
 
   return (
