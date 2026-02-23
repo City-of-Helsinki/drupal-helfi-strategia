@@ -4209,16 +4209,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.16.41",
+            "version": "6.16.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "9f065ac1d5ae8dfafd4a8c34e758757429161151"
+                "reference": "74427db23d2a001c5f5ba887036dfe79937818ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/9f065ac1d5ae8dfafd4a8c34e758757429161151",
-                "reference": "9f065ac1d5ae8dfafd4a8c34e758757429161151",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/74427db23d2a001c5f5ba887036dfe79937818ae",
+                "reference": "74427db23d2a001c5f5ba887036dfe79937818ae",
                 "shasum": ""
             },
             "require": {
@@ -4237,10 +4237,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.41",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.42",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2026-02-23T11:47:39+00:00"
+            "time": "2026-02-23T13:34:16+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
