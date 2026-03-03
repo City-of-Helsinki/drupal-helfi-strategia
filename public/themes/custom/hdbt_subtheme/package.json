@@ -37,7 +37,6 @@
     "glob": "^11.0.0",
     "hds-design-tokens": "^4.4.0",
     "hds-react": "^4.4.0",
-    "html-loader": "^4.0.0",
     "joi": "^17.4.0",
     "jotai": "^2.15.1",
     "js-yaml": "^4.1.0",
