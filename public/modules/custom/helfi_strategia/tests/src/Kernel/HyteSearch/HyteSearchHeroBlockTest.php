@@ -6,13 +6,15 @@ namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTrait;
 
 /**
  * Kernel tests for HyteSearchHeroBlock.
- *
- * @group helfi_strategia
  */
+#[Group('helfi_strategia')]
+#[RunTestsInSeparateProcesses]
 class HyteSearchHeroBlockTest extends KernelTestBase {
 
   use PropertyTrait;
