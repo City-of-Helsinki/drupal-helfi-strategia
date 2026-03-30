@@ -31,14 +31,9 @@ class HyteSearchController extends ControllerBase {
           ],
         ],
         'library' => [
-          'hdbt_subtheme/hyte-search',
+          'helfi_strategia/hyte-search',
         ],
       ],
-      '#description' => $this->t(
-        'Find wellbeing services in Helsinki near you by entering your address, entering a search term, or selecting one of the themes.',
-        [],
-        ['context' => 'Hyte search']
-      ),
       '#theme' => 'hyte_search',
       '#search_element' => [
         '#type' => 'html_tag',

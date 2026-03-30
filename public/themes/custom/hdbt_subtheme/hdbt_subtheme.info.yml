@@ -25,6 +25,9 @@ regions:
   footer_bottom: Footer - Bottom
   attachments: Attachments
 
+libraries-override:
+  helfi_strategia/hyte-search: hdbt_subtheme/hyte-search
+
 # Libraries
 #libraries:
 #  - hdbt_subtheme/global-styling
