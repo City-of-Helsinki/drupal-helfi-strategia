@@ -8,7 +8,6 @@ use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
 use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
-use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTrait;
 
 /**
  * Kernel tests for HyteSearchHeroBlock.
@@ -16,22 +15,6 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTra
 #[Group('helfi_strategia')]
 #[RunTestsInSeparateProcesses]
 class HyteSearchHeroBlockTest extends KernelTestBase {
-
-  use PropertyTrait;
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'block',
-  ];
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function setUp(): void {
-    parent::setUp();
-  }
 
   /**
    * Tests the build() method of the hero block.
