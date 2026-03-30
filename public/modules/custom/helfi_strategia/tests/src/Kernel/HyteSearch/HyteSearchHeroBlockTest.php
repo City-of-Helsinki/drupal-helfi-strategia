@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
-use Drupal\KernelTests\KernelTestBase;
 use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
+use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTrait;
@@ -23,12 +23,7 @@ class HyteSearchHeroBlockTest extends KernelTestBase {
    * {@inheritdoc}
    */
   protected static $modules = [
-    'system',
-    'user',
     'block',
-    'big_pipe',
-    'helfi_strategia',
-    'helfi_api_base',
   ];
 
   /**
@@ -36,8 +31,6 @@ class HyteSearchHeroBlockTest extends KernelTestBase {
    */
   protected function setUp(): void {
     parent::setUp();
-    $this->installEntitySchema('user');
-    $this->installConfig(['system']);
   }
 
   /**

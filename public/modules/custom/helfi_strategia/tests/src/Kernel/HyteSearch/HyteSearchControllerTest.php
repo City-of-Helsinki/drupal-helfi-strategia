@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace src\Kernel\HyteSearch;
+namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
 use Drupal\Core\Url;
-use Drupal\KernelTests\KernelTestBase;
 use Drupal\Tests\helfi_api_base\Traits\ApiTestTrait;
+use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
 use Drupal\Tests\user\Traits\UserCreationTrait;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\RunClassInSeparateProcess;
@@ -24,8 +24,6 @@ class HyteSearchControllerTest extends KernelTestBase {
   protected static $modules = [
     'system',
     'user',
-    'helfi_strategia',
-    'helfi_api_base',
   ];
 
   use ApiTestTrait;
