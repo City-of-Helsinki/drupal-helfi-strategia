@@ -20,10 +20,12 @@
     "The following packages were updated manually.",
     "Remove this section once the dependencies have been updated in their respective upstream packages.",
     {
+      "brace-expansion": ">=5.0.5, dependency of minimatch",
       "minimatch": ">=10.2.1, dependency of hds-core (eslint)"
     }
   ],
   "overrides": {
+    "brace-expansion": "^5.0.5",
     "minimatch": "^10.2.1"
   },
   "dependencies": {
