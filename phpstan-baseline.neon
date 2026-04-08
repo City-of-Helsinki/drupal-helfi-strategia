@@ -1,0 +1,71 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function helfi_strategia_preprocess_html\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/helfi_strategia.module
+
+		-
+			message: "#^Function helfi_strategia_preprocess_page\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/helfi_strategia.module
+
+		-
+			message: "#^Function helfi_strategia_theme\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/helfi_strategia.module
+
+		-
+			message: "#^Method Drupal\\\\helfi_strategia\\\\Controller\\\\HyteSearchController\\:\\:searchPage\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/src/Controller/HyteSearchController.php
+
+		-
+			message: "#^Cannot access offset 'csp' on array\\|bool\\|float\\|int\\|string\\|UnitEnum\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/src/HelfiStrategiaServiceProvider.php
+
+		-
+			message: "#^Method Drupal\\\\helfi_strategia\\\\Plugin\\\\Block\\\\HyteSearchHeroBlock\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: public/modules/custom/helfi_strategia/src/Plugin/Block/HyteSearchHeroBlock.php
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_block\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_block\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_preprocess_menu\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_block_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_block_alter\\(\\) has parameter \\$suggestions with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has parameter \\$suggestions with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has parameter \\$variables with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
