@@ -4,39 +4,17 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
-use Drupal\KernelTests\KernelTestBase;
 use Drupal\helfi_strategia\Plugin\Block\HyteSearchHeroBlock;
-use Symfony\Component\DependencyInjection\Loader\Configurator\Traits\PropertyTrait;
+use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Kernel tests for HyteSearchHeroBlock.
- *
- * @group helfi_strategia
  */
+#[Group('helfi_strategia')]
+#[RunTestsInSeparateProcesses]
 class HyteSearchHeroBlockTest extends KernelTestBase {
-
-  use PropertyTrait;
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'system',
-    'user',
-    'block',
-    'big_pipe',
-    'helfi_strategia',
-    'helfi_api_base',
-  ];
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function setUp(): void {
-    parent::setUp();
-    $this->installEntitySchema('user');
-    $this->installConfig(['system']);
-  }
 
   /**
    * Tests the build() method of the hero block.

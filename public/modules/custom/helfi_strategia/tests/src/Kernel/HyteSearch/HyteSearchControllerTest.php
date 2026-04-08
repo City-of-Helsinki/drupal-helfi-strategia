@@ -1,0 +1,51 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
+
+use Drupal\Core\Url;
+use Drupal\helfi_api_base\Environment\EnvironmentEnum;
+use Drupal\helfi_api_base\Environment\Project;
+use Drupal\Tests\helfi_api_base\Traits\ApiTestTrait;
+use Drupal\Tests\helfi_api_base\Traits\EnvironmentResolverTrait;
+use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
+use Drupal\Tests\user\Traits\UserCreationTrait;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunClassInSeparateProcess;
+
+/**
+ * Tests hyte search controller.
+ */
+#[Group('helfi_strategia')]
+#[RunClassInSeparateProcess]
+class HyteSearchControllerTest extends KernelTestBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected static $modules = [
+    'system',
+    'user',
+  ];
+
+  use ApiTestTrait;
+  use EnvironmentResolverTrait;
+  use UserCreationTrait;
+
+  /**
+   * Tests search controller.
+   */
+  public function testController(): void {
+    $this->installEntitySchema('user');
+    $this->setUpCurrentUser(permissions: ['access content']);
+    $this->setActiveProject(Project::STRATEGIA, EnvironmentEnum::Local);
+
+    $request = $this->getMockedRequest(Url::fromRoute('helfi_strategia.hyte_search', [
+      'org' => '00400',
+    ])->toString());
+    $response = $this->processRequest($request);
+    $this->assertEquals(200, $response->getStatusCode());
+  }
+
+}
