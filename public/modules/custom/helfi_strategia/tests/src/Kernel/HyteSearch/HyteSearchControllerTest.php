@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Drupal\Tests\helfi_strategia\Kernel\HyteSearch;
 
 use Drupal\Core\Url;
+use Drupal\helfi_api_base\Environment\EnvironmentEnum;
+use Drupal\helfi_api_base\Environment\Project;
 use Drupal\Tests\helfi_api_base\Traits\ApiTestTrait;
+use Drupal\Tests\helfi_api_base\Traits\EnvironmentResolverTrait;
 use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
 use Drupal\Tests\user\Traits\UserCreationTrait;
 use PHPUnit\Framework\Attributes\Group;
@@ -27,6 +30,7 @@ class HyteSearchControllerTest extends KernelTestBase {
   ];
 
   use ApiTestTrait;
+  use EnvironmentResolverTrait;
   use UserCreationTrait;
 
   /**
@@ -35,6 +39,7 @@ class HyteSearchControllerTest extends KernelTestBase {
   public function testController(): void {
     $this->installEntitySchema('user');
     $this->setUpCurrentUser(permissions: ['access content']);
+    $this->setActiveProject(Project::STRATEGIA, EnvironmentEnum::Local);
 
     $request = $this->getMockedRequest(Url::fromRoute('helfi_strategia.hyte_search', [
       'org' => '00400',
