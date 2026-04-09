@@ -21,11 +21,6 @@ parameters:
 			path: public/modules/custom/helfi_strategia/src/Controller/HyteSearchController.php
 
 		-
-			message: "#^Cannot access offset 'csp' on array\\|bool\\|float\\|int\\|string\\|UnitEnum\\.$#"
-			count: 1
-			path: public/modules/custom/helfi_strategia/src/HelfiStrategiaServiceProvider.php
-
-		-
 			message: "#^Method Drupal\\\\helfi_strategia\\\\Plugin\\\\Block\\\\HyteSearchHeroBlock\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_strategia/src/Plugin/Block/HyteSearchHeroBlock.php
@@ -69,3 +64,223 @@ parameters:
 			message: "#^Function hdbt_subtheme_theme_suggestions_menu_alter\\(\\) has parameter \\$variables with no type specified\\.$#"
 			count: 1
 			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: "#^Method Flatted\\:\\:asString\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:asString\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:index\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:index\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:index\\(\\) has parameter \\$known with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:index\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:keys\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:keys\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has parameter \\$keys with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has parameter \\$obj with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has parameter \\$output with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:loop\\(\\) has parameter \\$set with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:parse\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:parse\\(\\) has parameter \\$assoc with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:parse\\(\\) has parameter \\$depth with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:parse\\(\\) has parameter \\$json with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:parse\\(\\) has parameter \\$options with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$obj with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$output with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$set with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:ref\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:relate\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:relate\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:relate\\(\\) has parameter \\$known with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:relate\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:stringify\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:stringify\\(\\) has parameter \\$depth with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:stringify\\(\\) has parameter \\$options with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:stringify\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:transform\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:transform\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:transform\\(\\) has parameter \\$known with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:transform\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:wrap\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method Flatted\\:\\:wrap\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Method FlattedString\\:\\:__construct\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Property FlattedString\\:\\:\\$value has no type specified\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Static method Flatted\\:\\:asString\\(\\) is unused\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
+
+		-
+			message: "#^Static method Flatted\\:\\:wrap\\(\\) is unused\\.$#"
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/node_modules/flatted/php/flatted.php
