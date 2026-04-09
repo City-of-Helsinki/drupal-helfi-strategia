@@ -21,11 +21,6 @@ parameters:
 			path: public/modules/custom/helfi_strategia/src/Controller/HyteSearchController.php
 
 		-
-			message: "#^Cannot access offset 'csp' on array\\|bool\\|float\\|int\\|string\\|UnitEnum\\.$#"
-			count: 1
-			path: public/modules/custom/helfi_strategia/src/HelfiStrategiaServiceProvider.php
-
-		-
 			message: "#^Method Drupal\\\\helfi_strategia\\\\Plugin\\\\Block\\\\HyteSearchHeroBlock\\:\\:build\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: public/modules/custom/helfi_strategia/src/Plugin/Block/HyteSearchHeroBlock.php
