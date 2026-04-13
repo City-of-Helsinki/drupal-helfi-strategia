@@ -25,7 +25,10 @@ export const SearchBar = () => {
   };
 
   const onSubmit = (address: AddressWithCoordinates) => {
-    setSearchState({ addressWithCoordinates: address, [Components.ADDRESS]: address.label });
+    setSearchState({
+      addressWithCoordinates: address,
+      [Components.ADDRESS]: address.label,
+    });
   };
 
   return (
