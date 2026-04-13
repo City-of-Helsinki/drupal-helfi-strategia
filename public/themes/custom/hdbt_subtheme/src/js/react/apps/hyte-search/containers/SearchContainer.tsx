@@ -5,23 +5,30 @@ import { useAtomValue, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 import { IndexFields } from 'src/js/react/enum/IndexFields';
 import useSWRImmutable from 'swr/immutable';
-import { getElasticUrlAtom, initializeAppAtom, initializedAtom } from '../store';
+import { initializeAppAtom, initializedAtom } from '../store';
 import { FormContainer } from './FormContainer';
 import { ResultsContainer } from './ResultsContainer';
 
 const aggsQueryString = JSON.stringify({
   _source: false,
-  aggs: { themes: { terms: { field: `${IndexFields.NAME_SYNONYMS}.keyword`, size: 10000, order: { _key: 'asc' } } } },
+  aggs: {
+    themes: {
+      terms: {
+        field: `${IndexFields.NAME_SYNONYMS}.keyword`,
+        size: 10000,
+        order: { _key: 'asc' },
+      },
+    },
+  },
   query: { match_all: {} },
 });
 
-export const SearchContainer = () => {
-  const url = useAtomValue(getElasticUrlAtom);
+export const SearchContainer = ({ url }: { url: string }) => {
   const initialized = useAtomValue(initializedAtom);
   const initializeApp = useSetAtom(initializeAppAtom);
 
   const fetcher = async (query: string) => {
-    const response = await fetch(`${url}/hyte/_search`, {
+    const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: query,
@@ -46,7 +53,7 @@ export const SearchContainer = () => {
   return (
     <>
       <FormContainer />
-      <ResultsContainer />
+      <ResultsContainer url={url} />
     </>
   );
 };
