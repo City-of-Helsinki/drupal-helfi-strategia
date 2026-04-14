@@ -3,7 +3,7 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
-import { IndexFields } from 'src/js/react/enum/IndexFields';
+import { IndexFields } from '../../../enum/IndexFields';
 import useSWRImmutable from 'swr/immutable';
 import { initializeAppAtom, initializedAtom } from '../store';
 import { FormContainer } from './FormContainer';

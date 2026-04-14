@@ -1,7 +1,7 @@
 // biome-ignore-all lint/correctness/useJsxKeyInIterable: @todo UHF-12501
 // biome-ignore-all lint/style/noNonNullAssertion: @todo UHF-12501
 import { IconLocation } from 'hds-react';
-import { Themes } from 'src/js/react/enum/Themes';
+import { Themes } from '../../../enum/Themes';
 import type TagType from '@/common/types/TagType';
 import CardItem, { Metarow } from '@/react/common/Card';
 import type { Service } from '../types/Service';
