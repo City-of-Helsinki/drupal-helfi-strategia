@@ -1,4 +1,4 @@
-uuid: 56fd142f-ec0a-4fed-a7f0-1b9ceb68fa86
+uuid: 622688ce-c7fb-470f-aadb-bb26db300eec
 langcode: en
 status: true
 dependencies:
@@ -31,14 +31,14 @@ field_mappers:
                 config: {  }
             description: ''
       debug_level: 0
-  uuid:
+  tid:
     id: generic
     config:
       property_mappings:
         value:
           id: jsonpath
           config:
-            mapping: '$._source.uuid[0]'
+            mapping: '$._source.tid[0]'
             required_field: false
             main_property: true
             data_processors:
@@ -63,14 +63,14 @@ field_mappers:
                 config: {  }
             description: ''
       debug_level: 0
-  tid:
+  uuid:
     id: generic
     config:
       property_mappings:
         value:
           id: jsonpath
           config:
-            mapping: '$._source.tid[0]'
+            mapping: '$._source.uuid[0]'
             required_field: false
             main_property: true
             data_processors:
