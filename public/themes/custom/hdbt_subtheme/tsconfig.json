@@ -3,6 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "bundler",
     "paths": {
+      "src/*": ["./src/*"],
       "@/react/common/*": ["../../contrib/hdbt/src/js/react/common/*"],
       "@/common/types/*": ["../../contrib/hdbt/src/js/types/*"],
       "@/types/*": ["../../contrib/hdbt/src/js/types/*"],

@@ -7,5 +7,4 @@ export const Themes = new Map<string, string>([
   ['hh_rur', Drupal.t('Nutrition, sleep and addiction management', {}, { context: 'Hyte search' })],
   ['hh_vet', Drupal.t('Volunteer activities', {}, { context: 'Hyte search' })],
   ['hh_yht', Drupal.t('Meeting places and community', {}, { context: 'Hyte search' })],
-  /** @todo find out if there is a value for 'Wellbeing in Helsinki' */
 ]);
