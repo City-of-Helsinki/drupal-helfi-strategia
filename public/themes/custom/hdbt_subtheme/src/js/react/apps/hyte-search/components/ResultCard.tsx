@@ -1,12 +1,22 @@
-// biome-ignore-all lint/correctness/useJsxKeyInIterable: @todo UHF-12501
-// biome-ignore-all lint/style/noNonNullAssertion: @todo UHF-12501
-import { IconLocation } from 'hds-react';
-import { Themes } from '../../../enum/Themes';
+import { Themes } from 'src/js/react/enum/Themes';
 import type TagType from '@/common/types/TagType';
 import CardItem, { Metarow } from '@/react/common/Card';
-import type { Service } from '../types/Service';
+import type { Service, Unit } from '../types/Service';
+import { getElasticUrlAtom } from '../store';
+import { useAtomValue } from 'jotai';
 
-export const ResultCard = ({ description_summary, name, name_override, name_synonyms, units, url }: Service) => {
+declare const ELASTIC_DEV_URL: string | undefined;
+
+export const ResultCard = ({
+  description_summary,
+  name,
+  name_override,
+  name_synonyms,
+  units,
+  url,
+}: Service & { units: Unit[] }) => {
+  const elasticUrl = useAtomValue(getElasticUrlAtom);
+
   const getUnits = () => {
     if (!units?.length) {
       return [];
@@ -15,25 +25,33 @@ export const ResultCard = ({ description_summary, name, name_override, name_syno
     return [
       <Metarow
         content={units.length.toString()}
-        icon={<IconLocation />}
+        icon={<span className='hel-icon hel-icon--location' />}
         label={`${Drupal.t('Locations', {}, { context: 'Hyte search' })}`}
+        key='location'
       />,
     ];
   };
 
   const getTags = (): TagType[] => {
-    /** @todo implement better once BE changes are made */
-    const foundThemes = name_synonyms
-      ?.toString()
-      .split(',')
-      .map((tag) => tag.trim())
-      .filter((tag) => Themes.has(tag));
+    const foundThemes = name_synonyms?.map((tag) => tag.trim()).filter((tag) => Themes.has(tag));
 
     if (!foundThemes?.length) {
       return [];
     }
 
-    return foundThemes.map((theme: string) => ({ tag: Themes.get(theme)! }));
+    return foundThemes.map((theme: string) => ({ tag: Themes.get(theme) }));
+  };
+
+  // For ease-of-testing, makes test environment images work
+  const enrichImageUrl = (imageUrl: string): string => {
+    if (
+      typeof ELASTIC_DEV_URL !== 'undefined' &&
+      elasticUrl.includes('arodevtest') &&
+      !/^https?:\/\//i.test(imageUrl)
+    ) {
+      return `https://www.test.hel.ninja${imageUrl}`;
+    }
+    return imageUrl;
   };
 
   const getImage = (): JSX.Element | undefined => {
@@ -42,7 +60,7 @@ export const ResultCard = ({ description_summary, name, name_override, name_syno
     }
 
     const srcSet = units[0]?.['image.variants.1.5_1022w_682h_LQ']
-      ? `${units[0]?.['image.variants.1.5_1022w_682h_LQ']} 2x`
+      ? `${enrichImageUrl(units[0]?.['image.variants.1.5_1022w_682h_LQ'].toString())} 2x`
       : undefined;
 
     return (
@@ -50,7 +68,7 @@ export const ResultCard = ({ description_summary, name, name_override, name_syno
         alt={units[0]?.['image.alt']?.toString() || ''}
         data-photographer={units[0]?.['image.photographer']?.toString() || ''}
         className='card__image'
-        src={units[0]?.['image.url']?.[0]}
+        src={enrichImageUrl(units[0]?.['image.url']?.[0])}
         srcSet={srcSet}
         title={units[0]?.['image.title']?.toString() || ''}
       />

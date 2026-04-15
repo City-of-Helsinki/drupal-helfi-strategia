@@ -1,6 +1,6 @@
 import { TextInput } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { Components } from '../../../enum/Components';
+import { Components } from 'src/js/react/enum/Components';
 import { AddressSearch, type AddressWithCoordinates } from '@/react/common/AddressSearch';
 import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 
@@ -25,10 +25,7 @@ export const SearchBar = () => {
   };
 
   const onSubmit = (address: AddressWithCoordinates) => {
-    setSearchState({
-      addressWithCoordinates: address,
-      [Components.ADDRESS]: address.label,
-    });
+    setSearchState({ addressWithCoordinates: address, [Components.ADDRESS]: address.label });
   };
 
   return (
