@@ -3,6 +3,7 @@ import { useAtomValue, useSetAtom } from 'jotai';
 import { Components } from 'src/js/react/enum/Components';
 import { AddressSearch, type AddressWithCoordinates } from '@/react/common/AddressSearch';
 import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
+import { defaultAddressSearchTexts } from '@/react/common/constants/defaultAddressSearchTexts';
 
 export const SearchBar = () => {
   const initialized = useAtomValue(initializedAtom);
@@ -33,14 +34,9 @@ export const SearchBar = () => {
       id={Components.ADDRESS}
       includeCoordinates
       className='hdbt-search__filter hdbt-search--react__text-field'
-      label={Drupal.t('Home address', {}, { context: 'React search: home address' })}
       onChange={onChange}
       onSubmit={onSubmit}
-      placeholder={Drupal.t(
-        'For example, Kotikatu 1',
-        {},
-        { context: 'React search: street input helper placeholder' },
-      )}
+      texts={defaultAddressSearchTexts}
       value={address || ''}
     />
   );
