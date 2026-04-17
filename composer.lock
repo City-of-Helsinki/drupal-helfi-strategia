@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6efca1fba0533557a41bb56374f523a1",
+    "content-hash": "9f85ce1cdeb0b8613d60a359b657ea9e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4357,16 +4357,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.16.60",
+            "version": "6.16.65",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "65ed94c157f3e1c02a77a35aeed75110142008ac"
+                "reference": "ed99684b2cc3feffea17ce6986e42faa24abec63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/65ed94c157f3e1c02a77a35aeed75110142008ac",
-                "reference": "65ed94c157f3e1c02a77a35aeed75110142008ac",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/ed99684b2cc3feffea17ce6986e42faa24abec63",
+                "reference": "ed99684b2cc3feffea17ce6986e42faa24abec63",
                 "shasum": ""
             },
             "require": {
@@ -4385,10 +4385,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.60",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.65",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2026-04-02T13:27:44+00:00"
+            "time": "2026-04-16T13:52:25+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4695,16 +4695,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "dev-UHF-13130",
+            "version": "5.1.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "a61e0f3b8e3df79e1a92217fb40f1e7ba492d1f1"
+                "reference": "2ea2cb20c54f7a7742464ecff6e26c68427a763f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/a61e0f3b8e3df79e1a92217fb40f1e7ba492d1f1",
-                "reference": "a61e0f3b8e3df79e1a92217fb40f1e7ba492d1f1",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/2ea2cb20c54f7a7742464ecff6e26c68427a763f",
+                "reference": "2ea2cb20c54f7a7742464ecff6e26c68427a763f",
                 "shasum": ""
             },
             "require": {
@@ -4820,10 +4820,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/UHF-13130",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.1.39",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2026-04-16T21:24:44+00:00"
+            "time": "2026-04-17T04:57:55+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -16125,16 +16125,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.9.5",
+            "version": "2.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "72a8f8e653710e18d83e5dd531eb5a71fc3223e6"
+                "reference": "82a2fbd1372a98d7915cfb092acf05207d9b4113"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/72a8f8e653710e18d83e5dd531eb5a71fc3223e6",
-                "reference": "72a8f8e653710e18d83e5dd531eb5a71fc3223e6",
+                "url": "https://api.github.com/repos/composer/composer/zipball/82a2fbd1372a98d7915cfb092acf05207d9b4113",
+                "reference": "82a2fbd1372a98d7915cfb092acf05207d9b4113",
                 "shasum": ""
             },
             "require": {
@@ -16222,7 +16222,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.9.5"
+                "source": "https://github.com/composer/composer/tree/2.9.7"
             },
             "funding": [
                 {
@@ -16234,7 +16234,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-29T10:40:53+00:00"
+            "time": "2026-04-14T11:31:52+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -16776,7 +16776,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "11.3.6",
+            "version": "11.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -16826,7 +16826,7 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev/tree/11.3.6"
+                "source": "https://github.com/drupal/core-dev/tree/11.3.7"
             },
             "time": "2026-02-04T09:01:40+00:00"
         },
@@ -21249,12 +21249,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/helfi_drupal_tools": 20,
-        "drupal/helfi_platform_config": 20
+        "drupal/helfi_drupal_tools": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
