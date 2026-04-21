@@ -33,7 +33,6 @@ export const SearchBar = () => {
     <AddressSearch
       id={Components.ADDRESS}
       includeCoordinates
-      className='hdbt-search__filter hdbt-search--react__text-field'
       onChange={onChange}
       onSubmit={onSubmit}
       texts={defaultAddressSearchTexts}
