@@ -15,7 +15,6 @@ function helfi_strategia_theme(): array {
     'hyte_search' => [
       'variables' => [
         'search_element' => NULL,
-        'description' => NULL,
       ],
       'template' => 'hyte-search',
     ],
