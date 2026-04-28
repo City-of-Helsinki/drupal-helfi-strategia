@@ -35,7 +35,6 @@
     "@sentry/react": "^10.22.0",
     "breakpoint-sass": "^3.0.0",
     "glob": "^11.0.0",
-    "html-loader": "^4.0.0",
     "joi": "^17.4.0",
     "js-yaml": "^4.1.0",
     "npm-run-all2": "^8.0.4",
