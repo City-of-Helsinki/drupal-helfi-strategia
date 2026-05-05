@@ -15,7 +15,9 @@
     "lint:js": "biome lint src/js/",
     "format:js": "biome format --write src/js/",
     "lint": "npm-run-all --parallel lint:scss lint:js -s",
-    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit 2>&1 | grep -v 'hdbt' || true"
+    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit 2>&1 | grep -v 'hdbt' || true",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "@comment dependencies": [
     "The following packages were updated manually.",
@@ -30,19 +32,30 @@
     "minimatch": "^10.2.1"
   },
   "dependencies": {
-    "@biomejs/biome": "^2.2.4",
     "@hdbt/theme-builder": "file:../../contrib/hdbt/theme-builder",
     "@sentry/react": "^10.22.0",
-    "breakpoint-sass": "^3.0.0",
-    "glob": "^11.0.0",
+    "hds-design-tokens": "^4.4.0",
+    "hds-react": "^4.4.0",
     "joi": "^17.4.0",
+    "jotai": "^2.19.1",
     "js-yaml": "^4.1.0",
     "npm-run-all2": "^8.0.4",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "react": "^17.0.2"
   },
   "browserslist": [
     "last 3 major versions",
     "> 1%",
     "not dead"
-  ]
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@vitest/browser": "^4.1.5",
+    "@vitest/coverage-v8": "^4.1.5",
+    "breakpoint-sass": "^3.0.0",
+    "glob": "^11.0.6",
+    "jsdom": "^27.0.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
 }
