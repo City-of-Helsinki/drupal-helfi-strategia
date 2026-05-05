@@ -9,10 +9,10 @@ import { Themes } from '../../enum/Themes';
 
 declare const ELASTIC_DEV_URL: string | undefined;
 
-type aggsType = { [key: string]: estypes.AggregationsStringTermsBucket } | undefined;
+type aggsType = { [key: string]: estypes.AggregationsStringTermsBucket[] } | undefined;
 export const aggsAtom = atom<aggsType>(undefined);
 
-type SearchState = {
+export type SearchState = {
   [Components.ADDRESS]?: string;
   [Components.KEYWORD]?: string;
   [Components.PAGE]?: number;

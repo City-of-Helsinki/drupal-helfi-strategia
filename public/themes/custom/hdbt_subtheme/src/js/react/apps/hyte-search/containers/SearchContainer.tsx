@@ -39,7 +39,10 @@ export const SearchContainer = () => {
 
   useEffect(() => {
     if (!initialized && !loading && data) {
-      initializeApp({ themes: data.aggregations?.themes.buckets });
+      const themes = data.aggregations?.themes as estypes.AggregationsStringTermsAggregate | undefined;
+      if (themes?.buckets) {
+        initializeApp({ themes: themes.buckets as estypes.AggregationsStringTermsBucket[] });
+      }
     }
   }, [data]);
 
