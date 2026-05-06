@@ -2,7 +2,7 @@ import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useAtomCallback } from 'jotai/react/utils';
 import { useCallback, useEffect } from 'react';
-import { Components } from 'src/js/react/enum/Components';
+import { Components } from '../enum/Components';
 import useSwr from 'swr';
 import { AddressNotFound } from '@/react/common/AddressNotFound';
 import { GhostList } from '@/react/common/GhostList';

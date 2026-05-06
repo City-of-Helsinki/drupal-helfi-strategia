@@ -1,7 +1,7 @@
 import { type Option, Select } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { Components } from 'src/js/react/enum/Components';
-import { Themes } from 'src/js/react/enum/Themes';
+import { Components } from '../enum/Components';
+import { Themes } from '../enum/Themes';
 import { getThemeAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 const options = [...Themes]

@@ -1,6 +1,6 @@
 import { TextInput } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { Components } from 'src/js/react/enum/Components';
+import { Components } from '../enum/Components';
 import { AddressSearch, type AddressWithCoordinates } from '@/react/common/AddressSearch';
 import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 import { defaultAddressSearchTexts } from '@/react/common/constants/defaultAddressSearchTexts';

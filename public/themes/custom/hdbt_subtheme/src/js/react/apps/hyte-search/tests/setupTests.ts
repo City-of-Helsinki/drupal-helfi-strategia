@@ -8,3 +8,9 @@ vi.stubGlobal('drupalSettings', drupalSettings);
 
 // HDS produces css parsing errors with jsdom. We don't really care about these.
 console.error = (_message, ..._optionalParams) => {};
+
+window.ResizeObserver = class ResizeObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};

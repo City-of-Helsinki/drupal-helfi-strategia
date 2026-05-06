@@ -7,6 +7,8 @@
       "@/react/common/*": ["../../contrib/hdbt/src/js/react/common/*"],
       "@/common/types/*": ["../../contrib/hdbt/src/js/types/*"],
       "@/types/*": ["../../contrib/hdbt/src/js/types/*"],
+      "jotai": ["../../contrib/hdbt/node_modules/jotai"],
+      "jotai/*": ["../../contrib/hdbt/node_modules/jotai/*"],
       "react": ["../../contrib/hdbt/node_modules/@types/react"],
       "react/jsx-runtime": ["../../contrib/hdbt/node_modules/@types/react/jsx-runtime"],
       "react/jsx-dev-runtime": ["../../contrib/hdbt/node_modules/@types/react/jsx-dev-runtime"],

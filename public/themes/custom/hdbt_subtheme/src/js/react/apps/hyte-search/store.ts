@@ -4,8 +4,8 @@ import { atom } from 'jotai';
 import { atomWithReset, RESET } from 'jotai/utils';
 import type { AddressWithCoordinates } from '@/react/common/AddressSearch';
 import useAddressToCoordsQuery from '@/react/common/hooks/useAddressToCoordsQuery';
-import { Components } from '../../enum/Components';
-import { Themes } from '../../enum/Themes';
+import { Components } from './enum/Components';
+import { Themes } from './enum/Themes';
 
 declare const ELASTIC_DEV_URL: string | undefined;
 

@@ -3,7 +3,7 @@ import type { Option } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { RESET } from 'jotai/utils';
 
-import { Components } from 'src/js/react/enum/Components';
+import { Components } from '../enum/Components';
 import FilterButton from '@/react/common/FilterButton';
 import SelectionsWrapper from '@/react/common/SelectionsWrapper';
 import { type SearchState, setSearchStateAtom, submitStateAtom, submittedStateAtom } from '../store';
