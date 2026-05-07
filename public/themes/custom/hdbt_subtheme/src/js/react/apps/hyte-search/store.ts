@@ -4,15 +4,15 @@ import { atom } from 'jotai';
 import { atomWithReset, RESET } from 'jotai/utils';
 import type { AddressWithCoordinates } from '@/react/common/AddressSearch';
 import useAddressToCoordsQuery from '@/react/common/hooks/useAddressToCoordsQuery';
-import { Components } from '../../enum/Components';
-import { Themes } from '../../enum/Themes';
+import { Components } from './enum/Components';
+import { Themes } from './enum/Themes';
 
 declare const ELASTIC_DEV_URL: string | undefined;
 
-type aggsType = { [key: string]: estypes.AggregationsStringTermsBucket } | undefined;
+type aggsType = { [key: string]: estypes.AggregationsStringTermsBucket[] } | undefined;
 export const aggsAtom = atom<aggsType>(undefined);
 
-type SearchState = {
+export type SearchState = {
   [Components.ADDRESS]?: string;
   [Components.KEYWORD]?: string;
   [Components.PAGE]?: number;

@@ -2,8 +2,8 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue } from 'jotai';
 import { useMemo } from 'react';
-import { Components } from 'src/js/react/enum/Components';
-import { IndexFields, UnitFields, UnitImageFields } from 'src/js/react/enum/IndexFields';
+import { Components } from '../enum/Components';
+import { IndexFields, UnitFields, UnitImageFields } from '../enum/IndexFields';
 import { submittedStateAtom } from '../store';
 
 const dataFields = [`${IndexFields.NAME}^5`, `${IndexFields.NAME_OVERRIDE}^5`, IndexFields.DESCRIPTION_SUMMARY];

@@ -1,7 +1,7 @@
 import { useAtomValue, useSetAtom } from 'jotai';
 import { getKeywordAtom, initializedAtom, setSearchStateAtom } from '../store';
 import { TextInput } from 'hds-react';
-import { Components } from 'src/js/react/enum/Components';
+import { Components } from '../enum/Components';
 
 export const KeywordFilter = () => {
   const initialized = useAtomValue(initializedAtom);
