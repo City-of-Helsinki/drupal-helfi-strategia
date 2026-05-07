@@ -29,15 +29,16 @@
   ],
   "overrides": {
     "brace-expansion": "^5.0.5",
-    "minimatch": "^10.2.1",
-    "react": "file:../../contrib/hdbt/node_modules/react",
-    "react-dom": "file:../../contrib/hdbt/node_modules/react-dom"
+    "minimatch": "^10.2.1"
   },
   "dependencies": {
     "@hdbt/theme-builder": "file:../../contrib/hdbt/theme-builder",
+    "jotai": "file:../../contrib/hdbt/node_modules/jotai",
     "js-yaml": "^4.1.0",
     "npm-run-all2": "^8.0.4",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "react": "file:../../contrib/hdbt/node_modules/react",
+    "react-dom": "file:../../contrib/hdbt/node_modules/react-dom"
   },
   "browserslist": [
     "last 3 major versions",

@@ -1,16 +1,14 @@
-import { resolve } from 'node:path';
 import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [tsconfigPaths({ projects: ['./tsconfig.json', '../../contrib/hdbt/tsconfig.json'] })],
-  resolve: {
-    alias: {
-      react: resolve(__dirname, '../../contrib/hdbt/node_modules/react'),
-      'react-dom': resolve(__dirname, '../../contrib/hdbt/node_modules/react-dom'),
-    },
-  },
   test: {
+    server: {
+      deps: {
+        inline: ['@testing-library/react'],
+      },
+    },
     coverage: {
       include: ['src/js/react/apps/hyte-search/**/*.{js,jsx,ts,tsx}'],
       exclude: [
