@@ -23,5 +23,5 @@ export const UnitImageFields = {
   PHOTOGRAPHER: 'units.image.photographer',
   TITLE: 'units.image.title',
   URL: 'units.image.url',
-  VARIANT: 'units.image.variants.1.5_1022w_682h_LQ',
+  VARIANT: 'units.image.variants.1_5_1022w_682h_lq',
 };

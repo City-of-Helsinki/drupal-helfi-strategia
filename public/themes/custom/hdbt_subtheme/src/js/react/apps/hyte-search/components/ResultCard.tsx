@@ -59,8 +59,8 @@ export const ResultCard = ({
       return;
     }
 
-    const srcSet = units[0]?.['image.variants.1.5_1022w_682h_LQ']
-      ? `${enrichImageUrl(units[0]?.['image.variants.1.5_1022w_682h_LQ'].toString())} 2x`
+    const srcSet = units[0]?.['image.variants.1_5_1022w_682h_lq']
+      ? `${enrichImageUrl(units[0]?.['image.variants.1_5_1022w_682h_lq'].toString())} 2x`
       : undefined;
 
     return (

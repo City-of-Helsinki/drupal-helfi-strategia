@@ -13,7 +13,7 @@ export type Unit = {
   'image.photographer'?: string[];
   'image.title'?: string[];
   'image.url'?: string[];
-  'image.variants.1.5_1022w_682h_LQ'?: string[];
+  'image.variants.1_5_1022w_682h_lq'?: string[];
   address: Address;
   location: Location;
   name_override?: string[];
