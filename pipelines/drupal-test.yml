@@ -10,7 +10,7 @@ trigger:
     - '*.md'
     - '.github/'
     - 'pipelines/drupal-staging.yml'
-    - 'pipelines/drupal-production.yml'
+    - 'pipelines/drupal-release.yml'
 
 # Pull request (PR) triggers cause a pipeline to run whenever a pull request is
 # opened with one of the specified target branches, or when updates are made to

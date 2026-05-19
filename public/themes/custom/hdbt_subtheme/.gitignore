@@ -6,3 +6,7 @@ npm-debug.log
 .DS_Store
 .idea
 dist/**/*.map
+
+# Vitest coverage directory
+coverage
+

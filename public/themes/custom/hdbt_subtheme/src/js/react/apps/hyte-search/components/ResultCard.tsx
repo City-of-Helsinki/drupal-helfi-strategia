@@ -1,4 +1,4 @@
-import { Themes } from 'src/js/react/enum/Themes';
+import { Themes } from '../enum/Themes';
 import type TagType from '@/common/types/TagType';
 import CardItem, { Metarow } from '@/react/common/Card';
 import type { Service, Unit } from '../types/Service';
