@@ -1,17 +1,17 @@
-uuid: d119de57-4367-44af-bfb1-b2ed5815cf27
+uuid: 80f30cfb-7925-4bd0-81e4-fc79cafa770d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_free_events
+    - field.storage.paragraph.field_search_term
     - paragraphs.paragraphs_type.event_list
 _core:
-  default_config_hash: J45LtULBxvSEc41OCog0UEp0D7ArbIYZ7JFiA0GKJoI
-id: paragraph.event_list.field_free_events
-field_name: field_free_events
+  default_config_hash: 3AJl2tZRqKsI5hZv_XaOqYJNk6KzEE6LAukdO_cazzM
+id: paragraph.event_list.field_search_term
+field_name: field_search_term
 entity_type: paragraph
 bundle: event_list
-label: 'Free events'
+label: 'Search term'
 description: ''
 required: false
 translatable: false
