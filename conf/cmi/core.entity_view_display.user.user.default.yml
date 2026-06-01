@@ -1,0 +1,20 @@
+uuid: cebd8d54-1518-47ce-8f8c-2578b51bf150
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  user_content:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  langcode: true
+  member_for: true
+  search_api_excerpt: true
