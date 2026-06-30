@@ -4559,16 +4559,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "3.4.20",
+            "version": "3.4.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "f9d6b03b5b50896b36e6a6927b836baff0fe8cbf"
+                "reference": "ad170c9f4e8144a4a19d3a46e0e62572a7371809"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/f9d6b03b5b50896b36e6a6927b836baff0fe8cbf",
-                "reference": "f9d6b03b5b50896b36e6a6927b836baff0fe8cbf",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/ad170c9f4e8144a4a19d3a46e0e62572a7371809",
+                "reference": "ad170c9f4e8144a4a19d3a46e0e62572a7371809",
                 "shasum": ""
             },
             "require": {
@@ -4589,10 +4589,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.4.20",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.4.21",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2026-06-26T10:41:44+00:00"
+            "time": "2026-06-30T09:24:31+00:00"
         },
         {
             "name": "drupal/health_check",
@@ -4862,16 +4862,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "5.1.83",
+            "version": "5.1.85",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "530e66111ad367097663a017e14965dacca09864"
+                "reference": "f9f96f05c1c1c867eeb71b3cde1b76f52a70b279"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/530e66111ad367097663a017e14965dacca09864",
-                "reference": "530e66111ad367097663a017e14965dacca09864",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/f9f96f05c1c1c867eeb71b3cde1b76f52a70b279",
+                "reference": "f9f96f05c1c1c867eeb71b3cde1b76f52a70b279",
                 "shasum": ""
             },
             "require": {
@@ -4962,7 +4962,8 @@
                         "[#UHF-9952, #UHF-9980] Duplicate <br /> tags (https://www.drupal.org/i/3083786)": "./public/modules/contrib/helfi_platform_config/patches/3083786.patch",
                         "[#UHF-11025] Status message templates missing theme when bigpipe is enabled (https://www.drupal.org/i/3396318)": "./public/modules/contrib/helfi_platform_config/patches/3396318.patch",
                         "[#UHF-11784] Sort the source and target arrays in the configuration storage comparer to avoid false positives": "./public/modules/contrib/helfi_platform_config/patches/drupal-core-sort-storage-comparer-source-and-target-arrays.patch",
-                        "[#UHF-13252] ...account administration pages causes RouteMatch to be Null in some cases (https://www.drupal.org/i/3265213)": "./public/modules/contrib/helfi_platform_config/patches/3265213.patch"
+                        "[#UHF-13252] ...account administration pages causes RouteMatch to be Null in some cases (https://www.drupal.org/i/3265213)": "./public/modules/contrib/helfi_platform_config/patches/3265213.patch",
+                        "[#UHF-12901] TODO remove on D12 once telephone field is moved to contrib module: Prevent accessibility issue due to difference in tel href encoding between ckeditor and telephone field formatter": "./public/modules/contrib/helfi_platform_config/patches/non-encoded-tel-link-href.patch"
                     },
                     "drupal/diff": {
                         "Revision overview form problem (https://www.drupal.org/i/3390329)": "./public/modules/contrib/helfi_platform_config/patches/diff_8.x_1.3_revision_overview_form.patch"
@@ -4978,8 +4979,7 @@
                     },
                     "drupal/paragraphs": {
                         "https://www.drupal.org/project/paragraphs/issues/2904705#comment-13836790": "./public/modules/contrib/helfi_platform_config/patches/2904705-115.patch",
-                        "[#UHF-2059] Enhancements for the Admin UI": "./public/modules/contrib/helfi_platform_config/patches/helfi_customizations_for_paragraphs_widget_8.x-1.12.patch",
-                        "[#UHF-10840] https://www.drupal.org/i/3510842: Duplicating nested paragraph overwriting paragraph references": "./public/modules/contrib/helfi_platform_config/patches/paragraphs-3510842-duplicate_paragraph_overwrite.patch"
+                        "[#UHF-2059] Enhancements for the Admin UI": "./public/modules/contrib/helfi_platform_config/patches/helfi_customizations_for_paragraphs_widget_8.x-1.12.patch"
                     },
                     "drupal/view_unpublished": {
                         "[#UHF-9256] Fix missing dynamic permission dependencies.": "./public/modules/contrib/helfi_platform_config/patches/view_unpublished_permissions_missing_dependencies.patch"
@@ -4991,10 +4991,10 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.1.83",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.1.85",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2026-06-29T14:10:03+00:00"
+            "time": "2026-06-30T13:25:30+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -16798,16 +16798,16 @@
         },
         {
             "name": "composer/metadata-minifier",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/metadata-minifier.git",
-                "reference": "c549d23829536f0d0e984aaabbf02af91f443207"
+                "reference": "8e86142e3ade750b837d55e55f0cdc786d8da006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/metadata-minifier/zipball/c549d23829536f0d0e984aaabbf02af91f443207",
-                "reference": "c549d23829536f0d0e984aaabbf02af91f443207",
+                "url": "https://api.github.com/repos/composer/metadata-minifier/zipball/8e86142e3ade750b837d55e55f0cdc786d8da006",
+                "reference": "8e86142e3ade750b837d55e55f0cdc786d8da006",
                 "shasum": ""
             },
             "require": {
@@ -16815,8 +16815,8 @@
             },
             "require-dev": {
                 "composer/composer": "^2",
-                "phpstan/phpstan": "^0.12.55",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
+                "phpstan/phpstan": "^1",
+                "symfony/phpunit-bridge": "^4.2 || ^5 || ^6 || ^7"
             },
             "type": "library",
             "extra": {
@@ -16847,7 +16847,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/metadata-minifier/issues",
-                "source": "https://github.com/composer/metadata-minifier/tree/1.0.0"
+                "source": "https://github.com/composer/metadata-minifier/tree/1.0.1"
             },
             "funding": [
                 {
@@ -16857,13 +16857,9 @@
                 {
                     "url": "https://github.com/composer",
                     "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
                 }
             ],
-            "time": "2021-04-07T13:37:33+00:00"
+            "time": "2026-06-30T11:34:59+00:00"
         },
         {
             "name": "composer/pcre",
