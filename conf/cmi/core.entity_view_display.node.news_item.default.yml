@@ -109,6 +109,7 @@ content:
     weight: 3
     region: content
 hidden:
+  ai_summary: true
   field_news_item_tags: true
   langcode: true
   search_api_excerpt: true
