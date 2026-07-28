@@ -28,12 +28,6 @@
     "react": "file:../../contrib/hdbt/node_modules/react",
     "react-dom": "file:../../contrib/hdbt/node_modules/react-dom"
   },
-  "overrides": {
-    "minimatch": "^10.2.1",
-    "svg-sprite": {
-      "glob": "^13.0.0"
-    }
-  },
   "browserslist": [
     "last 3 major versions",
     "> 1%",
