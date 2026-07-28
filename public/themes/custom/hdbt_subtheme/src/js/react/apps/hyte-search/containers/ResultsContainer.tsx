@@ -1,7 +1,6 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { useAtomCallback } from 'jotai/react/utils';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { Components } from '../enum/Components';
 import useSwr from 'swr';
 import { AddressNotFound } from '@/react/common/AddressNotFound';
@@ -9,14 +8,7 @@ import { GhostList } from '@/react/common/GhostList';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
 import { useQuery } from '../hooks/useQuery';
-import {
-  getElasticUrlAtom,
-  getPageAtom,
-  initializedAtom,
-  setPageAtom,
-  shouldScrollAtom,
-  submittedStateAtom,
-} from '../store';
+import { getElasticUrlAtom, getPageAtom, initializedAtom, setPageAtom, submittedStateAtom } from '../store';
 import type { Service, Unit } from '../types/Service';
 
 export const ResultsContainer = () => {
@@ -26,8 +18,6 @@ export const ResultsContainer = () => {
   const submittedState = useAtomValue(submittedStateAtom);
   const currentPage = useAtomValue(getPageAtom);
   const setPage = useSetAtom(setPageAtom);
-  const readShouldScroll = useAtomCallback(useCallback((get) => get(shouldScrollAtom), []));
-  const setShouldScroll = useSetAtom(shouldScrollAtom);
 
   const fetcher = useCallback(
     (query: string) =>
@@ -47,12 +37,6 @@ export const ResultsContainer = () => {
   });
 
   const loading = isLoading || isValidating;
-
-  useEffect(() => {
-    if (!readShouldScroll() && !loading && initialized) {
-      setShouldScroll(true);
-    }
-  }, [initialized, loading, readShouldScroll, setShouldScroll]);
 
   if (!initialized) {
     return <GhostList count={10} />;
@@ -96,10 +80,11 @@ export const ResultsContainer = () => {
           { context: 'Hyte search' },
         )
       }
-      isLoading={loading}
+      isValidating={loading}
+      queryString={JSON.stringify(query)}
       resultItemCallBack={resultItemCallBack}
-      setPage={setPage}
-      shouldScroll={readShouldScroll() && !loading}
+      setPage={(page) => setPage(Number(page))}
+      trigger={submittedState}
       size={10}
     />
   );
