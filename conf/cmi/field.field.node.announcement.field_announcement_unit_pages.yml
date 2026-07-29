@@ -1,4 +1,4 @@
-uuid: 6f3e0fbd-02d8-4c65-b245-29a4de172bac
+uuid: 03886aa6-0a46-4b52-9d48-6d5f5b320785
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ field_name: field_announcement_unit_pages
 entity_type: node
 bundle: announcement
 label: 'Show on unit pages'
-description: ''
+description: 'Select the TPR-unit pages where the announcement will be displayed. Enter part of the page title and select the correct page from the suggestions.'
 required: false
 translatable: false
 default_value: {  }
