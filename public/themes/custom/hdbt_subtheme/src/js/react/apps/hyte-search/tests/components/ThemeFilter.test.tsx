@@ -1,10 +1,10 @@
-import { describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { TestProvider } from '../../testutils/TestProvider';
+import { describe, expect, it } from 'vitest';
 import { ThemeFilter } from '../../components/ThemeFilter';
-import { initializedAtom, type SearchState, searchStateAtom } from '../../store';
 import { Components } from '../../enum/Components';
 import { Themes } from '../../enum/Themes';
+import { initializedAtom, type SearchState, searchStateAtom } from '../../store';
+import { TestProvider } from '../../testutils/TestProvider';
 
 const mockSearchState: SearchState = {
   [Components.THEME]: [
@@ -20,18 +20,18 @@ const mockSearchState: SearchState = {
 };
 
 describe('ThemeFilter.tsx', () => {
-  render(
-    <TestProvider
-      initialValues={[
-        [initializedAtom, true],
-        [searchStateAtom, mockSearchState],
-      ]}
-    >
-      <ThemeFilter />
-    </TestProvider>,
-  );
-
   it('Renders the theme select with label', () => {
+    render(
+      <TestProvider
+        initialValues={[
+          [initializedAtom, true],
+          [searchStateAtom, mockSearchState],
+        ]}
+      >
+        <ThemeFilter />
+      </TestProvider>,
+    );
+
     const label = screen.getByText(Themes.get('hh_kul') as string);
     expect(label).toBeTruthy();
   });

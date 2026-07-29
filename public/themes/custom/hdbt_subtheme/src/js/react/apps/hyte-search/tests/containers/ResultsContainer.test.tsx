@@ -2,8 +2,8 @@ import { describe, expect, it, vi } from 'vitest';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { TestProvider } from '../../testutils/TestProvider';
 import { ResultsContainer } from '../../containers/ResultsContainer';
-import { initializedAtom, type SearchState, submittedStateAtom } from '../../store';
 import { Components } from '../../enum/Components';
+import { initializedAtom, type SearchState, submittedStateAtom } from '../../store';
 
 // Two pages worth of results with Global.SIZE (15) per page.
 const TOTAL = 25;

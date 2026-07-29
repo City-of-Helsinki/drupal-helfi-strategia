@@ -1,9 +1,9 @@
 import { TextInput } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { Components } from '../enum/Components';
 import { AddressSearch, type AddressWithCoordinates } from '@/react/common/AddressSearch';
-import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 import { defaultAddressSearchTexts } from '@/react/common/constants/defaultAddressSearchTexts';
+import { Components } from '../enum/Components';
+import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 export const SearchBar = () => {
   const initialized = useAtomValue(initializedAtom);

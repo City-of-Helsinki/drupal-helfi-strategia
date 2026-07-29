@@ -1,13 +1,13 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useCallback } from 'react';
-import { Components } from '../enum/Components';
 import { Global } from '../enum/Global';
 import useSwr from 'swr';
 import { AddressNotFound } from '@/react/common/AddressNotFound';
 import { GhostList } from '@/react/common/GhostList';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
+import { Components } from '../enum/Components';
 import { useQuery } from '../hooks/useQuery';
 import { getElasticUrlAtom, getPageAtom, initializedAtom, setPageAtom, submittedStateAtom } from '../store';
 import type { Service, Unit } from '../types/Service';

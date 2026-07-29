@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import initSentry from '@/react/common/helpers/Sentry';
 import { SearchContainer } from './containers/SearchContainer';
@@ -15,12 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     throw new Error('Root id missing for Hyte Search React app');
   }
 
-  ReactDOM.render(
+  createRoot(rootElement).render(
     <React.StrictMode>
       <Suspense fallback={<div>Loading...</div>}>
         <SearchContainer />
       </Suspense>
     </React.StrictMode>,
-    rootElement,
   );
 });

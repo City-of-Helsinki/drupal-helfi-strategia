@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createStore } from 'jotai';
 import { RESET } from 'jotai/utils';
+import { Components } from '../enum/Components';
 import {
   getAddressAtom,
   getKeywordAtom,
@@ -12,7 +13,6 @@ import {
   submitStateAtom,
   submittedStateAtom,
 } from '../store';
-import { Components } from '../enum/Components';
 
 // Service map response used when an address is resolved to coordinates.
 const serviceMapResponse = {

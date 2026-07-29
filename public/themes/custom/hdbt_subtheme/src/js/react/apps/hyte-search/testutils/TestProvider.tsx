@@ -1,6 +1,7 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: @todo UHF-12501
 import { Provider } from 'jotai';
 import { useHydrateAtoms } from 'jotai/utils';
+import type { JSX } from 'react';
 
 type propType = { initialValues: any; children: JSX.Element };
 

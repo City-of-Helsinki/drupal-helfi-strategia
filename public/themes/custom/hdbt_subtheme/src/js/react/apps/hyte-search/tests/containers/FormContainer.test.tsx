@@ -1,17 +1,17 @@
-import { describe, expect, it } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { TestProvider } from '../../testutils/TestProvider';
+import { describe, expect, it } from 'vitest';
 import { FormContainer } from '../../containers/FormContainer';
 import { initializedAtom } from '../../store';
+import { TestProvider } from '../../testutils/TestProvider';
 
 describe('FormContainer.tsx', () => {
-  render(
-    <TestProvider initialValues={[[initializedAtom, true]]}>
-      <FormContainer />
-    </TestProvider>,
-  );
-
   it('Renders the search form with a submit button', () => {
+    render(
+      <TestProvider initialValues={[[initializedAtom, true]]}>
+        <FormContainer />
+      </TestProvider>,
+    );
+
     expect(screen.getByRole('search')).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Search' })).toBeTruthy();
   });
