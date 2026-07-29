@@ -19,18 +19,6 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "@comment dependencies": [
-    "The following packages were updated manually.",
-    "Remove this section once the dependencies have been updated in their respective upstream packages.",
-    {
-      "brace-expansion": ">=5.0.5, dependency of minimatch",
-      "minimatch": ">=10.2.1, dependency of hds-core (eslint)"
-    }
-  ],
-  "overrides": {
-    "brace-expansion": "^5.0.5",
-    "minimatch": "^10.2.1"
-  },
   "dependencies": {
     "@hdbt/theme-builder": "file:../../contrib/hdbt/theme-builder",
     "jotai": "file:../../contrib/hdbt/node_modules/jotai",
@@ -51,7 +39,7 @@
     "@vitest/browser": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
     "breakpoint-sass": "^3.0.0",
-    "glob": "^11.0.6",
+    "glob": "^13.0.0",
     "jsdom": "^27.0.1",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.10"
