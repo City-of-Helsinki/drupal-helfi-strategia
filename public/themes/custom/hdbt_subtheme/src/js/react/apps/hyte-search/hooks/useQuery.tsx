@@ -3,6 +3,7 @@ import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue } from 'jotai';
 import { useMemo } from 'react';
 import { Components } from '../enum/Components';
+import { Global } from '../enum/Global';
 import { IndexFields, UnitFields, UnitImageFields } from '../enum/IndexFields';
 import { submittedStateAtom } from '../store';
 
@@ -89,7 +90,7 @@ export const useQuery = (): estypes.SearchRequest | null => {
       query.bool.minimum_should_match = 1;
     }
 
-    const size = 15;
+    const size = Global.SIZE;
     const page = submittedState.page || 1;
 
     const result = {
