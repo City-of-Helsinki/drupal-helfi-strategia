@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createStore } from 'jotai';
 import { RESET } from 'jotai/utils';
 import {
@@ -14,6 +14,17 @@ import {
 } from '../store';
 import { Components } from '../enum/Components';
 
+// Service map response used when an address is resolved to coordinates.
+const serviceMapResponse = {
+  results: [{ location: { coordinates: [24.9354, 60.1695] }, name: { fi: 'Mannerheimintie 1' } }],
+};
+
+const mockServiceMap = (response: unknown = { results: [] }) => {
+  const fetchMock = vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(response) }));
+  vi.stubGlobal('fetch', fetchMock);
+  return fetchMock;
+};
+
 const themeOption = {
   disabled: false,
   isGroupLabel: false,
@@ -26,6 +37,8 @@ const themeOption = {
 describe('store.ts', () => {
   beforeEach(() => {
     window.history.replaceState({}, '', '/');
+    // Keep address resolution off the network by default.
+    mockServiceMap();
   });
 
   it('setSearchStateAtom merges partial updates into searchStateAtom', () => {
@@ -71,14 +84,46 @@ describe('store.ts', () => {
     expect(window.location.search).toContain('page=3');
   });
 
-  it('Derived atoms expose values from search and submitted state', () => {
+  it('submitStateAtom resolves coordinates for the submitted address', async () => {
+    const fetchMock = mockServiceMap(serviceMapResponse);
+    const store = createStore();
+    store.set(setSearchStateAtom, { [Components.ADDRESS]: 'Mannerheimintie 1' });
+    await store.set(submitStateAtom);
+
+    // Without coordinates the geo filter is skipped and no search is made at all, so
+    // they must be resolved even when the address never went through onSubmit.
+    expect(store.get(submittedStateAtom).addressWithCoordinates).toEqual({
+      label: 'Mannerheimintie 1',
+      value: [24.9354, 60.1695, 'Mannerheimintie 1'],
+    });
+
+    // Resubmitting the same address reuses what was already resolved.
+    const callCount = fetchMock.mock.calls.length;
+    await store.set(submitStateAtom);
+    expect(fetchMock.mock.calls.length).toBe(callCount);
+  });
+
+  it('submitStateAtom clears coordinates that no longer match the address', async () => {
+    mockServiceMap(serviceMapResponse);
+    const store = createStore();
+    store.set(setSearchStateAtom, { [Components.ADDRESS]: 'Mannerheimintie 1' });
+    await store.set(submitStateAtom);
+
+    mockServiceMap();
+    store.set(setSearchStateAtom, { [Components.ADDRESS]: '' });
+    await store.set(submitStateAtom);
+
+    expect(store.get(submittedStateAtom).addressWithCoordinates).toBeUndefined();
+  });
+
+  it('Derived atoms expose values from search and submitted state', async () => {
     const store = createStore();
     store.set(setSearchStateAtom, {
       [Components.ADDRESS]: 'addr',
       [Components.KEYWORD]: 'kw',
       [Components.THEME]: [themeOption],
     });
-    store.set(submitStateAtom);
+    await store.set(submitStateAtom);
 
     expect(store.get(getAddressAtom)).toBe('addr');
     expect(store.get(getKeywordAtom)).toBe('kw');
