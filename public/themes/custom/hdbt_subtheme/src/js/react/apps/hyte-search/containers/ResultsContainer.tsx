@@ -1,12 +1,11 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
-import { useCallback, useRef } from 'react';
+import { useCallback } from 'react';
 import { Components } from '../enum/Components';
 import { Global } from '../enum/Global';
 import useSwr from 'swr';
 import { AddressNotFound } from '@/react/common/AddressNotFound';
 import { GhostList } from '@/react/common/GhostList';
-import useScrollToFirstItem from '@/react/common/hooks/useScrollToFirstItem';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
 import { useQuery } from '../hooks/useQuery';
@@ -39,8 +38,6 @@ export const ResultsContainer = () => {
   });
 
   const loading = isLoading || isValidating;
-  const resultsRef = useRef<HTMLDivElement>(null);
-  const scrollToFirstItem = useScrollToFirstItem(resultsRef, loading);
 
   if (!initialized) {
     return <GhostList count={Global.SIZE} />;
@@ -71,30 +68,25 @@ export const ResultsContainer = () => {
   };
 
   return (
-    <div ref={resultsRef}>
-      <ResultsWrapper
-        currentPage={currentPage}
-        data={data}
-        error={error}
-        getHeaderText={() =>
-          Drupal.formatPlural(
-            data.aggregations?.total_services?.value ?? 0,
-            '1 result',
-            '@count results',
-            {},
-            { context: 'Hyte search' },
-          )
-        }
-        isValidating={loading}
-        queryString={JSON.stringify(query)}
-        resultItemCallBack={resultItemCallBack}
-        setPage={(page) => {
-          setPage(Number(page));
-          scrollToFirstItem();
-        }}
-        trigger={submittedState}
-        size={Global.SIZE}
-      />
-    </div>
+    <ResultsWrapper
+      currentPage={currentPage}
+      data={data}
+      error={error}
+      getHeaderText={() =>
+        Drupal.formatPlural(
+          data.aggregations?.total_services?.value ?? 0,
+          '1 result',
+          '@count results',
+          {},
+          { context: 'Hyte search' },
+        )
+      }
+      isValidating={loading}
+      queryString={JSON.stringify(query)}
+      resultItemCallBack={resultItemCallBack}
+      setPage={(page) => setPage(Number(page))}
+      trigger={submittedState}
+      size={Global.SIZE}
+    />
   );
 };
