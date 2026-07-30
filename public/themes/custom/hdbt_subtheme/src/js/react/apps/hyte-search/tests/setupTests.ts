@@ -1,6 +1,10 @@
 import { vi } from 'vitest';
 
-const Drupal = { t: (key: string) => key };
+const Drupal = {
+  t: (key: string) => key,
+  formatPlural: (count: number, singular: string, plural: string) =>
+    (count === 1 ? singular : plural).replace('@count', String(count)),
+};
 vi.stubGlobal('Drupal', Drupal);
 
 const drupalSettings = { path: { currentLanguage: 'en' } };
@@ -14,3 +18,7 @@ window.ResizeObserver = class ResizeObserver {
   unobserve() {}
   disconnect() {}
 };
+
+if (!Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = () => {};
+}
