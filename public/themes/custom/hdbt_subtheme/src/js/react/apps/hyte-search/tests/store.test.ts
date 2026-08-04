@@ -1,6 +1,6 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createStore } from 'jotai';
 import { RESET } from 'jotai/utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Components } from '../enum/Components';
 import {
   getAddressAtom,
