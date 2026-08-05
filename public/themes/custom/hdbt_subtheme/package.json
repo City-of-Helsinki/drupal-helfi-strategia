@@ -13,10 +13,10 @@
     "postinstall": "npm --prefix ../../contrib/hdbt install --no-audit --progress=false --loglevel=silent",
     "lint:scss": "npx --prefix ../../contrib/hdbt/theme-builder postcss \"$INIT_CWD/src/scss/**/*.scss\" --syntax postcss-scss --use css-declaration-sorter --replace --no-map && npm run lint:stylelint --loglevel=silent",
     "lint:stylelint": "npx --prefix ../../contrib/hdbt/theme-builder stylelint \"$INIT_CWD/src/scss/**/*.scss\" --config ../../contrib/hdbt/theme-builder/.stylelintrc.yaml --fix",
-    "lint:js": "biome lint src/js/",
+    "lint:js": "biome check --write --assist-enabled=true src/js/",
     "format:js": "biome format --write src/js/",
     "lint": "npm-run-all --parallel lint:scss lint:js -s",
-    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit 2>&1 | grep -v 'hdbt' || true",
+    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
@@ -36,7 +36,8 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "^2.4.14",
-    "@testing-library/react": "^12.1.5",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@vitest/browser": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
     "breakpoint-sass": "^3.0.0",

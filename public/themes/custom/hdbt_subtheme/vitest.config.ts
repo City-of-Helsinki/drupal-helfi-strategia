@@ -1,8 +1,17 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+const hdbtNodeModules = fileURLToPath(new URL('../../contrib/hdbt/node_modules', import.meta.url));
+
 export default defineConfig({
   plugins: [tsconfigPaths({ projects: ['./tsconfig.json', '../../contrib/hdbt/tsconfig.json'] })],
+  resolve: {
+    alias: {
+      react: `${hdbtNodeModules}/react`,
+      'react-dom': `${hdbtNodeModules}/react-dom`,
+    },
+  },
   test: {
     server: {
       deps: {

@@ -1,6 +1,6 @@
-import { describe, expect, it, vi } from 'vitest';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { createStore, Provider } from 'jotai';
+import { describe, expect, it, vi } from 'vitest';
 import { SearchBar } from '../../components/SearchBar';
 import { Components } from '../../enum/Components';
 import { initializedAtom, submitStateAtom, submittedStateAtom } from '../../store';
