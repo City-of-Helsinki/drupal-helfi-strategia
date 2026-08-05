@@ -16,7 +16,7 @@
     "lint:js": "biome check --write --assist-enabled=true src/js/",
     "format:js": "biome format --write src/js/",
     "lint": "npm-run-all --parallel lint:scss lint:js -s",
-    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit 2>&1 | grep -v 'hdbt' || true",
+    "validate-ts": "npx --prefix ../../contrib/hdbt tsc --noEmit",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
