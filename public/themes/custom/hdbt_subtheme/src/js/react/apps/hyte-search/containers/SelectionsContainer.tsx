@@ -2,10 +2,10 @@
 import type { Option } from 'hds-react';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { RESET } from 'jotai/utils';
-
-import { Components } from '../enum/Components';
+import type { JSX } from 'react';
 import FilterButton from '@/react/common/FilterButton';
 import SelectionsWrapper from '@/react/common/SelectionsWrapper';
+import { Components } from '../enum/Components';
 import { type SearchState, setSearchStateAtom, submitStateAtom, submittedStateAtom } from '../store';
 
 export const SelectionsContainer = () => {

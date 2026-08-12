@@ -1,10 +1,10 @@
-import { describe, expect, it } from 'vitest';
 import { render } from '@testing-library/react';
-import { TestProvider } from '../../testutils/TestProvider';
-import { useQuery } from '../../hooks/useQuery';
-import { type SearchState, submittedStateAtom } from '../../store';
+import { describe, expect, it } from 'vitest';
 import { Components } from '../../enum/Components';
 import { Themes } from '../../enum/Themes';
+import { useQuery } from '../../hooks/useQuery';
+import { type SearchState, submittedStateAtom } from '../../store';
+import { TestProvider } from '../../testutils/TestProvider';
 
 type FilterClause = {
   match?: Record<string, unknown>;

@@ -1,14 +1,15 @@
-import { useAtomValue, useSetAtom } from 'jotai';
-import { getKeywordAtom, initializedAtom, setSearchStateAtom } from '../store';
 import { TextInput } from 'hds-react';
+import { useAtomValue, useSetAtom } from 'jotai';
+import type { ChangeEvent } from 'react';
 import { Components } from '../enum/Components';
+import { getKeywordAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 export const KeywordFilter = () => {
   const initialized = useAtomValue(initializedAtom);
   const setSearchState = useSetAtom(setSearchStateAtom);
   const keyword = useAtomValue(getKeywordAtom);
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchState({ [Components.KEYWORD]: event.target.value });
   };
 

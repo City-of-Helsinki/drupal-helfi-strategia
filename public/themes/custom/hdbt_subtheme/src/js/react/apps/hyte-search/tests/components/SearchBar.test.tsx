@@ -1,9 +1,9 @@
-import { describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { TestProvider } from '../../testutils/TestProvider';
+import { describe, expect, it } from 'vitest';
 import { SearchBar } from '../../components/SearchBar';
-import { initializedAtom, type SearchState, searchStateAtom } from '../../store';
 import { Components } from '../../enum/Components';
+import { initializedAtom, type SearchState, searchStateAtom } from '../../store';
+import { TestProvider } from '../../testutils/TestProvider';
 
 const address = 'Mannerheimintie 1';
 const mockSearchState: SearchState = {
@@ -11,18 +11,18 @@ const mockSearchState: SearchState = {
 };
 
 describe('SearchBar.tsx', () => {
-  render(
-    <TestProvider
-      initialValues={[
-        [initializedAtom, true],
-        [searchStateAtom, mockSearchState],
-      ]}
-    >
-      <SearchBar />
-    </TestProvider>,
-  );
-
   it('Renders the address input with the correct value', () => {
+    render(
+      <TestProvider
+        initialValues={[
+          [initializedAtom, true],
+          [searchStateAtom, mockSearchState],
+        ]}
+      >
+        <SearchBar />
+      </TestProvider>,
+    );
+
     expect(screen.getByDisplayValue(address)).toBeTruthy();
   });
 });

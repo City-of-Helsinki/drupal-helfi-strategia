@@ -60,26 +60,47 @@ const setUrlParams = (params: URLSearchParams) => {
   window.history.replaceState({}, '', url.toString());
 };
 
+/**
+ * Resolves the coordinates the geo filter needs from an address string.
+ *
+ * @param {string|undefined} address - The address to resolve.
+ * @returns {Promise} - Promise resolving to the address with coordinates, or undefined
+ *   when the address is empty or the service map does not recognize it.
+ */
+const resolveAddress = async (address?: string): Promise<AddressWithCoordinates | undefined> => {
+  if (!address) {
+    return undefined;
+  }
+
+  // @todo refactor address query functionality to have a non-hook version
+  // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
+  const coordinates = await useAddressToCoordsQuery(address);
+
+  return coordinates ? { label: address, value: coordinates } : undefined;
+};
+
 export const searchStateAtom = atomWithReset<SearchState>({ page: 1 });
 export const submittedStateAtom = atomWithReset<SearchState>({ page: 1 });
-export const submitStateAtom = atom(null, (get, set) => {
+export const submitStateAtom = atom(null, async (get, set) => {
   const currentState = { ...get(searchStateAtom) };
+  const address = currentState[Components.ADDRESS];
+
+  if (currentState.addressWithCoordinates?.label !== address) {
+    currentState.addressWithCoordinates = await resolveAddress(address);
+  }
+
+  set(searchStateAtom, currentState);
   set(submittedStateAtom, currentState);
   setUrlParams(selectionsToURLParams(currentState));
 });
 
 export const initializeAppAtom = atom(null, async (_get, set, aggs: aggsType) => {
   set(aggsAtom, aggs);
-  let coordinatesData: [number, number, string] | null = null;
 
-  if (initialParams[Components.ADDRESS]) {
-    // @todo refactor address query functionality to have a non-hook version
-    // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
-    coordinatesData = await useAddressToCoordsQuery(initialParams[Components.ADDRESS]);
-  }
-  if (coordinatesData) {
-    const address = initialParams[Components.ADDRESS] || '';
-    initialParams.addressWithCoordinates = { label: address, value: coordinatesData };
+  const addressWithCoordinates = await resolveAddress(initialParams[Components.ADDRESS]);
+
+  if (addressWithCoordinates) {
+    initialParams.addressWithCoordinates = addressWithCoordinates;
   }
 
   set(searchStateAtom, { ...initialParams });
