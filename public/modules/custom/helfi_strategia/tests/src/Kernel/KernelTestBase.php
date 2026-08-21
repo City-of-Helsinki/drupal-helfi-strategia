@@ -18,6 +18,7 @@ abstract class KernelTestBase extends CoreKernelTestBase {
     'helfi_strategia',
     'helfi_api_base',
     'csp',
+    'diff',
   ];
 
 }
