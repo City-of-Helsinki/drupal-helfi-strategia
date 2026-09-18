@@ -3,7 +3,12 @@ import type { Option } from 'hds-react';
 import { atom } from 'jotai';
 import { atomWithReset, RESET } from 'jotai/utils';
 import type { AddressWithCoordinates } from '@/react/common/AddressSearch';
-import useAddressToCoordsQuery from '@/react/common/hooks/useAddressToCoordsQuery';
+import type { AddressSearchErrorType } from '@/react/common/helpers/addressSearchError';
+import {
+  type AddressCoordinates,
+  getAddressCoordinates,
+  ServiceMapUnavailableError,
+} from '@/react/common/helpers/ServiceMap';
 import { Components } from './enum/Components';
 import { Themes } from './enum/Themes';
 
@@ -18,6 +23,7 @@ export type SearchState = {
   [Components.PAGE]?: number;
   [Components.THEME]?: Option[];
   addressWithCoordinates?: AddressWithCoordinates;
+  addressError?: AddressSearchErrorType;
 };
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -40,7 +46,7 @@ const selectionsToURLParams = (currentParams: SearchState): URLSearchParams => {
   const params = new URLSearchParams();
 
   Object.entries(currentParams)
-    .filter(([key]) => key !== 'addressWithCoordinates')
+    .filter(([key]) => key !== 'addressWithCoordinates' && key !== 'addressError')
     .forEach(([key, value]) => {
       if (value && Array.isArray(value) && value.length) {
         value.forEach((option) => {
@@ -60,23 +66,35 @@ const setUrlParams = (params: URLSearchParams) => {
   window.history.replaceState({}, '', url.toString());
 };
 
+type ResolvedAddress = { address?: AddressWithCoordinates; error?: AddressSearchErrorType };
+
 /**
  * Resolves the coordinates the geo filter needs from an address string.
  *
  * @param {string|undefined} address - The address to resolve.
- * @returns {Promise} - Promise resolving to the address with coordinates, or undefined
- *   when the address is empty or the service map does not recognize it.
+ * @returns {Promise} - Promise resolving to the address with coordinates, or to the
+ *   reason it could not be resolved: `not-found` when the service map does not
+ *   recognize the address, `unavailable` when it could not be reached at all.
+ *   Both are empty when there is no address to resolve.
  */
-const resolveAddress = async (address?: string): Promise<AddressWithCoordinates | undefined> => {
+const resolveAddress = async (address?: string): Promise<ResolvedAddress> => {
   if (!address) {
-    return undefined;
+    return {};
   }
 
-  // @todo refactor address query functionality to have a non-hook version
-  // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
-  const coordinates = await useAddressToCoordsQuery(address);
+  let coordinates: AddressCoordinates | null;
 
-  return coordinates ? { label: address, value: coordinates } : undefined;
+  try {
+    coordinates = await getAddressCoordinates(address);
+  } catch (e) {
+    if (!(e instanceof ServiceMapUnavailableError)) {
+      throw e;
+    }
+
+    return { error: 'unavailable' };
+  }
+
+  return coordinates ? { address: { label: address, value: coordinates } } : { error: 'not-found' };
 };
 
 export const searchStateAtom = atomWithReset<SearchState>({ page: 1 });
@@ -86,7 +104,9 @@ export const submitStateAtom = atom(null, async (get, set) => {
   const address = currentState[Components.ADDRESS];
 
   if (currentState.addressWithCoordinates?.label !== address) {
-    currentState.addressWithCoordinates = await resolveAddress(address);
+    const resolved = await resolveAddress(address);
+    currentState.addressWithCoordinates = resolved.address;
+    currentState.addressError = resolved.error;
   }
 
   set(searchStateAtom, currentState);
@@ -97,10 +117,14 @@ export const submitStateAtom = atom(null, async (get, set) => {
 export const initializeAppAtom = atom(null, async (_get, set, aggs: aggsType) => {
   set(aggsAtom, aggs);
 
-  const addressWithCoordinates = await resolveAddress(initialParams[Components.ADDRESS]);
+  const resolved = await resolveAddress(initialParams[Components.ADDRESS]);
 
-  if (addressWithCoordinates) {
-    initialParams.addressWithCoordinates = addressWithCoordinates;
+  if (resolved.address) {
+    initialParams.addressWithCoordinates = resolved.address;
+  }
+
+  if (resolved.error) {
+    initialParams.addressError = resolved.error;
   }
 
   set(searchStateAtom, { ...initialParams });

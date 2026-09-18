@@ -3,7 +3,7 @@ import { createStore, Provider } from 'jotai';
 import { describe, expect, it, vi } from 'vitest';
 import { SearchBar } from '../../components/SearchBar';
 import { Components } from '../../enum/Components';
-import { initializedAtom, submitStateAtom, submittedStateAtom } from '../../store';
+import { initializedAtom, setSearchStateAtom, submitStateAtom, submittedStateAtom } from '../../store';
 
 const address = 'Mannerheimintie 1';
 const coordinates = [24.9354, 60.1695];
@@ -58,5 +58,34 @@ describe('Address search flow', () => {
     const submitted = store.get(submittedStateAtom);
     expect(submitted[Components.ADDRESS]).toBe(address);
     expect(submitted.addressWithCoordinates?.value).toEqual([...coordinates, address]);
+  });
+
+  it('Records why an address could not be resolved when the service map is down', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new TypeError('Failed to fetch')));
+    const store = createStore();
+    store.set(initializedAtom, true);
+    store.set(setSearchStateAtom, { [Components.ADDRESS]: address });
+
+    await store.set(submitStateAtom);
+
+    const submitted = store.get(submittedStateAtom);
+    expect(submitted.addressWithCoordinates).toBeUndefined();
+    expect(submitted.addressError).toBe('unavailable');
+  });
+
+  it('Records a not-found address as such', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve({ results: [] }) })),
+    );
+    const store = createStore();
+    store.set(initializedAtom, true);
+    store.set(setSearchStateAtom, { [Components.ADDRESS]: 'Ei ole olemassa 404' });
+
+    await store.set(submitStateAtom);
+
+    const submitted = store.get(submittedStateAtom);
+    expect(submitted.addressWithCoordinates).toBeUndefined();
+    expect(submitted.addressError).toBe('not-found');
   });
 });
