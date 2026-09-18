@@ -27,7 +27,6 @@
     "jotai": "file:../../contrib/hdbt/node_modules/jotai",
     "js-yaml": "^4.1.0",
     "npm-run-all2": "^8.0.4",
-    "postcss-cli": "^11.0.1",
     "react": "file:../../contrib/hdbt/node_modules/react",
     "react-dom": "file:../../contrib/hdbt/node_modules/react-dom"
   },

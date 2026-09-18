@@ -52,7 +52,7 @@ describe('ResultsContainer.tsx', () => {
     expect(screen.getByText('Search results are loading')).toBeTruthy();
   });
 
-  it('Renders the address-not-found message when coordinates are missing', () => {
+  it('Renders the empty results message when coordinates are missing', () => {
     const mockSubmittedState: SearchState = {
       [Components.ADDRESS]: 'Unknown Place',
     };
@@ -68,7 +68,10 @@ describe('ResultsContainer.tsx', () => {
       </TestProvider>,
     );
 
-    expect(screen.getByText('No results for the address entered')).toBeTruthy();
+    expect(screen.getByText('No results')).toBeTruthy();
+    expect(
+      screen.getByText('No results were found for the criteria you entered. Try changing your search criteria.'),
+    ).toBeTruthy();
   });
 
   it('Moves focus to the first result when changing page', async () => {

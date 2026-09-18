@@ -3,7 +3,7 @@ import type { Option } from 'hds-react';
 import { atom } from 'jotai';
 import { atomWithReset, RESET } from 'jotai/utils';
 import type { AddressWithCoordinates } from '@/react/common/AddressSearch';
-import useAddressToCoordsQuery from '@/react/common/hooks/useAddressToCoordsQuery';
+import { getAddressCoordinates } from '@/react/common/helpers/ServiceMap';
 import { Components } from './enum/Components';
 import { Themes } from './enum/Themes';
 
@@ -72,9 +72,7 @@ const resolveAddress = async (address?: string): Promise<AddressWithCoordinates 
     return undefined;
   }
 
-  // @todo refactor address query functionality to have a non-hook version
-  // biome-ignore lint/correctness/useHookAtTopLevel: will be replaced at a later time
-  const coordinates = await useAddressToCoordsQuery(address);
+  const coordinates = await getAddressCoordinates(address);
 
   return coordinates ? { label: address, value: coordinates } : undefined;
 };
@@ -121,6 +119,11 @@ export const setSearchStateAtom = atom(null, (get, set, update: Partial<SearchSt
 });
 
 export const getAddressAtom = atom((get) => get(searchStateAtom)[Components.ADDRESS] || '');
+export const getAddressErrorAtom = atom((get) => {
+  const submitted = get(submittedStateAtom);
+
+  return Boolean(submitted[Components.ADDRESS]?.length && !submitted.addressWithCoordinates?.value);
+});
 export const getKeywordAtom = atom((get) => get(searchStateAtom)[Components.KEYWORD] || '');
 export const getThemeAtom = atom((get) => get(searchStateAtom)[Components.THEME] || []);
 
