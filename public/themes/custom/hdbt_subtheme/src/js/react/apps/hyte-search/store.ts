@@ -119,6 +119,11 @@ export const setSearchStateAtom = atom(null, (get, set, update: Partial<SearchSt
 });
 
 export const getAddressAtom = atom((get) => get(searchStateAtom)[Components.ADDRESS] || '');
+export const getAddressErrorAtom = atom((get) => {
+  const submitted = get(submittedStateAtom);
+
+  return Boolean(submitted[Components.ADDRESS]?.length && !submitted.addressWithCoordinates?.value);
+});
 export const getKeywordAtom = atom((get) => get(searchStateAtom)[Components.KEYWORD] || '');
 export const getThemeAtom = atom((get) => get(searchStateAtom)[Components.THEME] || []);
 
