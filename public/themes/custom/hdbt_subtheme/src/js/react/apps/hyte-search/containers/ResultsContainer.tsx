@@ -2,7 +2,7 @@ import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useCallback } from 'react';
 import useSwr from 'swr';
-import { AddressSearchError } from '@/react/common/AddressNotFound';
+import { AddressNotFound } from '@/react/common/AddressNotFound';
 import { GhostList } from '@/react/common/GhostList';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
@@ -44,7 +44,7 @@ export const ResultsContainer = () => {
   }
 
   if (unknownCoordinates) {
-    return <AddressSearchError type={submittedState.addressError ?? 'not-found'} />;
+    return <AddressNotFound />;
   }
 
   const resultItemCallBack = (item: estypes.SearchHit<Service>) => {
