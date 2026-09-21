@@ -3,12 +3,13 @@ import { useAtomValue, useSetAtom } from 'jotai';
 import { AddressSearch, type AddressWithCoordinates } from '@/react/common/AddressSearch';
 import { defaultAddressSearchTexts } from '@/react/common/constants/defaultAddressSearchTexts';
 import { Components } from '../enum/Components';
-import { getAddressAtom, initializedAtom, setSearchStateAtom } from '../store';
+import { getAddressAtom, getAddressErrorAtom, initializedAtom, setSearchStateAtom } from '../store';
 
 export const SearchBar = () => {
   const initialized = useAtomValue(initializedAtom);
   const setSearchState = useSetAtom(setSearchStateAtom);
   const address = useAtomValue(getAddressAtom);
+  const addressError = useAtomValue(getAddressErrorAtom);
 
   if (!initialized) {
     return (
@@ -31,6 +32,7 @@ export const SearchBar = () => {
 
   return (
     <AddressSearch
+      error={addressError}
       id={Components.ADDRESS}
       includeCoordinates
       onChange={onChange}
