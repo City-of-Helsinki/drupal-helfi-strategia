@@ -2,7 +2,6 @@ import type { estypes } from '@elastic/elasticsearch';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useCallback } from 'react';
 import useSwr from 'swr';
-import { AddressNotFound } from '@/react/common/AddressNotFound';
 import { GhostList } from '@/react/common/GhostList';
 import { ResultsWrapper } from '@/react/common/ResultsWrapper';
 import { ResultCard } from '../components/ResultCard';
@@ -41,10 +40,6 @@ export const ResultsContainer = () => {
 
   if (!initialized) {
     return <GhostList count={Global.SIZE} />;
-  }
-
-  if (unknownCoordinates) {
-    return <AddressNotFound />;
   }
 
   const resultItemCallBack = (item: estypes.SearchHit<Service>) => {
