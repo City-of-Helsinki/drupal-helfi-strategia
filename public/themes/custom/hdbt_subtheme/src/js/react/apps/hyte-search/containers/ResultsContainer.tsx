@@ -11,6 +11,9 @@ import { useQuery } from '../hooks/useQuery';
 import { getElasticUrlAtom, getPageAtom, initializedAtom, setPageAtom, submittedStateAtom } from '../store';
 import type { Service, Unit } from '../types/Service';
 
+// Helper for when address api fails so focus management fires
+const EMPTY_RESPONSE = { hits: { hits: [] } } as unknown as estypes.SearchResponse<Service>;
+
 export const ResultsContainer = () => {
   const url = useAtomValue(getElasticUrlAtom);
   const initialized = useAtomValue(initializedAtom);
@@ -65,7 +68,7 @@ export const ResultsContainer = () => {
   return (
     <ResultsWrapper
       currentPage={currentPage}
-      data={data}
+      data={unknownCoordinates ? EMPTY_RESPONSE : data}
       error={error}
       getHeaderText={() =>
         Drupal.formatPlural(
