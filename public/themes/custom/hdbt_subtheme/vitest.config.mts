@@ -1,12 +1,11 @@
-import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vitest/config';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
-const hdbtNodeModules = fileURLToPath(new URL('../../contrib/hdbt/node_modules', import.meta.url));
+const hdbtNodeModules = resolve(import.meta.dirname, '../../contrib/hdbt/node_modules');
 
 export default defineConfig({
-  plugins: [tsconfigPaths({ projects: ['./tsconfig.json', '../../contrib/hdbt/tsconfig.json'] })],
   resolve: {
+    tsconfigPaths: true,
     alias: {
       react: `${hdbtNodeModules}/react`,
       'react-dom': `${hdbtNodeModules}/react-dom`,
@@ -30,6 +29,6 @@ export default defineConfig({
     exclude: ['node_modules'],
     globals: true,
     setupFiles: ['src/js/react/apps/hyte-search/tests/setupTests.ts'],
-  }
+  },
 });
 

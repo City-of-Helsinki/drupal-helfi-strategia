@@ -1,3 +1,4 @@
+/// <reference types="vitest/jsdom" />
 import { vi } from 'vitest';
 
 const Drupal = {
@@ -11,7 +12,7 @@ const drupalSettings = { path: { currentLanguage: 'en' } };
 vi.stubGlobal('drupalSettings', drupalSettings);
 
 // HDS produces css parsing errors with jsdom. We don't really care about these.
-console.error = (_message, ..._optionalParams) => {};
+jsdom.virtualConsole.removeAllListeners('jsdomError');
 
 window.ResizeObserver = class ResizeObserver {
   observe() {}
