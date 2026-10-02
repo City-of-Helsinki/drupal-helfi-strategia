@@ -1,4 +1,5 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { createStore, Provider } from 'jotai';
 import { describe, expect, it, vi } from 'vitest';
 import { ResultsContainer } from '../../containers/ResultsContainer';
 import { Components } from '../../enum/Components';
@@ -101,5 +102,28 @@ describe('ResultsContainer.tsx', () => {
 
     await waitFor(() => expect(screen.queryByText('Service 2')).toBeTruthy());
     await waitFor(() => expect(document.activeElement?.getAttribute('href')).toBe('https://example.com/service/2'));
+  });
+
+  it('Moves focus to the empty results when the submitted address is not found', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(responseFor(1)) })),
+    );
+    const store = createStore();
+    store.set(initializedAtom, true);
+
+    render(
+      <Provider store={store}>
+        <ResultsContainer />
+      </Provider>,
+    );
+
+    await screen.findByText('Service 1');
+
+    // Nothing is fetched for an unresolved address, so there is no loading cycle to
+    // drive the focus change.
+    act(() => store.set(submittedStateAtom, { page: 1, [Components.ADDRESS]: 'Unknown Place' }));
+
+    await waitFor(() => expect(document.activeElement?.textContent?.trim()).toBe('No results'));
   });
 });
