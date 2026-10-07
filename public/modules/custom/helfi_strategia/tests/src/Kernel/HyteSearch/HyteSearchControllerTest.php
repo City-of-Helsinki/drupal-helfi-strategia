@@ -12,13 +12,13 @@ use Drupal\Tests\helfi_api_base\Traits\EnvironmentResolverTrait;
 use Drupal\Tests\helfi_strategia\Kernel\KernelTestBase;
 use Drupal\Tests\user\Traits\UserCreationTrait;
 use PHPUnit\Framework\Attributes\Group;
-use PHPUnit\Framework\Attributes\RunClassInSeparateProcess;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests hyte search controller.
  */
 #[Group('helfi_strategia')]
-#[RunClassInSeparateProcess]
+#[RunTestsInSeparateProcesses]
 class HyteSearchControllerTest extends KernelTestBase {
 
   /**
