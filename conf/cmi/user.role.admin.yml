@@ -17,7 +17,6 @@ dependencies:
     - taxonomy.vocabulary.keywords
     - taxonomy.vocabulary.news_tags
   module:
-    - ai
     - block
     - config_translation
     - content_lock
@@ -172,7 +171,6 @@ permissions:
   - 'edit remote entities'
   - 'edit terms in keywords'
   - 'edit terms in news_tags'
-  - 'manage ai prompts'
   - 'mark as hidden in editoria11y'
   - 'rebuild node access permissions'
   - 'revert all revisions'
