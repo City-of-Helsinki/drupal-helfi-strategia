@@ -4533,16 +4533,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "3.6.1",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "607e08dbef3310885da68d07086a3b46aea06cb0"
+                "reference": "f72ae108ab7b26d4bb49a8443c9b0a94c3da543a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/607e08dbef3310885da68d07086a3b46aea06cb0",
-                "reference": "607e08dbef3310885da68d07086a3b46aea06cb0",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/f72ae108ab7b26d4bb49a8443c9b0a94c3da543a",
+                "reference": "f72ae108ab7b26d4bb49a8443c9b0a94c3da543a",
                 "shasum": ""
             },
             "require": {
@@ -4562,11 +4562,11 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.6.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/3.7.0",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2026-11-06T11:44:15+00:00",
-            "published-time": "2026-11-13T09:20:17+00:00"
+            "time": "2026-11-19T13:07:52+00:00",
+            "published-time": "2026-11-19T13:19:55+00:00"
         },
         {
             "name": "drupal/health_check",
@@ -4836,16 +4836,16 @@
         },
         {
             "name": "drupal/helfi_platform_config",
-            "version": "5.6.0",
+            "version": "5.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config.git",
-                "reference": "8801db8fbc9a8910e0f51e48b51c446cf34659cb"
+                "reference": "2edc6958c07289f7f847d9c08154b790735a2d7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/8801db8fbc9a8910e0f51e48b51c446cf34659cb",
-                "reference": "8801db8fbc9a8910e0f51e48b51c446cf34659cb",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-helfi-platform-config/zipball/2edc6958c07289f7f847d9c08154b790735a2d7d",
+                "reference": "2edc6958c07289f7f847d9c08154b790735a2d7d",
                 "shasum": ""
             },
             "require": {
@@ -4986,11 +4986,11 @@
             ],
             "description": "HELfi platform config",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.6.0",
+                "source": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/5.6.1",
                 "issues": "https://github.com/City-of-Helsinki/drupal-helfi-platform-config/issues"
             },
-            "time": "2026-11-19T05:34:01+00:00",
-            "published-time": "2026-11-19T05:43:07+00:00"
+            "time": "2026-11-19T13:07:35+00:00",
+            "published-time": "2026-11-19T13:20:04+00:00"
         },
         {
             "name": "drupal/helfi_proxy",
@@ -10556,16 +10556,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.12.1",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "d7059e4c691d05ea1222b5124bed0f961be46e15"
+                "reference": "1f5f55bb4a9a230ff6d8a4ceccea31d10b0142ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d7059e4c691d05ea1222b5124bed0f961be46e15",
-                "reference": "d7059e4c691d05ea1222b5124bed0f961be46e15",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1f5f55bb4a9a230ff6d8a4ceccea31d10b0142ac",
+                "reference": "1f5f55bb4a9a230ff6d8a4ceccea31d10b0142ac",
                 "shasum": ""
             },
             "require": {
@@ -10645,7 +10645,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.12.1"
+                "source": "https://github.com/Seldaek/monolog/tree/3.13.0"
             },
             "funding": [
                 {
@@ -10657,8 +10657,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-29T19:21:12+00:00",
-            "published-time": "2026-09-29T19:21:44+00:00"
+            "time": "2026-11-16T10:43:05+00:00",
+            "published-time": "2026-11-16T10:45:37+00:00"
         },
         {
             "name": "nikic/php-parser",
